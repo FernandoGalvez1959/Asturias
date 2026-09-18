@@ -1,0 +1,865 @@
+<title>Asturias</title>
+<style>
+  :root{
+    --bg:#f6f4ee; --bg-elev:#ffffff; --ink:#1d2b2b; --ink-dim:#5b6a6a;
+    --line:#e1ddd0; --sea:#0e6e73; --sea-dark:#0a4f54; --accent:#e0803a;
+    --sand-dorada:#d9a566; --sand-blanca:#ece3d2; --sand-oscura:#6f5b4a; --sand-cantos:#9a978d;
+    --chip-bg:#eef0e9; --chip-ink:#3a4a4a; --card-shadow:0 1px 2px rgba(20,30,30,.06),0 6px 18px rgba(20,30,30,.06);
+    --sky1:#dff1ee; --sky2:#f3ead9;
+    color-scheme: light;
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --bg:#121a1a; --bg-elev:#182323; --ink:#eef3f0; --ink-dim:#9fb3b0;
+      --line:#26332f; --sea:#3fb5ac; --sea-dark:#2c8b86; --accent:#f0964f;
+      --chip-bg:#1d2827; --chip-ink:#cfe0dc; --card-shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.35);
+      --sky1:#17302e; --sky2:#2a2620;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121a1a; --bg-elev:#182323; --ink:#eef3f0; --ink-dim:#9fb3b0;
+    --line:#26332f; --sea:#3fb5ac; --sea-dark:#2c8b86; --accent:#f0964f;
+    --chip-bg:#1d2827; --chip-ink:#cfe0dc; --card-shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px rgba(0,0,0,.35);
+    --sky1:#17302e; --sky2:#2a2620;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;font-size:16px}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  header.top{padding:28px 0 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--sky1),var(--bg) 140%)}
+  h1{font-size:clamp(26px,4vw,34px);margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--ink-dim);margin:0 0 18px;font-size:16px;max-width:62ch}
+  nav.tabs{display:flex;gap:8px;flex-wrap:wrap}
+  nav.tabs button{border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);padding:10px 16px;border-radius:999px;font-size:15px;cursor:pointer}
+  nav.tabs button.active{background:var(--sea);border-color:var(--sea);color:#fff;font-weight:600}
+  nav.tabs button.soon{opacity:.55;cursor:default}
+  nav.tabs button.soon:hover{opacity:.55}
+
+  section.map-wrap{padding:18px 0 6px}
+  .map-row{display:flex;gap:14px;flex-wrap:wrap}
+  .map-card{background:var(--bg-elev);border:1px solid var(--line);border-radius:16px;padding:16px 16px 12px;box-shadow:var(--card-shadow);flex:1 1 260px;min-width:260px}
+  .map-card h2{font-size:17px;margin:0 0 2px}
+  .map-card .hint{color:var(--ink-dim);font-size:13.5px;margin:0 0 6px}
+  .map-card svg{width:100%;height:auto;display:block}
+  .cm-label-v{font-size:13.5px;fill:var(--ink-dim)}
+  .cm-name-v{font-size:17px;fill:var(--ink);font-weight:700}
+  .cm-node-v{cursor:pointer}
+  .cm-node-v circle{transition:r .12s ease}
+  .cm-node-v:hover circle{r:9}
+  .cm-node-v:hover .cm-name-v{fill:var(--sea)}
+  .cm-gijon-v circle{fill:var(--accent)}
+  .cm-gijon-v .cm-name-v{fill:var(--accent);font-weight:800}
+
+  .controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0;border-bottom:1px solid var(--line)}
+  .controls-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  input[type="search"]{flex:1 1 220px;min-width:0;padding:12px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);font-size:16px}
+  select{padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);font-size:16px}
+  .chipbar{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+  .chip{border:1px solid var(--line);background:var(--chip-bg);color:var(--chip-ink);padding:8px 13px;border-radius:999px;font-size:14px;cursor:pointer;user-select:none}
+  .chip.on{background:var(--sea);border-color:var(--sea);color:#fff}
+  .count{color:var(--ink-dim);font-size:14px;margin-left:auto;white-space:nowrap}
+
+  main{padding:26px 0 60px}
+  .concejo-block{margin-bottom:34px;scroll-margin-top:120px}
+  .concejo-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+  .concejo-head h3{font-size:21px;margin:0}
+  .concejo-head .tag-zona{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--chip-bg);color:var(--ink-dim)}
+  .concejo-head .dist{color:var(--ink-dim);font-size:14px}
+  .concejo-head .gmaps-btn{margin-left:auto;font-size:14px;padding:8px 14px;border-radius:8px;background:var(--bg-elev);border:1px solid var(--line);text-decoration:none;color:var(--ink);white-space:nowrap}
+  .concejo-head .gmaps-btn:hover{border-color:var(--sea);color:var(--sea)}
+
+  .grid{display:flex;flex-direction:column;gap:16px;max-width:640px}
+  .card{background:var(--bg-elev);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--card-shadow);display:flex;flex-direction:column;width:100%}
+  .card svg.art{width:100%;height:160px;display:block;background:var(--sky1)}
+  .card .body{padding:16px 16px 16px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .card h4{margin:0;font-size:19px;line-height:1.25}
+  .card .desc{font-size:15px;color:var(--ink-dim);margin:0}
+  .card .tags{display:flex;flex-wrap:wrap;gap:5px}
+  .card .tags span{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--chip-bg);color:var(--chip-ink)}
+  .card .meta{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--ink-dim)}
+  .card .actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+  .card .actions a{flex:1 1 45%;text-align:center;font-size:13.5px;padding:10px 6px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink);white-space:nowrap}
+  .card .actions a.wind:hover{border-color:#3f9ad9;color:#3f9ad9}
+  .card .actions a.tide:hover{border-color:#3fae8f;color:#3fae8f}
+  .card .actions a.temp:hover{border-color:#e0803a;color:#e0803a}
+  .card .actions a.gmap:hover{border-color:var(--sea);color:var(--sea)}
+  .fav-banner{max-width:640px;background:var(--bg-elev);border:1px dashed var(--line);border-radius:14px;padding:24px 20px;text-align:center;color:var(--ink-dim);font-size:15px;margin-bottom:18px}
+  .fav-banner strong{color:var(--ink);display:block;font-size:17px;margin-bottom:6px}
+  .fav-banner button{margin-top:12px;background:var(--sea);color:#fff;border:none;padding:11px 20px;border-radius:999px;font-size:15px;cursor:pointer}
+
+  .fav-row{display:flex;align-items:center;gap:6px;margin-top:-2px}
+  .star-btn{background:none;border:none;cursor:pointer;font-size:23px;line-height:1;padding:4px 6px;color:#c9a227}
+  .star-btn[disabled]{opacity:.35;cursor:default}
+  .star-btn.on{color:#e8b400}
+  .note-btn{background:none;border:1px solid var(--line);border-radius:7px;cursor:pointer;font-size:13px;padding:5px 10px;color:var(--ink-dim)}
+  .note-btn[disabled]{opacity:.35;cursor:default}
+  .note-btn.has-note{border-color:var(--sea);color:var(--sea)}
+  .note-box textarea{width:100%;font:inherit;font-size:14.5px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);resize:vertical}
+  .photo-strip{display:flex;gap:6px;margin-top:2px}
+  .photo-tile{width:52px;height:52px;border-radius:8px;overflow:hidden;position:relative;flex:0 0 auto;background:var(--chip-bg);border:1px solid var(--line)}
+  .photo-tile img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-tile .rm{position:absolute;top:0;right:0;background:rgba(0,0,0,.55);color:#fff;border:none;font-size:10px;width:17px;height:17px;line-height:17px;cursor:pointer;border-radius:0 0 0 6px}
+  .photo-add{width:52px;height:52px;border-radius:8px;border:1px dashed var(--line);background:none;color:var(--ink-dim);cursor:pointer;font-size:19px;flex:0 0 auto}
+  .photo-add[disabled]{opacity:.3;cursor:default}
+  .cloud-hint{font-size:11px;color:var(--ink-dim);margin-top:1px}
+
+  .empty{text-align:center;color:var(--ink-dim);padding:50px 10px;font-size:15px}
+
+  .foto-card{background:var(--bg-elev);border:1px solid var(--line);border-radius:14px;padding:16px 16px;box-shadow:var(--card-shadow);margin-bottom:14px}
+  .foto-card .foto-head{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .foto-card .foto-icon{font-size:21px;line-height:1}
+  .foto-card h4{margin:0;font-size:18px;flex:1}
+  .foto-card .tipo-badge{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--chip-bg);color:var(--chip-ink);white-space:nowrap}
+  .foto-card .desc{font-size:14.5px;color:var(--ink-dim);margin:0 0 9px}
+  .foto-card .luz{font-size:14px;color:var(--ink);background:var(--sky1);border-radius:8px;padding:9px 11px;margin:0 0 11px;display:flex;gap:6px}
+  .foto-card .luz b{white-space:nowrap}
+  .foto-card .meta{font-size:13px;color:var(--ink-dim);margin-bottom:9px}
+  .foto-card .actions{display:flex}
+  .foto-card .actions a{flex:1;text-align:center;font-size:14px;padding:10px 6px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+  .foto-card .actions a:hover{border-color:var(--sea);color:var(--sea)}
+  .foto-disclaimer{font-size:12.5px;color:var(--ink-dim);margin:10px 0 30px;max-width:70ch}
+
+  .enlace-modal{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center}
+  .enlace-modal[hidden]{display:none}
+  .enlace-modal-fondo{position:absolute;inset:0;background:rgba(0,0,0,.5)}
+  .enlace-modal-box{position:relative;width:100%;max-width:480px;background:var(--bg-elev);border-radius:16px 16px 0 0;padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 24px rgba(0,0,0,.25)}
+  @media (min-width:560px){
+    .enlace-modal{align-items:center}
+    .enlace-modal-box{border-radius:16px;margin:0 20px}
+  }
+  .enlace-modal-titulo{font-size:17px;font-weight:700;margin:0 0 6px;color:var(--ink)}
+  .enlace-modal-hint{font-size:14px;color:var(--ink-dim);margin:0 0 12px}
+  #enlace-modal-url{width:100%;font-size:14px;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);margin-bottom:12px}
+  .enlace-modal-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .enlace-modal-actions button{flex:1 1 45%;font-size:14.5px;padding:11px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);cursor:pointer}
+  #enlace-modal-copiar{background:var(--sea);border-color:var(--sea);color:#fff;font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--ink-dim);font-size:13.5px}
+  footer p{max-width:70ch;margin:0 0 8px}
+  .soon-panel{padding:60px 20px;text-align:center;color:var(--ink-dim)}
+  .soon-panel h3{color:var(--ink);font-size:21px;margin:0 0 8px}
+  @media (max-width:560px){
+    .concejo-head .gmaps-btn{margin-left:0}
+    .count{margin-left:0;width:100%}
+  }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <h1>🏖️ Asturias</h1>
+    <p class="sub">Guía de las playas del Principado, organizadas de oeste a este a lo largo de la costa, con la distancia aproximada en coche desde Gijón. Pulsa el viento o las mareas para verlos en directo, o "cómo llegar" para abrir la ruta en Google Maps.</p>
+    <nav class="tabs">
+      <button class="active" data-tab="playas">Playas</button>
+      <button data-tab="foto">📷 Ruta fotográfica</button>
+      <button class="soon" data-tab="restaurantes">Restaurantes <span style="opacity:.7">(próximamente)</span></button>
+      <button class="soon" data-tab="sitios">Qué ver <span style="opacity:.7">(próximamente)</span></button>
+    </nav>
+  </div>
+</header>
+
+<div id="tab-playas">
+<section class="map-wrap">
+  <div class="wrap map-row">
+    <div class="map-card">
+      <h2>⟵ Al oeste de Gijón</h2>
+      <p class="hint">De más cerca a más lejos. Toca un concejo para ir a sus playas.</p>
+      <svg id="map-playas-oeste" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="map-card">
+      <h2>Al este de Gijón ⟶</h2>
+      <p class="hint">De más cerca a más lejos. Toca un concejo para ir a sus playas.</p>
+      <svg id="map-playas-este" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-row">
+      <input type="search" id="q" placeholder="Buscar playa o concejo…">
+      <select id="f-zona">
+        <option value="">Toda la costa</option>
+        <option value="oeste">Oeste de Gijón</option>
+        <option value="gijon">Gijón</option>
+        <option value="este">Este de Gijón</option>
+      </select>
+      <select id="f-concejo"><option value="">Todos los concejos</option></select>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="chipbar" id="chipbar"></div>
+  </div>
+</div>
+
+<main class="wrap" id="results"></main>
+</div>
+
+<div id="tab-foto" hidden>
+<section class="map-wrap">
+  <div class="wrap map-row">
+    <div class="map-card">
+      <h2>⟵ Al oeste de Gijón</h2>
+      <p class="hint">De más cerca a más lejos. Toca un concejo para ir a sus puntos de interés.</p>
+      <svg id="map-foto-oeste" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="map-card">
+      <h2>Al este de Gijón ⟶</h2>
+      <p class="hint">De más cerca a más lejos. Toca un concejo para ir a sus puntos de interés.</p>
+      <svg id="map-foto-este" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-row">
+      <input type="search" id="qf" placeholder="Buscar punto o concejo…">
+      <span class="count" id="count-foto"></span>
+    </div>
+    <div class="chipbar" id="chipbar-foto"></div>
+  </div>
+</div>
+
+<main class="wrap" id="results-foto"></main>
+<div class="wrap"><p class="foto-disclaimer">Miradores, faros, pueblos marineros y playas seleccionados por su interés fotográfico (investigación web, septiembre 2026). La "mejor luz" es una orientación general, no una garantía — comprueba siempre el acceso y la seguridad del lugar in situ, especialmente cerca de acantilados y con mar de fondo.</p></div>
+</div>
+
+<div id="tab-restaurantes" hidden><div class="wrap"><div class="soon-panel"><h3>🍽️ Restaurantes</h3><p>Próxima ampliación de la guía: sidrerías, marisquerías y restaurantes cerca de cada playa.</p></div></div></div>
+<div id="tab-sitios" hidden><div class="wrap"><div class="soon-panel"><h3>🗺️ Qué ver</h3><p>Próxima ampliación de la guía: pueblos, miradores y rutas para completar el itinerario.</p></div></div></div>
+
+<div id="enlace-modal" class="enlace-modal" hidden>
+  <div id="enlace-modal-fondo" class="enlace-modal-fondo"></div>
+  <div class="enlace-modal-box">
+    <p class="enlace-modal-titulo" id="enlace-modal-titulo">Abrir enlace</p>
+    <p class="enlace-modal-hint">No se pudo abrir automáticamente en este dispositivo. Copia el enlace y pégalo en tu navegador o en la app correspondiente:</p>
+    <input type="text" id="enlace-modal-url" readonly>
+    <div class="enlace-modal-actions">
+      <button type="button" id="enlace-modal-copiar">📋 Copiar enlace</button>
+      <button type="button" id="enlace-modal-cerrar">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Sobre los datos:</strong> recopilados de fuentes públicas (guías turísticas de Asturias) en septiembre de 2026. Las distancias son aproximadas en coche a nivel de concejo (municipio) — las playas del mismo concejo comparten aproximadamente la misma distancia. Los botones "Llegar" abren Google Maps; los botones "Viento" abren Windy.com centrado en la zona de la playa; los botones "Mareas" y "Temperatura" abren tablademareas.com del punto de referencia más cercano — todos en pestaña nueva (o en una ventana emergente dentro de la app si el enlace no se puede abrir automáticamente).</p>
+    <p>Ilustraciones esquemáticas generadas a partir de las características de cada playa (no son fotografías). Puedes marcar tus favoritas con la estrella, añadir hasta 3 fotos propias y una nota personal en cada ficha — se guardan en esta app.</p>
+  </div>
+</footer>
+
+<script id="playas-data" type="application/json">__DATA_JSON__</script>
+<script>
+const DATA = JSON.parse(document.getElementById('playas-data').textContent);
+const GIJON = {lat:43.5378, lon:-5.6544};
+
+const TAG_LABELS = {
+  'arena-dorada':'Arena dorada','arena-blanca':'Arena blanca','arena-oscura':'Arena oscura','cantos':'Cantos/rocas',
+  'urbana':'Urbana','rural':'Rural','dificil-acceso':'Acceso difícil','accesible':'Accesible','nudista':'Nudista',
+  'perros':'Admite perros','surf':'Surf','buceo':'Buceo','monumento-natural':'Monumento natural','duna':'Dunas',
+  'acantilados':'Acantilados','familias':'Familias'
+};
+const CHIP_FILTERS = ['arena-dorada','arena-blanca','arena-oscura','urbana','rural','accesible','dificil-acceso','duna','monumento-natural','surf','nudista','familias','perros'];
+
+// ---------- orden geográfico oeste -> este ----------
+const ORDER = DATA.concejos.slice().sort((a,b)=>{
+  const rank = z => z==='oeste' ? 0 : (z==='gijon' ? 1 : 2);
+  if (rank(a.zona)!==rank(b.zona)) return rank(a.zona)-rank(b.zona);
+  if (a.zona==='oeste') return b.dist_km - a.dist_km; // más lejos primero, acercándose a Gijón
+  if (a.zona==='este') return a.dist_km - b.dist_km; // saliendo de Gijón hacia más lejos
+  return 0;
+});
+
+// ---------- utilidades ----------
+function hash(str){ let h=0; for(let i=0;i<str.length;i++){ h = (h*31 + str.charCodeAt(i))>>>0; } return h; }
+function rand(seed){ let s = seed; return function(){ s = (s*1103515245+12345)>>>0; return (s>>>8)/16777216; }; }
+
+function sandColor(tags){
+  if(tags.includes('arena-blanca')) return 'var(--sand-blanca)';
+  if(tags.includes('arena-oscura')) return 'var(--sand-oscura)';
+  if(tags.includes('cantos')) return 'var(--sand-cantos)';
+  return 'var(--sand-dorada)';
+}
+function sandColorHex(tags){
+  if(tags.includes('arena-blanca')) return '#ece3d2';
+  if(tags.includes('arena-oscura')) return '#6f5b4a';
+  if(tags.includes('cantos')) return '#9a978d';
+  return '#d9a566';
+}
+
+function beachArt(playa){
+  const seed = hash(playa.nombre + playa.concejo);
+  const rnd = rand(seed);
+  const w=320,h=120;
+  const sand = sandColorHex(playa.tags);
+  const cliffs = playa.tags.includes('dificil-acceso') || playa.tags.includes('cantos');
+  const duna = playa.tags.includes('duna');
+  const urbana = playa.tags.includes('urbana');
+  const monumento = playa.tags.includes('monumento-natural');
+  let parts = [];
+  // cielo
+  const hueShift = Math.floor(rnd()*14)-7;
+  parts.push(`<defs><linearGradient id="sky${seed}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(${172+hueShift},45%,88%)"/><stop offset="1" stop-color="hsl(${38+hueShift},55%,90%)"/></linearGradient>
+  <linearGradient id="sea${seed}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a8f92"/><stop offset="1" stop-color="#0a4f54"/></linearGradient></defs>`);
+  parts.push(`<rect width="${w}" height="${h}" fill="url(#sky${seed})"/>`);
+  // sol
+  parts.push(`<circle cx="${40+rnd()*40}" cy="${20+rnd()*10}" r="10" fill="#ffffff" opacity=".55"/>`);
+  // acantilados laterales
+  if(cliffs){
+    const lh = 40+rnd()*30;
+    parts.push(`<path d="M0,${50} L${18+rnd()*10},${50-lh*0.5} L${34+rnd()*8},${50} Z" fill="#8a8378" opacity=".85"/>`);
+    if(rnd()>0.4){
+      const rh = 35+rnd()*30;
+      parts.push(`<path d="M${w},${52} L${w-20-rnd()*10},${52-rh*0.5} L${w-38-rnd()*8},${52} Z" fill="#8a8378" opacity=".8"/>`);
+    }
+  }
+  // mar
+  const seaY = 52+rnd()*8;
+  parts.push(`<path d="M0,${seaY} Q${w*0.25},${seaY-6} ${w*0.5},${seaY} T${w},${seaY} L${w},${seaY+30} L0,${seaY+30} Z" fill="url(#sea${seed})"/>`);
+  // olas
+  for(let i=0;i<3;i++){
+    const oy = seaY+10+i*8+rnd()*4;
+    parts.push(`<path d="M${rnd()*40},${oy} q10,-4 20,0 t20,0 t20,0 t20,0" stroke="#ffffff" stroke-opacity=".35" fill="none" stroke-width="1.4"/>`);
+  }
+  // arena
+  const sandY = seaY+26+rnd()*6;
+  parts.push(`<path d="M0,${sandY} Q${w*0.5},${sandY-14} ${w},${sandY} L${w},${h} L0,${h} Z" fill="${sand}"/>`);
+  // dunas
+  if(duna){
+    parts.push(`<ellipse cx="${w*0.2}" cy="${sandY+18}" rx="30" ry="9" fill="${sand}" stroke="#00000018"/>`);
+    parts.push(`<ellipse cx="${w*0.75}" cy="${sandY+24}" rx="36" ry="10" fill="${sand}" stroke="#00000018"/>`);
+  }
+  // detalle urbano: sombrillas
+  if(urbana){
+    for(let i=0;i<3;i++){
+      const ux = w*0.3+i*38+rnd()*10, uy = sandY+22+rnd()*10;
+      const c = ['#d1495b','#3f9ad9','#e0803a'][i%3];
+      parts.push(`<path d="M${ux-8},${uy} A8,6 0 0 1 ${ux+8},${uy} Z" fill="${c}" opacity=".85"/><line x1="${ux}" y1="${uy}" x2="${ux}" y2="${uy+10}" stroke="#5b4b3a" stroke-width="1.4"/>`);
+    }
+  }
+  // estrella monumento natural
+  if(monumento){
+    parts.push(`<text x="${w-26}" y="22" font-size="16">✦</text>`);
+  }
+  return `<svg class="art" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${parts.join('')}</svg>`;
+}
+
+function windyUrl(lat,lon){ return `https://www.windy.com/${lat.toFixed(3)}/${lon.toFixed(3)}?wind,${lat.toFixed(3)},${lon.toFixed(3)},11`; }
+function tidesUrl(slug){ return `https://tablademareas.com/es/asturias/${slug}/prevision/mareas`; }
+function waterTempUrl(slug){ return `https://tablademareas.com/es/asturias/${slug}/prevision/temperatura-agua`; }
+function gmapsPlaceUrl(nombre, concejo){ const q = encodeURIComponent(`Playa de ${nombre.split('/')[0].trim()}, ${concejo}, Asturias, España`); return `https://www.google.com/maps/search/?api=1&query=${q}`; }
+function gmapsDirUrl(destQuery){ const o = encodeURIComponent('Playa de San Lorenzo, Gijón, Asturias, España'); const d = encodeURIComponent(destQuery); return `https://www.google.com/maps/dir/?api=1&origin=${o}&destination=${d}`; }
+
+function docId(p){ return slug(p.concejo)+'--'+slug(p.nombre); }
+
+function cardHTML(p){
+  const tagsHTML = p.tags.map(t=>`<span>${TAG_LABELS[t]||t}</span>`).join('');
+  const distTxt = p.dist_km===0 ? 'En Gijón' : `≈ ${p.dist_km.toFixed(0)} km de Gijón`;
+  const id = docId(p);
+  return `<article class="card" data-docid="${id}" data-name="${p.nombre.toLowerCase()}" data-concejo="${p.concejo}" data-zona="${p.zona}" data-tags="${p.tags.join(',')}">
+    ${beachArt(p)}
+    <div class="body">
+      <h4>${p.nombre}</h4>
+      <p class="desc">${p.desc}</p>
+      <div class="tags">${tagsHTML}</div>
+      <div class="meta"><span>${p.concejo}</span><span>${distTxt}</span></div>
+      <div class="fav-row">
+        <button class="star-btn" data-id="${id}" disabled title="Cargando…">☆</button>
+        <button class="note-btn" data-id="${id}" disabled title="Cargando…">✎ Nota</button>
+      </div>
+      <div class="note-box" data-id="${id}" hidden><textarea class="note-input" data-id="${id}" rows="2" placeholder="Tu nota sobre esta playa…"></textarea></div>
+      <div class="photo-strip" data-id="${id}"></div>
+      <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
+      <div class="actions">
+        <a class="wind" target="_blank" rel="noopener" href="${windyUrl(p.lat,p.lon)}" title="Viento en directo (Windy)">🌬️ Viento</a>
+        <a class="tide" target="_blank" rel="noopener" href="${tidesUrl(p.mareas_slug)}" title="Tabla de mareas (tablademareas.com)">🌊 Mareas</a>
+        <a class="temp" target="_blank" rel="noopener" href="${waterTempUrl(p.mareas_slug)}" title="Temperatura del agua (tablademareas.com)">🌡️ Temperatura</a>
+        <a class="gmap" target="_blank" rel="noopener" href="${gmapsPlaceUrl(p.nombre,p.concejo)}" title="Cómo llegar (Google Maps)">📍 Llegar</a>
+      </div>
+    </div>
+  </article>`;
+}
+
+function concejoBlockHTML(c){
+  const playas = DATA.playas.filter(p=>p.concejo===c.nombre);
+  const distTxt = c.dist_km===0 ? 'Gijón' : `≈ ${c.dist_km.toFixed(0)} km desde Gijón`;
+  const zonaLbl = c.zona==='oeste' ? 'Oeste' : (c.zona==='este' ? 'Este' : 'Centro');
+  const destQ = encodeURIComponent(`${c.nombre}, Asturias, España`);
+  return `<section class="concejo-block" id="c-${slug(c.nombre)}" data-zona="${c.zona}">
+    <div class="concejo-head">
+      <h3>${c.nombre}</h3>
+      <span class="tag-zona">${zonaLbl}</span>
+      <span class="dist">${distTxt} · ${playas.length} playas</span>
+      <a class="gmaps-btn" target="_blank" rel="noopener" href="${gmapsDirUrl(c.nombre+', Asturias, España')}">🚗 Ruta desde Gijón</a>
+    </div>
+    <div class="grid">${playas.map(cardHTML).join('')}</div>
+  </section>`;
+}
+function slug(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+
+// ---------- mapa esquemático ----------
+// Espaciado por orden (no por km real) para que las etiquetas no se amontonen;
+// el hint del panel ya avisa de que no está a escala. La distancia real se
+// muestra como etiqueta junto a cada concejo.
+// Mapa esquemático vertical: una línea de tiempo de distancias desde Gijón,
+// de más cerca (arriba) a más lejos (abajo). Más legible en móvil en vertical
+// que una única tira horizontal con 19 nombres apretados.
+function buildVerticalMap(svgId, list, anchorPrefix){
+  const svg = document.getElementById(svgId);
+  if(!svg) return;
+  const W = 320, rowH = 54, padTop = 34, padBottom = 14, cx = 30;
+  const H = padTop + list.length*rowH + padBottom;
+  let items = [];
+  items.push(`<line x1="${cx}" y1="10" x2="${cx}" y2="${H-padBottom}" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/>`);
+  items.push(`<a href="#${anchorPrefix}gijon" class="cm-node-v cm-gijon-v"><rect x="0" y="0" width="${W}" height="${padTop}" fill="transparent" style="pointer-events:all"/><circle cx="${cx}" cy="10" r="7" fill="var(--accent)" stroke="var(--bg-elev)" stroke-width="2"/><text class="cm-name-v" x="${cx+18}" y="15">Gijón</text></a>`);
+  list.forEach((c,i)=>{
+    const y = padTop + rowH*i + rowH/2;
+    const distTxt = c.dist_km===0 ? 'en Gijón' : `≈ ${c.dist_km.toFixed(0)} km`;
+    items.push(`<a href="#${anchorPrefix}${slug(c.nombre)}" class="cm-node-v"><rect x="0" y="${padTop+rowH*i}" width="${W}" height="${rowH}" fill="transparent" style="pointer-events:all"/><circle cx="${cx}" cy="${y}" r="7" fill="var(--sea)"/><text class="cm-name-v" x="${cx+18}" y="${(y-4).toFixed(1)}">${c.nombre}</text><text class="cm-label-v" x="${cx+18}" y="${(y+16).toFixed(1)}">${distTxt}</text></a>`);
+  });
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.innerHTML = items.join('');
+}
+function buildMap(){
+  const westC = DATA.concejos.filter(c=>c.zona==='oeste').sort((a,b)=>a.dist_km-b.dist_km);
+  const eastC = DATA.concejos.filter(c=>c.zona==='este').sort((a,b)=>a.dist_km-b.dist_km);
+  buildVerticalMap('map-playas-oeste', westC, 'c-');
+  buildVerticalMap('map-playas-este', eastC, 'c-');
+}
+
+// ---------- ruta fotográfica ----------
+const TIPO_LABELS = { mirador:'Mirador', faro:'Faro', pueblo:'Pueblo marinero', playa:'Playa', 'fenomeno-natural':'Fenómeno natural', monumento:'Monumento' };
+const TIPO_ICONS = { mirador:'🔭', faro:'🗼', pueblo:'🏘️', playa:'🏖️', 'fenomeno-natural':'💦', monumento:'🗿' };
+const TIPO_FILTERS = ['mirador','faro','pueblo','playa','fenomeno-natural','monumento'];
+
+function fotoDocId(p){ return 'foto--'+slug(p.concejo)+'--'+slug(p.nombre); }
+
+function fotoCardHTML(p){
+  const gmapQ = encodeURIComponent(`${p.nombre.split('/')[0].trim()}, ${p.concejo}, Asturias, España`);
+  const gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  return `<article class="foto-card" data-docid="${fotoDocId(p)}" data-name="${p.nombre.toLowerCase()}" data-concejo="${p.concejo}" data-tipo="${p.tipo}">
+    <div class="foto-head">
+      <span class="foto-icon">${TIPO_ICONS[p.tipo]||'📷'}</span>
+      <h4>${p.nombre}</h4>
+      <span class="tipo-badge">${TIPO_LABELS[p.tipo]||p.tipo}</span>
+    </div>
+    <p class="desc">${p.desc}</p>
+    <p class="luz"><b>💡 Mejor luz:</b> <span>${p.mejor_luz}</span></p>
+    <div class="meta">${p.concejo} · ${p.dist_km===0?'En Gijón':`≈ ${p.dist_km.toFixed(0)} km de Gijón`}</div>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+    </div>
+  </article>`;
+}
+
+function fotoConcejoBlockHTML(c){
+  const puntos = DATA.ruta_foto.filter(p=>p.concejo===c.nombre);
+  if(!puntos.length) return '';
+  const distTxt = c.dist_km===0 ? 'Gijón' : `≈ ${c.dist_km.toFixed(0)} km desde Gijón`;
+  return `<section class="concejo-block" id="foto-c-${slug(c.nombre)}" data-zona="${c.zona}">
+    <div class="concejo-head">
+      <h3>${c.nombre}</h3>
+      <span class="dist">${distTxt} · ${puntos.length} ${puntos.length===1?'punto':'puntos'}</span>
+    </div>
+    ${puntos.map(fotoCardHTML).join('')}
+  </section>`;
+}
+
+let activeFotoTipos = new Set();
+function buildFotoChipbar(){
+  const bar = document.getElementById('chipbar-foto');
+  if(!bar) return;
+  bar.innerHTML = TIPO_FILTERS.map(t=>`<span class="chip" data-tipo="${t}">${TIPO_ICONS[t]} ${TIPO_LABELS[t]}</span>`).join('');
+  bar.querySelectorAll('.chip[data-tipo]').forEach(ch=>ch.addEventListener('click', ()=>{ ch.classList.toggle('on'); applyFotoFilters(); }));
+}
+
+function applyFotoFilters(){
+  const q = (document.getElementById('qf')?.value||'').trim().toLowerCase();
+  activeFotoTipos = new Set([...document.querySelectorAll('#chipbar-foto .chip.on')].map(c=>c.dataset.tipo));
+  let total=0, shown=0;
+  document.querySelectorAll('#results-foto .concejo-block').forEach(block=>{
+    let anyVisible = false;
+    block.querySelectorAll('.foto-card').forEach(card=>{
+      total++;
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const matchesTipo = activeFotoTipos.size===0 || activeFotoTipos.has(card.dataset.tipo);
+      const visible = matchesQ && matchesTipo;
+      card.style.display = visible ? '' : 'none';
+      if(visible){ anyVisible = true; shown++; }
+    });
+    block.style.display = anyVisible ? '' : 'none';
+  });
+  const countEl = document.getElementById('count-foto');
+  if(countEl) countEl.textContent = `${shown} de ${total} puntos`;
+  const results = document.getElementById('results-foto');
+  let emptyEl = document.getElementById('empty-msg-foto');
+  if(shown===0){
+    if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-foto'; emptyEl.className='empty'; emptyEl.textContent='No hay puntos que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
+  } else if(emptyEl){ emptyEl.remove(); }
+}
+
+function initFotoTab(){
+  const fotoConcejos = DATA.concejos.filter(c=>DATA.ruta_foto.some(p=>p.concejo===c.nombre));
+  document.getElementById('results-foto').innerHTML = ORDER.filter(c=>DATA.ruta_foto.some(p=>p.concejo===c.nombre)).map(fotoConcejoBlockHTML).join('');
+  buildFotoChipbar();
+  const fotoOeste = fotoConcejos.filter(c=>c.zona==='oeste').sort((a,b)=>a.dist_km-b.dist_km);
+  const fotoEste = fotoConcejos.filter(c=>c.zona==='este').sort((a,b)=>a.dist_km-b.dist_km);
+  buildVerticalMap('map-foto-oeste', fotoOeste, 'foto-c-');
+  buildVerticalMap('map-foto-este', fotoEste, 'foto-c-');
+  document.getElementById('qf').addEventListener('input', applyFotoFilters);
+  applyFotoFilters();
+}
+
+// ---------- render principal ----------
+function populateConcejoFilter(){
+  const sel = document.getElementById('f-concejo');
+  ORDER.forEach(c=>{
+    const opt = document.createElement('option');
+    opt.value = c.nombre; opt.textContent = `${c.nombre} (${c.n})`;
+    sel.appendChild(opt);
+  });
+}
+let favOnly = true;
+
+function buildChipbar(){
+  const bar = document.getElementById('chipbar');
+  bar.innerHTML = `<span class="chip${favOnly?' on':''}" id="fav-only-chip">★ Solo favoritas</span>` +
+    CHIP_FILTERS.map(t=>`<span class="chip" data-tag="${t}">${TAG_LABELS[t]}</span>`).join('');
+  document.getElementById('fav-only-chip').addEventListener('click', function(){ favOnly = !favOnly; this.classList.toggle('on', favOnly); applyFilters(); });
+  bar.querySelectorAll('.chip[data-tag]').forEach(ch=>ch.addEventListener('click', ()=>{ ch.classList.toggle('on'); applyFilters(); }));
+}
+
+function showAllBeaches(){
+  favOnly = false;
+  const chip = document.getElementById('fav-only-chip');
+  if(chip) chip.classList.remove('on');
+  applyFilters();
+}
+
+let activeTags = new Set();
+
+function applyFilters(){
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const zona = document.getElementById('f-zona').value;
+  const concejo = document.getElementById('f-concejo').value;
+  activeTags = new Set([...document.querySelectorAll('.chip[data-tag].on')].map(c=>c.dataset.tag));
+
+  let total = 0, shown = 0;
+  document.querySelectorAll('#results .concejo-block').forEach(block=>{
+    let anyVisible = false;
+    block.querySelectorAll('.card').forEach(card=>{
+      total++;
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const matchesZona = !zona || card.dataset.zona===zona;
+      const matchesConcejo = !concejo || card.dataset.concejo===concejo;
+      const cardTags = card.dataset.tags.split(',');
+      const matchesTags = activeTags.size===0 || [...activeTags].every(t=>cardTags.includes(t));
+      const matchesFav = !favOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+      const visible = matchesQ && matchesZona && matchesConcejo && matchesTags && matchesFav;
+      card.style.display = visible ? '' : 'none';
+      if(visible){ anyVisible = true; shown++; }
+    });
+    block.style.display = anyVisible ? '' : 'none';
+  });
+  document.getElementById('count').textContent = `${shown} de ${total} playas`;
+  const results = document.getElementById('results');
+  let emptyEl = document.getElementById('empty-msg');
+  if(shown===0){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div');
+    emptyEl.id = 'empty-msg';
+    if(favOnly && !q && !zona && !concejo && activeTags.size===0){
+      emptyEl.className = 'fav-banner';
+      emptyEl.innerHTML = `<strong>Aún no tienes playas favoritas</strong>Pulsa la ⭐ en la ficha de una playa para guardarla aquí, o mira el listado completo de las 199 playas de Asturias.<button type="button" id="fav-banner-btn">Ver todas las playas</button>`;
+      results.appendChild(emptyEl);
+      document.getElementById('fav-banner-btn').addEventListener('click', showAllBeaches);
+    } else if(favOnly){
+      emptyEl.className = 'fav-banner';
+      emptyEl.innerHTML = `<strong>Ninguna favorita coincide</strong>No hay playas favoritas que coincidan con la búsqueda/filtros actuales.<button type="button" id="fav-banner-btn">Ver todas las playas</button>`;
+      results.appendChild(emptyEl);
+      document.getElementById('fav-banner-btn').addEventListener('click', showAllBeaches);
+    } else {
+      emptyEl.className = 'empty';
+      emptyEl.textContent = 'No hay playas que coincidan con la búsqueda/filtros.';
+      results.appendChild(emptyEl);
+    }
+  } else if(emptyEl){ emptyEl.remove(); }
+}
+
+function init(){
+  document.getElementById('results').innerHTML = ORDER.map(concejoBlockHTML).join('');
+  populateConcejoFilter();
+  buildChipbar();
+  buildMap();
+  document.getElementById('q').addEventListener('input', applyFilters);
+  document.getElementById('f-zona').addEventListener('change', applyFilters);
+  document.getElementById('f-concejo').addEventListener('change', applyFilters);
+  applyFilters();
+
+  initFotoTab();
+
+  document.querySelectorAll('nav.tabs button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      if(btn.classList.contains('soon')) return;
+      document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      ['playas','foto','restaurantes','sitios'].forEach(t=>{
+        document.getElementById('tab-'+t).hidden = (t!==btn.dataset.tab);
+      });
+    });
+  });
+
+  wireDelegatedEvents();
+  wireExternalLinks();
+  initCapabilities();
+}
+
+// Abre enlaces externos (Viento/Mareas/Llegar/Ruta) de forma robusta: en algunas apps
+// empaquetadas (p.ej. AppsGeyser) o vistas restringidas, target="_blank" no hace nada
+// porque no soportan abrir una pestaña/ventana nueva. Si window.open falla o es bloqueado,
+// se navega en la misma ventana como alternativa para que el enlace sí se abra.
+function wireExternalLinks(){
+  document.addEventListener('click', function(ev){
+    const a = ev.target.closest('a[target="_blank"]');
+    if(!a) return;
+    const url = a.getAttribute('href');
+    if(!url) return;
+    ev.preventDefault();
+
+    // 1) Intentar abrir en pestaña/ventana nueva (funciona en navegador normal y dentro de Claude).
+    let ventana = null;
+    try{ ventana = window.open(url, '_blank', 'noopener'); }catch(e){ ventana = null; }
+    if(ventana) return;
+
+    // 2) En apps empaquetadas (AppsGeyser) sin soporte de ventanas nuevas, NUNCA navegamos
+    // la propia app fuera (eso deja a quien lo usa atrapado, sin forma de volver salvo cerrar
+    // la app). Probamos el selector nativo para compartir/abrir enlaces del sistema...
+    if(navigator.share){
+      navigator.share({url, title: a.title || 'Asturias'}).catch(()=>{ mostrarEnlaceManual(url, a.title); });
+      return;
+    }
+    // 3) Último recurso: mostrar el enlace dentro de la propia app para copiarlo, sin salir de ella.
+    mostrarEnlaceManual(url, a.title);
+  });
+
+  document.getElementById('enlace-modal-cerrar').addEventListener('click', ocultarEnlaceManual);
+  document.getElementById('enlace-modal-fondo').addEventListener('click', ocultarEnlaceManual);
+  document.getElementById('enlace-modal-copiar').addEventListener('click', async function(){
+    const input = document.getElementById('enlace-modal-url');
+    input.focus(); input.select();
+    let copiado = false;
+    try{ await navigator.clipboard.writeText(input.value); copiado = true; }
+    catch(e){
+      try{ copiado = document.execCommand('copy'); }catch(e2){ copiado = false; }
+    }
+    const btn = document.getElementById('enlace-modal-copiar');
+    btn.textContent = copiado ? '✓ Enlace copiado' : 'Mantén pulsado el texto para copiarlo';
+    setTimeout(()=>{ btn.textContent = '📋 Copiar enlace'; }, 2200);
+  });
+}
+
+function mostrarEnlaceManual(url, titulo){
+  document.getElementById('enlace-modal-titulo').textContent = titulo || 'Abrir enlace';
+  const input = document.getElementById('enlace-modal-url');
+  input.value = url;
+  document.getElementById('enlace-modal').hidden = false;
+  input.focus(); input.select();
+}
+function ocultarEnlaceManual(){
+  document.getElementById('enlace-modal').hidden = true;
+}
+
+// ---------- favoritas / notas / fotos ----------
+// (declaradas antes de init() porque applyFilters() las usa ya en el primer render)
+// storageMode: 'db' (dentro de una conversación de Claude) | 'local' (guardado en este dispositivo,
+// para el enlace abierto directamente, el HTML descargado o la app de AppsGeyser) | 'none'
+let db = null, assetsCap = null, storageMode = 'none';
+const estadoMap = {}; // docId -> {favorito, nota, fotos:[{id,url}]}
+const MAX_FOTOS = 3;
+const LOCAL_KEY = 'playas_asturias_estado_v1';
+
+init();
+
+function emptyEstado(){ return {favorito:false, nota:'', fotos:[]}; }
+
+function loadLocalEstado(){
+  try{
+    const raw = localStorage.getItem(LOCAL_KEY);
+    if(raw) Object.assign(estadoMap, JSON.parse(raw));
+  }catch(e){ console.error('No se pudo leer el guardado local', e); }
+}
+function saveLocalEstado(){
+  try{ localStorage.setItem(LOCAL_KEY, JSON.stringify(estadoMap)); }
+  catch(e){ console.error('No se pudo guardar localmente (¿memoria llena?)', e); }
+}
+
+// Redimensiona y comprime una foto en el propio navegador para poder guardarla
+// como imagen local cuando no hay conexión a la nube (modo 'local').
+function fotoALocalDataUrl(file, maxDim=720, calidad=0.62){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onerror = () => reject(reader.error);
+    reader.onload = () => {
+      const img = new Image();
+      img.onerror = reject;
+      img.onload = () => {
+        let w = img.width, h = img.height;
+        if(w > h && w > maxDim){ h = Math.round(h*maxDim/w); w = maxDim; }
+        else if(h >= w && h > maxDim){ w = Math.round(w*maxDim/h); h = maxDim; }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', calidad));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function cardFor(id){ return document.querySelector(`.card[data-docid="${CSS.escape(id)}"]`); }
+
+function renderEstado(id){
+  const card = cardFor(id);
+  if(!card) return;
+  const est = estadoMap[id] || emptyEstado();
+  const starBtn = card.querySelector('.star-btn');
+  const noteBtn = card.querySelector('.note-btn');
+  const noteInput = card.querySelector('.note-input');
+  const photoStrip = card.querySelector('.photo-strip');
+
+  starBtn.textContent = est.favorito ? '★' : '☆';
+  starBtn.classList.toggle('on', !!est.favorito);
+  noteBtn.classList.toggle('has-note', !!(est.nota && est.nota.trim()));
+  if(document.activeElement !== noteInput) noteInput.value = est.nota || '';
+
+  const fotos = est.fotos || [];
+  let tiles = fotos.map(f=>`<span class="photo-tile"><img src="${f.url}" loading="lazy" alt=""><button class="rm" data-id="${id}" data-foto="${f.id}" title="Quitar foto">✕</button></span>`).join('');
+  if(fotos.length < MAX_FOTOS && storageMode!=='none'){
+    tiles += `<button class="photo-add" data-id="${id}" title="Añadir foto (máx. ${MAX_FOTOS})">+</button>`;
+  }
+  photoStrip.innerHTML = tiles;
+}
+
+function renderAllEstado(){ Object.keys(estadoMap).forEach(renderEstado); document.querySelectorAll('.card').forEach(c=>renderEstado(c.dataset.docid)); }
+
+async function saveEstado(id, patch){
+  if(storageMode==='none') return;
+  const current = estadoMap[id] || emptyEstado();
+  const next = Object.assign({}, current, patch, {updatedAt: new Date().toISOString()});
+  estadoMap[id] = next; // optimista
+  renderEstado(id);
+  if(storageMode==='db'){
+    try{ await db.doc('estado_playas/'+id).set(next); }
+    catch(e){ console.error('No se pudo guardar', id, e); }
+  } else {
+    saveLocalEstado();
+  }
+}
+
+function wireDelegatedEvents(){
+  const results = document.getElementById('results');
+
+  results.addEventListener('click', async (ev)=>{
+    const star = ev.target.closest('.star-btn');
+    if(star && !star.disabled){
+      const id = star.dataset.id;
+      const cur = estadoMap[id] || emptyEstado();
+      saveEstado(id, {favorito: !cur.favorito});
+      return;
+    }
+    const noteBtn = ev.target.closest('.note-btn');
+    if(noteBtn && !noteBtn.disabled){
+      const id = noteBtn.dataset.id;
+      const box = document.querySelector(`.note-box[data-id="${CSS.escape(id)}"]`);
+      box.hidden = !box.hidden;
+      if(!box.hidden) box.querySelector('textarea').focus();
+      return;
+    }
+    const addBtn = ev.target.closest('.photo-add');
+    if(addBtn){
+      const id = addBtn.dataset.id;
+      const input = document.querySelector(`.photo-input[data-id="${CSS.escape(id)}"]`);
+      input.click();
+      return;
+    }
+    const rmBtn = ev.target.closest('.rm');
+    if(rmBtn){
+      const id = rmBtn.dataset.id, fotoId = rmBtn.dataset.foto;
+      const cur = estadoMap[id] || emptyEstado();
+      const fotos = (cur.fotos||[]).filter(f=>f.id!==fotoId);
+      saveEstado(id, {fotos});
+      if(storageMode==='db' && assetsCap && !fotoId.startsWith('local-')){ try{ await assetsCap.delete(fotoId); }catch(e){} }
+      return;
+    }
+  });
+
+  results.addEventListener('change', async (ev)=>{
+    const input = ev.target.closest('.photo-input');
+    if(input && input.files && input.files[0]){
+      const id = input.dataset.id;
+      const cur = estadoMap[id] || emptyEstado();
+      if((cur.fotos||[]).length >= MAX_FOTOS || storageMode==='none'){ input.value=''; return; }
+      const file = input.files[0];
+      input.value = '';
+      try{
+        let fotoEntry;
+        if(storageMode==='db' && assetsCap){
+          const res = await assetsCap.upload(file);
+          fotoEntry = {id: res.id, url: res.url};
+        } else {
+          const dataUrl = await fotoALocalDataUrl(file);
+          fotoEntry = {id: 'local-'+Date.now()+'-'+Math.random().toString(36).slice(2), url: dataUrl};
+        }
+        const cur2 = estadoMap[id] || emptyEstado();
+        const fotos = (cur2.fotos||[]).slice(0, MAX_FOTOS-1).concat([fotoEntry]);
+        saveEstado(id, {fotos});
+      }catch(e){ console.error('No se pudo añadir la foto', e); }
+    }
+  });
+
+  results.addEventListener('blur', (ev)=>{
+    const ta = ev.target.closest && ev.target.closest('.note-input');
+    if(ta){ saveEstado(ta.dataset.id, {nota: ta.value}); }
+  }, true);
+}
+
+async function initCapabilities(){
+  // 1) Si la página está enmarcada dentro de una conversación de Claude, se usa
+  //    la nube (db/assets): favoritas y fotos sincronizadas y compartidas entre sesiones.
+  if(window.claude && window.claude.use){
+    try{ db = await window.claude.use('db'); }catch(e){ db = null; }
+    try{ assetsCap = await window.claude.use('assets'); }catch(e){ assetsCap = null; }
+  }
+
+  if(db){
+    storageMode = 'db';
+  } else {
+    // 2) Si no (enlace abierto directamente, HTML descargado, app de AppsGeyser),
+    //    se guarda en este dispositivo con localStorage.
+    try{
+      const t = '__test__'; localStorage.setItem(t,'1'); localStorage.removeItem(t);
+      storageMode = 'local';
+    }catch(e){ storageMode = 'none'; }
+  }
+
+  if(storageMode==='local') loadLocalEstado();
+
+  document.querySelectorAll('.star-btn').forEach(b=>{ b.disabled = (storageMode==='none'); b.title = storageMode!=='none' ? 'Marcar como favorita' : 'No disponible en este dispositivo'; });
+  document.querySelectorAll('.note-btn').forEach(b=>{ b.disabled = (storageMode==='none'); b.title = storageMode!=='none' ? 'Añadir nota' : 'No disponible en este dispositivo'; });
+  renderAllEstado();
+  applyFilters();
+
+  if(storageMode!=='db') return;
+
+  db.collection('estado_playas').limit(1000).onSnapshot((snap)=>{
+    snap.docChanges().forEach(ch=>{
+      const id = ch.doc.id;
+      if(ch.type==='removed'){ delete estadoMap[id]; }
+      else { estadoMap[id] = ch.doc.data() || emptyEstado(); }
+      renderEstado(id);
+    });
+    applyFilters();
+  }, (err)=>{ console.error('db estado_playas onSnapshot error', err); });
+}
+</script>
