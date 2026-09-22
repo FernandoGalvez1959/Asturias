@@ -48,6 +48,48 @@ RESTAURANTES_RAW = json.loads(r'''
 ]
 ''')
 
+REST_NUEVOS_RAW = json.loads(r'''
+[
+{"nombre":"Gloria","concejo":"Gijón","distincion":["Recomendado Michelín"],"especialidades":"Cocina asturiana actualizada, guisos y producto de temporada","tique_medio":"35-45€ aprox","desc":"Restaurante informal de los hermanos Nacho y Esther Manzano (Casa Marcial) en la Plaza Florencio Rodríguez. Figura en la Guía Michelín sin estrella."},
+{"nombre":"Gloria","concejo":"Oviedo","distincion":["Recomendado Michelín"],"especialidades":"Cocina asturiana actualizada, guisos y producto de temporada","tique_medio":"35-45€ aprox","desc":"Segunda casa de la familia Manzano en Oviedo, mismo concepto desenfadado que el de Gijón. Recomendado por la Guía Michelín."},
+{"nombre":"Abarike","concejo":"Gijón","distincion":["Recomendado Michelín"],"especialidades":"Pescados y mariscos del Cantábrico, menús degustación","tique_medio":"45-60€ aprox","desc":"Restaurante gastronómico liderado por la chef Lara Roguez, especializada en producto del mar. Presente en la Guía Michelín."},
+{"nombre":"Sancho La Merced","concejo":"Gijón","distincion":["Recomendado Michelín"],"especialidades":"Cocina asturiana de mercado","tique_medio":"35-50€ aprox","desc":"Restaurante gijonés de cocina actual con base en producto local, incluido en la selección de la Guía Michelín."},
+{"nombre":"Fūmu","concejo":"Gijón","distincion":["Recomendado Michelín"],"especialidades":"Fusión japonesa-asturiana, sushi con producto local","tique_medio":"30-45€ aprox","desc":"Propuesta de fusión nipona-asturiana en Gijón, recogida en la Guía Michelín."},
+{"nombre":"La Tabla","concejo":"Gijón (Fano)","distincion":["Recomendado Michelín"],"especialidades":"Cocina asturiana tradicional, carnes a la brasa","tique_medio":"30-45€ aprox","desc":"Clásico de la parroquia gijonesa de Fano, abierto desde 1973, recomendado en la Guía Michelín."},
+{"nombre":"El Recetario","concejo":"Gijón","distincion":["Recomendado Michelín"],"especialidades":"Cocina de mercado actualizada","tique_medio":"30-40€ aprox","desc":"Bib Gourmand de la Guía Michelín en Gijón: buena relación calidad-precio con cocina de temporada."},
+{"nombre":"Le Bistró","concejo":"Llanes","distincion":["Recomendado Michelín"],"especialidades":"Cocina de bistró franco-asturiana","tique_medio":"30-45€ aprox","desc":"Bib Gourmand de la Guía Michelín en Llanes, con un formato de bistró de producto."},
+{"nombre":"El Bálamu","concejo":"Llanes","distincion":["Recomendado Michelín"],"especialidades":"Pescado y marisco a la parrilla frente al mar","tique_medio":"40-60€ aprox","desc":"Chiringuito-restaurante de referencia junto a la playa de Toró, recomendado por la Guía Michelín."},
+{"nombre":"Cabo Vidio","concejo":"Cudillero (Soto de Luiña)","distincion":["Recomendado Michelín","Recomendado Repsol"],"especialidades":"Pescados y mariscos, terraza con vistas","tique_medio":"40-60€ aprox","desc":"Restaurante con terraza sobre el cabo, parada gastronómica clásica de la Costa Verde, citado por Michelín y Repsol."},
+{"nombre":"Casa Eutimio","concejo":"Colunga (Lastres)","distincion":["Recomendado Michelín"],"especialidades":"Merluza a la sidra, arroces y pescado de lonja","tique_medio":"35-50€ aprox","desc":"Clásico marinero del puerto de Lastres, recomendado en la Guía Michelín."},
+{"nombre":"El Cenador del Azul","concejo":"Mieres","distincion":["Recomendado Michelín"],"especialidades":"Cocina de autor de temporada","tique_medio":"35-50€ aprox","desc":"Propuesta de cocina de autor en el centro de Mieres, incluida en la Guía Michelín."},
+{"nombre":"El Pandora","concejo":"Avilés","distincion":["Recomendado Michelín"],"especialidades":"Cocina contemporánea de mercado","tique_medio":"35-50€ aprox","desc":"Restaurante de cocina actual en el casco histórico de Avilés, recomendado por Michelín."},
+{"nombre":"Casa Chuchu","concejo":"Mieres (Turón)","distincion":["Recomendado Michelín"],"especialidades":"Sidrería y cocina de cuchara","tique_medio":"25-40€ aprox","desc":"Casa de comidas tradicional de la cuenca minera, en la parroquia de Turón, citada por la Guía Michelín."},
+{"nombre":"Arraigo","concejo":"Llanera (Posada de Llanera)","distincion":["Recomendado Michelín"],"especialidades":"Cocina de raíz asturiana con toques actuales","tique_medio":"35-50€ aprox","desc":"Restaurante cercano al aeropuerto de Asturias con cocina de raíz reinterpretada, recomendado por Michelín."},
+{"nombre":"El Planeta","concejo":"Gijón","distincion":["Recomendado Repsol"],"especialidades":"Sidrería, pescados (sardinas, bonito)","tique_medio":"30-40€ aprox","desc":"Sidrería histórica de Cimadevilla, especializada en pescado a la parrilla; cuenta con Solete de la Guía Repsol."},
+{"nombre":"Casa Puyo","concejo":"Oviedo (Trubia)","distincion":["Recomendado Repsol"],"especialidades":"Cocina casera, platos de cuchara","tique_medio":"20-30€ aprox","desc":"Casa de comidas tradicional en la parroquia ovetense de Trubia, con Solete Repsol."},
+{"nombre":"Parrilla La Veguca","concejo":"Llanes","distincion":["Recomendado Repsol"],"especialidades":"Carnes y pescados a la brasa","tique_medio":"25-40€ aprox","desc":"Parrilla llanisca reconocida con Solete Repsol por su producto a la brasa."},
+{"nombre":"Meraki","concejo":"Oviedo","distincion":["Recomendado Repsol"],"especialidades":"Cocina mediterránea-asturiana de mercado","tique_medio":"25-35€ aprox","desc":"Restaurante informal en Oviedo con Solete Repsol, cocina de mercado en ambiente desenfadado."},
+{"nombre":"La Reguerina","concejo":"Villaviciosa","distincion":["Recomendado Repsol"],"especialidades":"Sidrería, cocina casera con huerta propia","tique_medio":"25-40€ aprox","desc":"Sidrería en la comarca de la sidra con Solete Repsol y producto de huerta propia."},
+{"nombre":"La Jamonería","concejo":"Oviedo","distincion":["Recomendado Repsol"],"especialidades":"Jamón ibérico y tapeo de producto selecto","tique_medio":"20-35€ aprox","desc":"Especialistas en jamón y tapeo de calidad en Oviedo, con Solete de la Guía Repsol."},
+{"nombre":"Tierra de Agua","concejo":"Caso","distincion":["Recomendado Repsol"],"especialidades":"Cocina de montaña","tique_medio":"20-30€ aprox","desc":"Restaurante-terraza en el Parque Natural de Redes (Caso), con Solete Repsol."},
+{"nombre":"Las Terrazas de Sardalla","concejo":"Ribadesella (Sardalla)","distincion":["Recomendado Repsol"],"especialidades":"Cocina tradicional asturiana con vistas","tique_medio":"25-35€ aprox","desc":"Terraza-restaurante con vistas al valle en Sardalla (Ribadesella), reconocida con Solete Repsol."},
+{"nombre":"La Mar de Fondo","concejo":"Navia","distincion":["Recomendado Repsol"],"especialidades":"Pescados y mariscos frente a la ría","tique_medio":"25-35€ aprox","desc":"Terraza junto a la ría de Navia con Solete de la Guía Repsol."},
+{"nombre":"Casa Benigna","concejo":"Ponga","distincion":["Recomendado Repsol"],"especialidades":"Fabada y cocina de puchero","tique_medio":"20-30€ aprox","desc":"Casa de comidas en el Parque Natural de Ponga, referencia de fabada con Solete Repsol."},
+{"nombre":"Casa Xico","concejo":"Llanes","distincion":["Recomendado Repsol"],"especialidades":"Fabada y platos de cuchara","tique_medio":"20-30€ aprox","desc":"Sidrería-asador tradicional en Llanes, distinguida con Solete de la Guía Repsol."},
+{"nombre":"Casa Pilar","concejo":"Llanes (Nueva)","distincion":["Recomendado Repsol"],"especialidades":"Fabada asturiana","tique_medio":"20-30€ aprox","desc":"Restaurante tradicional en Nueva de Llanes, célebre por su fabada; 1 Sol Repsol."},
+{"nombre":"Casa Adela","concejo":"Langreo","distincion":["Recomendado Repsol"],"especialidades":"Cocina casera y fabada","tique_medio":"20-30€ aprox","desc":"Casa de comidas de la cuenca del Nalón con Solete de la Guía Repsol."},
+{"nombre":"Casa Eladia","concejo":"Villaviciosa","distincion":["Recomendado Repsol"],"especialidades":"Cocina casera asturiana","tique_medio":"20-30€ aprox","desc":"Restaurante tradicional en la comarca de la sidra, con Solete Repsol."},
+{"nombre":"Casa Ricardo","concejo":"Ponga (Sellaño)","distincion":["Recomendado Repsol"],"especialidades":"Fabada y platos típicos de montaña","tique_medio":"20-30€ aprox","desc":"Casa de comidas de montaña en Sellaño (Ponga), con Solete de la Guía Repsol."},
+{"nombre":"La Nueva Allandesa","concejo":"Allande (Pola de Allande)","distincion":["Recomendado Repsol"],"especialidades":"Cocina tradicional del occidente asturiano","tique_medio":"20-30€ aprox","desc":"Restaurante de referencia en Pola de Allande, con Solete de la Guía Repsol."},
+{"nombre":"El Torneiro","concejo":"Villayón","distincion":["Recomendado Repsol"],"especialidades":"Cocina tradicional del occidente asturiano","tique_medio":"20-30€ aprox","desc":"Restaurante rural en Villayón, reconocido con Solete Repsol."},
+{"nombre":"Casa Poli","concejo":"Llanes (Vidiago)","distincion":["Recomendado Repsol"],"especialidades":"Marisco y pescado","tique_medio":"25-40€ aprox","desc":"Clásico de Vidiago (Llanes) con la distinción 'Solete con Solera' de la Guía Repsol."},
+{"nombre":"Casa Marisa","concejo":"Ribadedeva (Colombres)","distincion":["Recomendado Repsol"],"especialidades":"Cocina asturiana de producto","tique_medio":"25-40€ aprox","desc":"Restaurante de referencia en el oriente asturiano, en Colombres, citado como parada gastronómica de la A-8."},
+{"nombre":"Leypon","concejo":"Llanes","distincion":["Recomendado Repsol"],"especialidades":"Pescados y mariscos","tique_medio":"25-40€ aprox","desc":"Restaurante costero en Llanes especializado en producto del mar, incluido entre las paradas gastronómicas recomendadas por Repsol."},
+{"nombre":"El Cafetín","concejo":"Colunga (Lastres)","distincion":["Recomendado Repsol"],"especialidades":"Cocina marinera con vistas al puerto","tique_medio":"25-40€ aprox","desc":"Restaurante con vistas al puerto de Lastres, recomendado por la Guía Repsol."},
+{"nombre":"Casa Seín","concejo":"Ribadedeva (Bustio)","distincion":["Recomendado Repsol"],"especialidades":"Angulas y marisco","tique_medio":"30-50€ aprox","desc":"Especialistas en angulas y marisco en Bustio, junto a la ría del Deva; con Solete de la Guía Repsol."}
+]
+''')
+
 SIDRERIAS_RAW = json.loads(r'''
 [
 {"nombre":"Sobiñagu","concejo":"Gijón","premiada":true,"premio":"Sidrería con más encanto, Gijón de Sidra 2025; Mejor Sidrería, Gijón de Sidra 2023","especialidad":"Cocina asturiana con producto de mar y su 'Bombón Sobiñagu'","desc":"Sidrería-restaurante de ambiente animado en Gijón, habitual entre las más premiadas del certamen Gijón de Sidra."},
@@ -108,6 +150,43 @@ SIDRERIAS_RAW = json.loads(r'''
 ]
 ''')
 
+LAGARES_RAW = json.loads(r'''
+[
+{"nombre":"Sidra Trabanco","concejo":"Gijón (Lavandera)","premiada":true,"premio":"Mejor Sidra - Gijón de Sidra 2025 (Sidra Tradicional Amarilla)","especialidad":"Sidra natural tradicional","desc":"Uno de los llagares más conocidos de Asturias, con visitas guiadas, tienda y sidrería propia junto a las pumaradas."},
+{"nombre":"Sidra Acebal","concejo":"Gijón (Cabueñes)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar tradicional en Cabueñes, parada habitual de la Ruta de la Sidra de Gijón, con venta directa al público."},
+{"nombre":"Sidra Piñera","concejo":"Gijón (Deva)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar familiar en la carretera Caldones-Deva, con producción y venta directa en el propio recinto."},
+{"nombre":"Sidra J.R.","concejo":"Gijón (Alto Infanzón)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Pequeño llagar familiar gijonés con venta directa, menos conocido que los grandes llagares de la zona."},
+{"nombre":"Sidra Menéndez","concejo":"Gijón (Fano)","premiada":true,"premio":"Manzana acogida a la D.O.P. Sidra de Asturias; pomaradas certificadas en cultivo ecológico","especialidad":"Sidra ecológica D.O.P.","desc":"Llagar con larga tradición familiar en Fano, elaborado en toneles de castaño, con tienda propia y venta directa."},
+{"nombre":"Llagar Bernueces","concejo":"Gijón (Bernueces)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar tradicional gijonés, una de las seis paradas oficiales de la Ruta de la Sidra de Gijón."},
+{"nombre":"Llagar de Sidra Cabueñes","concejo":"Gijón (Cabueñes)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar-sidrería en el barrio de Cabueñes con producción propia y venta directa."},
+{"nombre":"Sidra Canal","concejo":"Gijón (Lavandera)","premiada":false,"premio":"","especialidad":"Sidra natural (elaborando desde 1955)","desc":"Llagar familiar gijonés con más de 65 años de tradición, sidrería propia y venta directa."},
+{"nombre":"Sidra Fran","concejo":"Siero (Lugones)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar en Lugones con tienda y sidrería, punto de venta directa en el área metropolitana de Siero."},
+{"nombre":"Llagar Quelo","concejo":"Siero (Tiñana)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar-restaurante en Tiñana con producción propia, venta directa y organización de eventos."},
+{"nombre":"Sidra Fonciello","concejo":"Siero","premiada":false,"premio":"","especialidad":"Sidra natural, venta online","desc":"Llagar sierense con tienda física y online de sidra natural, además de visitas al lagar."},
+{"nombre":"Sidra Alonso","concejo":"Langreo","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar-sidrería en Langreo, uno de los pocos puntos de venta directa de sidra en la cuenca del Nalón."},
+{"nombre":"Llagar Panizales","concejo":"Mieres","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar en Mieres con venta y degustación, representando la producción sidrera de las cuencas mineras."},
+{"nombre":"Sidra Herminio","concejo":"Oviedo (Colloto)","premiada":false,"premio":"","especialidad":"Sidra natural (fundada en 1943)","desc":"Histórico llagar familiar en Colloto con más de 80 años de tradición, llagar propio y venta directa."},
+{"nombre":"Sidra Castañón","concejo":"Villaviciosa (Quintueles)","premiada":true,"premio":"Ganador del Concurso de Sidra Natural con su marca Val de Boides D.O.P.","especialidad":"Val de Boides D.O.P.","desc":"Llagar familiar desde 1938, referente de la D.O.P. Sidra de Asturias con numerosos premios en concursos de sidra natural."},
+{"nombre":"Sidra Cortina","concejo":"Villaviciosa (Amandi)","premiada":false,"premio":"","especialidad":"Sidra natural y sidra de hielo","desc":"Llagar en Amandi, cuna histórica de la sidra asturiana, con gama que incluye sidra de hielo y venta directa."},
+{"nombre":"Sidra El Gaitero","concejo":"Villaviciosa (La Espuncia)","premiada":true,"premio":"Trayectoria de reconocimientos desde 1890; marca sidrera asturiana más exportada internacionalmente","especialidad":"Sidra achampanada/espumosa","desc":"La sidrera más antigua y de mayor proyección internacional de Asturias, con museo, visitas guiadas y tienda."},
+{"nombre":"Llagar Sidra Coro","concejo":"Villaviciosa","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar villaviciosino con producción y venta directa, integrado en la ruta sidrera local."},
+{"nombre":"Llagar Sidra Vigón","concejo":"Villaviciosa (Tornón)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar familiar en Tornón con tienda propia y venta directa al público."},
+{"nombre":"Llagar Sidra Frutos","concejo":"Villaviciosa (Quintueles)","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar en Quintueles con venta directa, uno de los puntos habituales de la fiesta sidrera de Villaviciosa."},
+{"nombre":"Llagar Mayador (M. Busto)","concejo":"Villaviciosa","premiada":true,"premio":"Ganador de la cata popular en la Fiesta de la Sidra Natural de Villaviciosa","especialidad":"Sidra natural","desc":"Llagar villaviciosino reconocido en la cata popular de la fiesta local de la sidra."},
+{"nombre":"Llagar Buznego","concejo":"Villaviciosa","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar histórico, participante habitual de la Fiesta de la Sidra Natural de Villaviciosa."},
+{"nombre":"Llagar El Gobernador","concejo":"Villaviciosa (Sopeña)","premiada":true,"premio":"Premio a la etiqueta más bonita, Fiesta de la Sidra de Villaviciosa","especialidad":"Sidra Sopeña","desc":"Llagar en Sopeña conocido por su marca 'Sopeña' y reconocido por el diseño de su etiqueta."},
+{"nombre":"Llagar Sidra Muñiz","concejo":"Villaviciosa","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar villaviciosino con venta directa y presencia habitual en la fiesta local de la sidra."},
+{"nombre":"Sidra Viuda de Angelón (Pomar)","concejo":"Nava (Villa)","premiada":true,"premio":"Mejor Sidra de Asturias (varios años desde 1982); Sidra Más Prestosa - Gijón de Sidra 2025; Oro en Sagardo Forum 2025","especialidad":"Sidra de hielo, natural y achampanada","desc":"Uno de los llagares más laureados de Asturias, con décadas de premios en concursos regionales e internacionales."},
+{"nombre":"Llagar Orizón","concejo":"Nava","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar navetu con venta directa, integrado en la ruta sidrera de la Comarca de la Sidra."},
+{"nombre":"Llagar Sidra Zapatero","concejo":"Nava","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar familiar en Nava con producción y venta directa al público."},
+{"nombre":"Sidra Viuda de Corsino","concejo":"Nava","premiada":true,"premio":"Mejor Sidra Local - Festival de la Sidra de Nava 2026","especialidad":"Sidra natural","desc":"Llagar histórico de Nava galardonado como mejor sidra local en el festival del concejo."},
+{"nombre":"Llagar Foncueva","concejo":"Sariego","premiada":true,"premio":"Mencionado entre las mejores sidras de Asturias y del Festival de Nava (junto a Viuda de Corsino)","especialidad":"Sidra natural","desc":"Llagar sariegano reconocido entre las mejores sidras de la región en certámenes recientes."},
+{"nombre":"Llagar Ismael Bastián","concejo":"Sariego","premiada":false,"premio":"","especialidad":"Sidra natural artesanal","desc":"Pequeño llagar familiar en Sariego, de producción limitada, con visitas y venta directa."},
+{"nombre":"Sidra Crespo","concejo":"Colunga","premiada":false,"premio":"","especialidad":"Sidra natural","desc":"Llagar en Colunga con visitas guiadas organizadas junto al ayuntamiento y venta directa."},
+{"nombre":"Llagar Finca Ecológica El Noceu","concejo":"Colunga (Santiago)","premiada":false,"premio":"","especialidad":"Sidra ecológica","desc":"Llagar ecológico en Santiago de Colunga, con producción respetuosa con el medio y venta directa."}
+]
+''')
+
 RUTA_FOTO_INTERIOR_RAW = json.loads(r'''
 [
 {"nombre":"Lagos de Covadonga (Enol y Ercina)","concejo":"Cangas de Onís","tipo":"lago","desc":"Dos lagos glaciares a más de 1000 m de altitud rodeados de picos calizos; reflejos del Macizo Occidental y ganado pastando en los Picos de Europa.","mejor_luz":"Amanecer, antes de la afluencia de tráfico y con niebla frecuente en las mañanas de otoño","dist_km_aprox":95},
@@ -147,6 +226,8 @@ DIST_EXTRA = {
     "Oviedo": 28, "Avilés": 25, "Siero": 20, "Cabranes": 35, "Piloña": 45,
     "Parres": 55, "Cangas de Onís": 75, "Cangas del Narcea": 110, "Lena": 55,
     "Aller": 65, "Nava": 38, "Grado": 45, "Salas": 65, "Vegadeo": 130,
+    "Llanera": 28, "Mieres": 48, "Langreo": 32, "Sariego": 42,
+    "Caso": 78, "Ponga": 85, "Allande": 95, "Villayón": 90,
 }
 
 
@@ -162,8 +243,13 @@ def build_extra(concejos):
     dist_lookup.update(DIST_EXTRA)
 
     restaurantes = []
-    for r in RESTAURANTES_RAW:
+    vistos = set()
+    for r in RESTAURANTES_RAW + REST_NUEVOS_RAW:
         concejo_base, localidad = _parse_concejo(r["concejo"])
+        clave = (r["nombre"].strip().lower(), concejo_base.strip().lower())
+        if clave in vistos:
+            continue
+        vistos.add(clave)
         restaurantes.append(dict(
             nombre=r["nombre"], concejo=concejo_base, localidad=localidad,
             distincion=r["distincion"], especialidades=r["especialidades"],
@@ -181,6 +267,16 @@ def build_extra(concejos):
             dist_km=dist_lookup[concejo_base],
         ))
 
+    lagares = []
+    for l in LAGARES_RAW:
+        concejo_base, localidad = _parse_concejo(l["concejo"])
+        lagares.append(dict(
+            nombre=l["nombre"], concejo=concejo_base, localidad=localidad,
+            premiada=l["premiada"], premio=l["premio"],
+            especialidad=l["especialidad"], desc=l["desc"],
+            dist_km=dist_lookup[concejo_base],
+        ))
+
     ruta_foto_interior = []
     for p in RUTA_FOTO_INTERIOR_RAW:
         ruta_foto_interior.append(dict(
@@ -189,4 +285,4 @@ def build_extra(concejos):
             dist_km=p["dist_km_aprox"],
         ))
 
-    return restaurantes, sidrerias, ruta_foto_interior
+    return restaurantes, sidrerias, ruta_foto_interior, lagares

@@ -1,6 +1,6 @@
 # Asturias
 
-App web de una sola página con guía personal de Asturias: 199 playas del Principado, rutas fotográficas (costa e interior), restaurantes y sidrerías. Pensada para uso personal, instalable como app (PWA) desde el navegador, y también empaquetable como app Android (por ejemplo con AppsGeyser).
+App web de una sola página con guía personal de Asturias: 199 playas del Principado, rutas fotográficas (costa e interior), restaurantes, sidrerías y lagares. Pensada para uso personal, instalable como app (PWA) directamente desde el navegador.
 
 ## Contenido del repositorio
 
@@ -12,7 +12,8 @@ icons/                → Iconos de la app (192px, 512px y 1024px)
 src/
   template.html       → Plantilla fuente de la app (HTML + CSS + JS), sin los datos incrustados
   build_data.py        → Script Python que genera datos.json / datos.min.json (playas)
-  extra_data.py        → Datos de restaurantes, sidrerías y ruta fotográfica de interior
+  extra_data.py        → Datos de restaurantes, sidrerías, lagares y ruta fotográfica de interior
+  build_app.py          → Genera index.html a partir de template.html + datos.min.json
   datos.json            → Datos completos en formato legible
   datos.min.json        → Mismos datos, minificados (los que se incrustan en index.html)
 ```
@@ -34,7 +35,4 @@ Un archivo HTML suelto, o abierto directamente sin pasar por GitHub Pages, solo 
 
 - `index.html` es autocontenido: los datos de playas, rutas, restaurantes y sidrerías están incrustados en un bloque `<script type="application/json">`. Para modificarlos, edita `src/build_data.py` / `src/extra_data.py` (o los JSON directamente) y vuelve a generar `index.html` insertando el JSON minificado en `src/template.html`.
 - Favoritos, notas y fotos propias se guardan en el propio dispositivo (localStorage), no se suben a ningún sitio.
-
-## Empaquetar como app Android (alternativa a la instalación PWA)
-
-`index.html` puede usarse directamente como la URL/archivo fuente en AppsGeyser u otro empaquetador de WebView para generar un `.apk`.
+- Hay una pestaña de "Copia de seguridad" dentro de la app para descargar y restaurar esos datos guardados, por si se pierden.

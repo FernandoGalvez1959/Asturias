@@ -371,10 +371,11 @@ print(f"Total concejos: {len(concejos)}")
 print(f"Total playas: {len(playas)}")
 
 from extra_data import build_extra
-restaurantes, sidrerias, ruta_foto_interior = build_extra(concejos)
+restaurantes, sidrerias, ruta_foto_interior, lagares = build_extra(concejos)
 print(f"Total restaurantes: {len(restaurantes)}")
 print(f"Total sidrerías: {len(sidrerias)}")
 print(f"Total rutas fotográficas de interior: {len(ruta_foto_interior)}")
+print(f"Total lagares: {len(lagares)}")
 
 data = dict(
     concejos=[dict(nombre=c["nombre"], zona=c["zona"], dist_km=c["dist_km"], lat=c["lat"], lon=c["lon"], mareas_slug=c["mareas_slug"], n=len(c["beaches"])) for c in concejos],
@@ -383,6 +384,7 @@ data = dict(
     ruta_foto_interior=ruta_foto_interior,
     restaurantes=restaurantes,
     sidrerias=sidrerias,
+    lagares=lagares,
 )
 
 with open("playas.json", "w", encoding="utf-8") as f:

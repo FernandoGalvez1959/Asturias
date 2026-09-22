@@ -179,6 +179,14 @@
   footer p{max-width:70ch;margin:0 0 8px}
   .soon-panel{padding:60px 20px;text-align:center;color:var(--ink-dim)}
   .soon-panel h3{color:var(--ink);font-size:21px;margin:0 0 8px}
+  .backup-panel{padding:30px 0 60px;max-width:60ch}
+  .backup-panel h3{color:var(--ink);font-size:21px;margin:0 0 12px}
+  .backup-panel .hint{color:var(--ink-dim);font-size:14px;line-height:1.5;margin:0 0 16px}
+  .backup-actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+  #backup-export-btn, .backup-import-label{border:1px solid var(--line);background:var(--sea);border-color:var(--sea);color:#fff;padding:12px 18px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .backup-status{font-size:14px;font-weight:600;min-height:20px;margin:10px 0}
+  .backup-status.ok{color:var(--sea)}
+  .backup-status.err{color:#c0392b}
   @media (max-width:560px){
     .concejo-head .gmaps-btn{margin-left:0}
     .count{margin-left:0;width:100%}
@@ -188,13 +196,15 @@
 <header class="top">
   <div class="wrap">
     <h1>🏖️ Asturias</h1>
-    <p class="sub">Guía personal de Asturias, siempre con la distancia aproximada en coche desde Gijón: las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo; rutas fotográficas de costa (miradores, faros, pueblos marineros) y de interior (Picos de Europa, Somiedo, cascadas, desfiladeros); restaurantes con estrella Michelín, Sol Repsol o muy bien valorados; y sidrerías tradicionales, con las premiadas destacadas.</p>
+    <p class="sub">Guía personal de Asturias, siempre con la distancia aproximada en coche desde Gijón: las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo; rutas fotográficas de costa (miradores, faros, pueblos marineros) y de interior (Picos de Europa, Somiedo, cascadas, desfiladeros); restaurantes con estrella Michelín, Sol Repsol o recomendados en esas guías; sidrerías tradicionales con las premiadas destacadas; y lagares donde comprar sidra directamente al productor.</p>
     <nav class="tabs">
       <button class="active" data-tab="playas">🏖️ Playas</button>
       <button data-tab="foto">📷 Ruta fotográfica</button>
       <button data-tab="restaurantes">🍽️ Restaurantes</button>
       <button data-tab="sidrerias">🍎 Sidrerías</button>
+      <button data-tab="lagares">🍏 Lagares</button>
       <button class="soon" data-tab="sitios">Qué ver <span style="opacity:.7">(próximamente)</span></button>
+      <button data-tab="backup">💾 Copia de seguridad</button>
     </nav>
   </div>
 </header>
@@ -314,7 +324,7 @@
   </div>
 </div>
 <main class="wrap"><div id="results-rest"></div></main>
-<div class="wrap"><p class="foto-disclaimer">Restaurantes de Asturias con estrella Michelín, Sol Repsol o muy bien valorados en Google (investigación web, septiembre 2026). Tiques medios orientativos por persona (sin bebida, salvo que se indique lo contrario); pueden variar según menú, temporada y carta. Distancia aproximada en coche desde Gijón.</p></div>
+<div class="wrap"><p class="foto-disclaimer">Restaurantes de Asturias con estrella Michelín, Sol Repsol, mencionados en esas guías sin distinción, o muy bien valorados en Google (investigación web, septiembre 2026). Tiques medios orientativos por persona (sin bebida, salvo que se indique lo contrario); pueden variar según menú, temporada y carta. Distancia aproximada en coche desde Gijón.</p></div>
 </div>
 
 <div id="tab-sidrerias" hidden>
@@ -329,6 +339,41 @@
 </div>
 <main class="wrap"><div id="results-sidra"></div></main>
 <div class="wrap"><p class="foto-disclaimer">Sidrerías de Asturias, con las premiadas en concursos de escanciado y certámenes sidreros (como Gijón de Sidra o el Campeonato de Escanciadores de Asturias) destacadas (investigación web, septiembre 2026). No es un listado exhaustivo de las cientos de sidrerías de la región, sino una selección amplia repartida por toda Asturias.</p></div>
+</div>
+
+<div id="tab-lagares" hidden>
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-row">
+      <input type="search" id="qla" placeholder="Buscar lagar…">
+      <select id="f-concejo-lagar"><option value="">Todos los concejos</option></select>
+      <span class="count" id="count-lagares"></span>
+    </div>
+    <div class="filters-row">
+      <button type="button" class="fav-toggle" id="lagar-premiado-chip">🏆 Solo premiados</button>
+      <button type="button" class="fav-toggle" id="lagar-gijon-chip">📍 Solo de Gijón</button>
+    </div>
+  </div>
+</div>
+<main class="wrap"><div id="results-lagares"></div></main>
+<div class="wrap"><p class="foto-disclaimer">Llagares y lagares de sidra de Asturias con venta directa al público (no son sidrerías-restaurante, sino productores donde comprar sidra) — investigación web, septiembre 2026. Los premiados cuentan con reconocimientos en concursos de sidra natural (Gijón de Sidra, Fiesta de la Sidra de Villaviciosa, Festival de Nava, D.O.P. Sidra de Asturias, etc.). No es un listado exhaustivo.</p></div>
+</div>
+
+<div id="tab-backup" hidden>
+<div class="wrap">
+  <div class="backup-panel">
+    <h3>💾 Copia de seguridad</h3>
+    <p class="hint">Tus favoritas, notas y fotos se guardan en este dispositivo (o en esta conversación de Claude). Por si las moscas — pierdes el móvil, cambias de navegador, borras datos… — puedes descargar aquí una copia de seguridad y restaurarla cuando la necesites.</p>
+    <div class="backup-actions">
+      <button type="button" id="backup-export-btn">⬇️ Descargar copia de seguridad</button>
+      <label class="backup-import-label" for="backup-import-input">⬆️ Restaurar copia de seguridad
+        <input type="file" id="backup-import-input" accept="application/json,.json" hidden>
+      </label>
+    </div>
+    <p class="backup-status" id="backup-status"></p>
+    <p class="hint">Restaurar una copia añade/actualiza tus favoritas, notas y fotos guardadas — no borra lo que ya tengas guardado aquí, salvo que la copia contenga una versión distinta de la misma ficha (entonces gana la más reciente).</p>
+  </div>
+</div>
 </div>
 
 <div id="tab-sitios" hidden><div class="wrap"><div class="soon-panel"><h3>🗺️ Qué ver</h3><p>Próxima ampliación de la guía: pueblos, miradores y rutas para completar el itinerario.</p></div></div></div>
@@ -348,7 +393,6 @@
 
 <footer>
   <div class="wrap">
-    <p><strong>Sobre los datos:</strong> recopilados de fuentes públicas (guías turísticas de Asturias) en septiembre de 2026. Las distancias son aproximadas en coche a nivel de concejo (municipio) — las playas del mismo concejo comparten aproximadamente la misma distancia. Los botones "Llegar" abren Google Maps; los botones "Viento" abren Windy.com centrado en la zona de la playa; los botones "Mareas" y "Temperatura" abren tablademareas.com del punto de referencia más cercano — todos en pestaña nueva (o en una ventana emergente dentro de la app si el enlace no se puede abrir automáticamente).</p>
     <p>Ilustraciones esquemáticas generadas a partir de las características de cada playa (no son fotografías). Puedes marcar tus favoritas con la estrella, añadir hasta 3 fotos propias y una nota personal en cada ficha — se guardan en esta app.</p>
   </div>
 </footer>
@@ -671,6 +715,7 @@ const REST_FILTERS = [
   {key:'michelin', label:'⭐ Estrella Michelín'},
   {key:'sol', label:'☀️ Sol Repsol'},
   {key:'google', label:'👍 Muy valorado en Google'},
+  {key:'gijon', label:'📍 De Gijón'},
 ];
 function restBadgeKey(d){ return d.includes('Michelín') ? 'michelin' : (d.includes('Sol') ? 'sol' : 'google'); }
 function restDocId(r){ return 'rest--'+slug(r.concejo)+'--'+slug(r.nombre); }
@@ -681,7 +726,9 @@ function restCardHTML(r){
   const metaTxt = (r.dist_km===0 && !r.localidad) ? distTxt : `${lugarTxt} · ${distTxt}`;
   const gmapQ = encodeURIComponent(`${r.nombre}, ${r.localidad||r.concejo}, Asturias, España`);
   const badgesHTML = r.distincion.map(d=>`<span class="dist-badge badge-${restBadgeKey(d)}">${d}</span>`).join('');
-  return `<article class="rest-card" data-docid="${restDocId(r)}" data-name="${r.nombre.toLowerCase()}" data-concejo="${r.concejo}" data-dist="${r.distincion.map(restBadgeKey).join(',')}">
+  const distKeys = r.distincion.map(restBadgeKey);
+  if(r.concejo==='Gijón') distKeys.push('gijon');
+  return `<article class="rest-card" data-docid="${restDocId(r)}" data-name="${r.nombre.toLowerCase()}" data-concejo="${r.concejo}" data-dist="${distKeys.join(',')}">
     <div class="rest-head"><h4>${r.nombre}</h4><span class="tique">${r.tique_medio}</span></div>
     <div class="badges">${badgesHTML}</div>
     <p class="desc">${r.desc}</p>
@@ -773,6 +820,79 @@ function applySidraFilters(){
   });
   const countEl = document.getElementById('count-sidra');
   if(countEl) countEl.textContent = `${shown} de ${total} sidrerías`;
+}
+
+// ---------- lagares ----------
+function lagarDocId(l){ return 'lagar--'+slug(l.concejo)+'--'+slug(l.nombre); }
+
+function lagarCardHTML(l){
+  const distTxt = l.dist_km===0 ? 'En Gijón' : `≈ ${l.dist_km.toFixed(0)} km de Gijón`;
+  const lugarTxt = l.localidad ? `${l.localidad} (${l.concejo})` : l.concejo;
+  const metaTxt = (l.dist_km===0 && !l.localidad) ? distTxt : `${lugarTxt} · ${distTxt}`;
+  const gmapQ = encodeURIComponent(`${l.nombre}, ${l.localidad||l.concejo}, Asturias, España`);
+  return `<article class="sidra-card" data-docid="${lagarDocId(l)}" data-name="${l.nombre.toLowerCase()}" data-concejo="${l.concejo}" data-premiada="${l.premiada?1:0}">
+    <div class="rest-head"><h4>${l.nombre}</h4>${l.premiada?'<span class="badge-premio">🏆 Premiado</span>':''}</div>
+    ${l.premiada && l.premio ? `<p class="premio-txt">${l.premio}</p>` : ''}
+    <p class="desc">${l.desc}</p>
+    <p class="especialidades"><b>Especialidad:</b> ${l.especialidad}</p>
+    <div class="meta">${metaTxt}</div>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+    </div>
+  </article>`;
+}
+
+function populateLagarConcejoFilter(){
+  const sel = document.getElementById('f-concejo-lagar');
+  if(!sel) return;
+  const concejos = [...new Set((DATA.lagares||[]).map(l=>l.concejo))].sort((a,b)=>a.localeCompare(b,'es'));
+  concejos.forEach(c=>{
+    const opt = document.createElement('option');
+    opt.value = c; opt.textContent = c;
+    sel.appendChild(opt);
+  });
+}
+
+let lagarPremiadoOnly = false, lagarGijonOnly = false;
+function initLagaresTab(){
+  populateLagarConcejoFilter();
+  const items = (DATA.lagares||[]).slice().sort((a,b)=>a.dist_km-b.dist_km);
+  document.getElementById('results-lagares').innerHTML = items.map(lagarCardHTML).join('');
+  const qla = document.getElementById('qla');
+  if(qla) qla.addEventListener('input', applyLagaresFilters);
+  const selConcejo = document.getElementById('f-concejo-lagar');
+  if(selConcejo) selConcejo.addEventListener('change', applyLagaresFilters);
+  const chipPremio = document.getElementById('lagar-premiado-chip');
+  if(chipPremio) chipPremio.addEventListener('click', function(){
+    lagarPremiadoOnly = !lagarPremiadoOnly;
+    this.classList.toggle('on', lagarPremiadoOnly);
+    applyLagaresFilters();
+  });
+  const chipGijon = document.getElementById('lagar-gijon-chip');
+  if(chipGijon) chipGijon.addEventListener('click', function(){
+    lagarGijonOnly = !lagarGijonOnly;
+    this.classList.toggle('on', lagarGijonOnly);
+    applyLagaresFilters();
+  });
+  applyLagaresFilters();
+}
+
+function applyLagaresFilters(){
+  const q = (document.getElementById('qla')?.value||'').trim().toLowerCase();
+  const concejo = document.getElementById('f-concejo-lagar')?.value||'';
+  let total=0, shown=0;
+  document.querySelectorAll('#results-lagares .sidra-card').forEach(card=>{
+    total++;
+    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+    const matchesConcejo = !concejo || card.dataset.concejo===concejo;
+    const matchesPremio = !lagarPremiadoOnly || card.dataset.premiada==='1';
+    const matchesGijon = !lagarGijonOnly || card.dataset.concejo==='Gijón';
+    const visible = matchesQ && matchesConcejo && matchesPremio && matchesGijon;
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+  const countEl = document.getElementById('count-lagares');
+  if(countEl) countEl.textContent = `${shown} de ${total} lagares`;
 }
 
 // ---------- render principal ----------
@@ -873,13 +993,14 @@ function init(){
   initFotoSubtabs();
   initRestTab();
   initSidraTab();
+  initLagaresTab();
 
   document.querySelectorAll('nav.tabs button').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       if(btn.classList.contains('soon')) return;
       document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
-      ['playas','foto','restaurantes','sidrerias','sitios'].forEach(t=>{
+      ['playas','foto','restaurantes','sidrerias','lagares','sitios','backup'].forEach(t=>{
         document.getElementById('tab-'+t).hidden = (t!==btn.dataset.tab);
       });
     });
@@ -888,6 +1009,7 @@ function init(){
   wireDelegatedEvents();
   wireExternalLinks();
   initCapabilities();
+  initBackupTab();
 }
 
 // Abre enlaces externos (Viento/Mareas/Llegar/Ruta) de forma robusta: en algunas apps
@@ -949,7 +1071,7 @@ function ocultarEnlaceManual(){
 // (declaradas antes de init() porque applyFilters() las usa ya en el primer render)
 // storageMode: 'db' (dentro de una conversación de Claude) | 'local' (guardado en este dispositivo,
 // para el enlace abierto directamente, el HTML descargado o la app de AppsGeyser) | 'none'
-let db = null, assetsCap = null, storageMode = 'none';
+let db = null, assetsCap = null, downloadsCap = null, storageMode = 'none';
 const estadoMap = {}; // docId -> {favorito, nota, fotos:[{id,url}]}
 const MAX_FOTOS = 3;
 const LOCAL_KEY = 'playas_asturias_estado_v1';
@@ -1106,6 +1228,7 @@ async function initCapabilities(){
   if(window.claude && window.claude.use){
     try{ db = await window.claude.use('db'); }catch(e){ db = null; }
     try{ assetsCap = await window.claude.use('assets'); }catch(e){ assetsCap = null; }
+    try{ downloadsCap = await window.claude.use('downloads'); }catch(e){ downloadsCap = null; }
   }
 
   if(db){
@@ -1137,5 +1260,107 @@ async function initCapabilities(){
     });
     applyFilters();
   }, (err)=>{ console.error('db estado_playas onSnapshot error', err); });
+}
+
+// ---------- copia de seguridad (exportar / restaurar favoritas, notas y fotos) ----------
+function setBackupStatus(msg, tipo){
+  const el = document.getElementById('backup-status');
+  if(!el) return;
+  el.textContent = msg;
+  el.className = 'backup-status' + (tipo ? ' '+tipo : '');
+}
+
+async function exportEstado(){
+  const payload = {
+    app: 'asturias',
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    estado: estadoMap,
+  };
+  const text = JSON.stringify(payload, null, 1);
+  const n = Object.keys(estadoMap).length;
+  const fecha = new Date().toISOString().slice(0,10);
+  const filename = `asturias-copia-${fecha}.json`;
+
+  if(downloadsCap){
+    // Dentro de una conversación de Claude: la descarga se ofrece via la capacidad "downloads".
+    try{
+      await downloadsCap.save({filename, data: text});
+      setBackupStatus(n ? `✅ Copia descargada (${n} fichas guardadas).` : '✅ Copia descargada (todavía no tienes favoritas, notas ni fotos guardadas).', 'ok');
+    }catch(e){
+      console.error('No se pudo exportar la copia de seguridad (downloads)', e);
+      setBackupStatus('⚠️ No se pudo descargar el archivo (puede que hayas cancelado la descarga).', 'err');
+    }
+    return;
+  }
+
+  try{
+    const blob = new Blob([text], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+    setBackupStatus(n ? `✅ Copia descargada (${n} fichas guardadas).` : '✅ Copia descargada (todavía no tienes favoritas, notas ni fotos guardadas).', 'ok');
+  }catch(e){
+    console.error('No se pudo exportar la copia de seguridad', e);
+    setBackupStatus('⚠️ No se pudo generar el archivo de copia de seguridad.', 'err');
+  }
+}
+
+async function importEstado(file){
+  setBackupStatus('Restaurando…', '');
+  try{
+    const text = await file.text();
+    const payload = JSON.parse(text);
+    const incoming = (payload && typeof payload==='object' && payload.estado && typeof payload.estado==='object') ? payload.estado : null;
+    if(!incoming){ setBackupStatus('⚠️ El archivo no parece una copia de seguridad válida de Asturias.', 'err'); return; }
+
+    let restauradas = 0;
+    const paraGuardar = [];
+    for(const id of Object.keys(incoming)){
+      const nuevo = incoming[id];
+      if(!nuevo || typeof nuevo!=='object') continue;
+      const actual = estadoMap[id];
+      // si ya existe una versión con fecha más reciente, no se sobrescribe
+      if(actual && actual.updatedAt && nuevo.updatedAt && new Date(actual.updatedAt) > new Date(nuevo.updatedAt)) continue;
+      estadoMap[id] = Object.assign(emptyEstado(), nuevo);
+      paraGuardar.push(id);
+      restauradas++;
+    }
+
+    if(storageMode==='db' && db){
+      await Promise.all(paraGuardar.map(id => db.doc('estado_playas/'+id).set(estadoMap[id]).catch(e=>console.error('No se pudo restaurar', id, e))));
+    } else if(storageMode==='local'){
+      saveLocalEstado();
+    }
+
+    renderAllEstado();
+    applyFilters();
+    if(typeof applyRestFilters==='function') applyRestFilters();
+    if(typeof applySidraFilters==='function') applySidraFilters();
+    if(typeof applyLagaresFilters==='function') applyLagaresFilters();
+    if(typeof applyFotoFilters==='function') applyFotoFilters();
+    if(typeof applyFotoInteriorFilters==='function') applyFotoInteriorFilters();
+
+    setBackupStatus(restauradas ? `✅ Copia restaurada: ${restauradas} fichas actualizadas.` : 'ℹ️ El archivo no contenía datos nuevos para restaurar.', 'ok');
+  }catch(e){
+    console.error('No se pudo restaurar la copia de seguridad', e);
+    setBackupStatus('⚠️ No se pudo leer el archivo. Comprueba que sea una copia de seguridad exportada desde esta app.', 'err');
+  }
+}
+
+function initBackupTab(){
+  const btnExport = document.getElementById('backup-export-btn');
+  if(btnExport) btnExport.addEventListener('click', exportEstado);
+  const input = document.getElementById('backup-import-input');
+  if(input) input.addEventListener('change', ()=>{
+    const file = input.files && input.files[0];
+    input.value = '';
+    if(file) importEstado(file);
+  });
 }
 </script>
