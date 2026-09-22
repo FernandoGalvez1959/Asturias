@@ -43,8 +43,8 @@
   .map-card h2{font-size:17px;margin:0 0 2px}
   .map-card .hint{color:var(--ink-dim);font-size:13.5px;margin:0 0 6px}
   .map-card svg{width:100%;height:auto;display:block}
-  .cm-label-v{font-size:13.5px;fill:var(--ink-dim)}
-  .cm-name-v{font-size:17px;fill:var(--ink);font-weight:700}
+  .cm-label-v{font-size:11.5px;fill:var(--ink-dim)}
+  .cm-name-v{font-size:14.5px;fill:var(--ink);font-weight:700}
   .cm-node-v{cursor:pointer}
   .cm-node-v circle{transition:r .12s ease}
   .cm-node-v:hover circle{r:9}
@@ -60,6 +60,23 @@
   .chip{border:1px solid var(--line);background:var(--chip-bg);color:var(--chip-ink);padding:8px 13px;border-radius:999px;font-size:14px;cursor:pointer;user-select:none}
   .chip.on{background:var(--sea);border-color:var(--sea);color:#fff}
   .count{color:var(--ink-dim);font-size:14px;margin-left:auto;white-space:nowrap}
+
+  .filters-row{display:flex;gap:8px;align-items:flex-start;margin-top:10px;flex-wrap:wrap}
+  .fav-toggle{border:1px solid var(--line);background:var(--chip-bg);color:var(--chip-ink);padding:8px 13px;border-radius:999px;font-size:14px;cursor:pointer;user-select:none}
+  .fav-toggle.on{background:var(--sea);border-color:var(--sea);color:#fff}
+  .filter-dd{position:relative}
+  .filter-dd summary{list-style:none;border:1px solid var(--line);background:var(--chip-bg);color:var(--chip-ink);padding:8px 13px;border-radius:999px;font-size:14px;cursor:pointer;user-select:none;display:inline-block}
+  .filter-dd summary::-webkit-details-marker{display:none}
+  .filter-dd summary:after{content:' ▾'}
+  .filter-dd[open] summary{background:var(--sea);border-color:var(--sea);color:#fff}
+  .filter-dd[open] summary:after{content:' ▴'}
+  .filter-dd-body{position:absolute;top:calc(100% + 6px);left:0;z-index:12;background:var(--bg-elev);border:1px solid var(--line);border-radius:12px;padding:8px 12px;box-shadow:var(--card-shadow);display:flex;flex-direction:column;gap:2px;width:max-content;max-width:min(78vw,260px);max-height:60vh;overflow-y:auto}
+  .dd-check{display:flex;align-items:center;gap:8px;font-size:14.5px;padding:6px 2px;cursor:pointer;white-space:nowrap;color:var(--ink)}
+  .dd-check input{margin:0}
+
+  .subtabs{display:flex;gap:8px;padding:16px 0 4px}
+  .subtabs button{border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);padding:9px 15px;border-radius:999px;font-size:14.5px;cursor:pointer}
+  .subtabs button.sub-active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
 
   main{padding:26px 0 60px}
   .concejo-block{margin-bottom:34px;scroll-margin-top:120px}
@@ -121,6 +138,28 @@
   .foto-card .actions a:hover{border-color:var(--sea);color:var(--sea)}
   .foto-disclaimer{font-size:12.5px;color:var(--ink-dim);margin:10px 0 30px;max-width:70ch}
 
+  .rest-card,.sidra-card{background:var(--bg-elev);border:1px solid var(--line);border-radius:14px;padding:16px 16px;box-shadow:var(--card-shadow);margin-bottom:14px;max-width:640px}
+  .rest-head{display:flex;align-items:baseline;gap:9px;margin-bottom:7px}
+  .rest-head h4{margin:0;font-size:18px;flex:1}
+  .rest-head .tique{font-size:13.5px;color:var(--ink-dim);white-space:nowrap;font-weight:600}
+  .badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+  .dist-badge{font-size:12px;padding:3px 9px;border-radius:999px;font-weight:600}
+  .badge-michelin{background:#2c1810;color:#f3d9a0}
+  .badge-sol{background:#fff3d6;color:#8a5a00}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .badge-sol{background:#4a3a12;color:#ffd980} }
+  :root[data-theme="dark"] .badge-sol{background:#4a3a12;color:#ffd980}
+  .badge-google{background:var(--chip-bg);color:var(--chip-ink)}
+  .badge-premio{font-size:12px;padding:3px 9px;border-radius:999px;background:#fff3d6;color:#8a5a00;font-weight:700;white-space:nowrap}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .badge-premio{background:#4a3a12;color:#ffd980} }
+  :root[data-theme="dark"] .badge-premio{background:#4a3a12;color:#ffd980}
+  .rest-card .desc,.sidra-card .desc{font-size:14.5px;color:var(--ink-dim);margin:0 0 8px}
+  .rest-card .especialidades,.sidra-card .especialidades{font-size:14px;color:var(--ink);margin:0 0 9px}
+  .sidra-card .premio-txt{font-size:13px;color:var(--accent);margin:0 0 8px;font-weight:600}
+  .rest-card .meta,.sidra-card .meta{font-size:13px;color:var(--ink-dim);margin-bottom:9px}
+  .rest-card .actions,.sidra-card .actions{display:flex}
+  .rest-card .actions a,.sidra-card .actions a{flex:1;text-align:center;font-size:14px;padding:10px 6px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+  .rest-card .actions a:hover,.sidra-card .actions a:hover{border-color:var(--sea);color:var(--sea)}
+
   .enlace-modal{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center}
   .enlace-modal[hidden]{display:none}
   .enlace-modal-fondo{position:absolute;inset:0;background:rgba(0,0,0,.5)}
@@ -149,11 +188,12 @@
 <header class="top">
   <div class="wrap">
     <h1>🏖️ Asturias</h1>
-    <p class="sub">Guía de las playas del Principado, organizadas de oeste a este a lo largo de la costa, con la distancia aproximada en coche desde Gijón. Pulsa el viento o las mareas para verlos en directo, o "cómo llegar" para abrir la ruta en Google Maps.</p>
+    <p class="sub">Guía personal de Asturias, siempre con la distancia aproximada en coche desde Gijón: las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo; rutas fotográficas de costa (miradores, faros, pueblos marineros) y de interior (Picos de Europa, Somiedo, cascadas, desfiladeros); restaurantes con estrella Michelín, Sol Repsol o muy bien valorados; y sidrerías tradicionales, con las premiadas destacadas.</p>
     <nav class="tabs">
-      <button class="active" data-tab="playas">Playas</button>
+      <button class="active" data-tab="playas">🏖️ Playas</button>
       <button data-tab="foto">📷 Ruta fotográfica</button>
-      <button class="soon" data-tab="restaurantes">Restaurantes <span style="opacity:.7">(próximamente)</span></button>
+      <button data-tab="restaurantes">🍽️ Restaurantes</button>
+      <button data-tab="sidrerias">🍎 Sidrerías</button>
       <button class="soon" data-tab="sitios">Qué ver <span style="opacity:.7">(próximamente)</span></button>
     </nav>
   </div>
@@ -188,7 +228,13 @@
       <select id="f-concejo"><option value="">Todos los concejos</option></select>
       <span class="count" id="count"></span>
     </div>
-    <div class="chipbar" id="chipbar"></div>
+    <div class="filters-row">
+      <button type="button" class="fav-toggle on" id="fav-only-chip">★ Solo favoritas</button>
+      <details class="filter-dd" id="filter-dd">
+        <summary>Filtros <span id="filter-dd-count"></span></summary>
+        <div class="filter-dd-body" id="filter-dd-body"></div>
+      </details>
+    </div>
   </div>
 </div>
 
@@ -196,6 +242,14 @@
 </div>
 
 <div id="tab-foto" hidden>
+<div class="wrap">
+  <div class="subtabs">
+    <button class="sub-active" id="foto-sub-costa" data-sub="costa">🌊 Costa y mar</button>
+    <button id="foto-sub-interior" data-sub="interior">⛰️ Interior</button>
+  </div>
+</div>
+
+<div id="foto-view-costa">
 <section class="map-wrap">
   <div class="wrap map-row">
     <div class="map-card">
@@ -217,15 +271,66 @@
       <input type="search" id="qf" placeholder="Buscar punto o concejo…">
       <span class="count" id="count-foto"></span>
     </div>
-    <div class="chipbar" id="chipbar-foto"></div>
+    <details class="filter-dd" id="filter-dd-foto">
+      <summary>Filtros <span id="filter-dd-foto-count"></span></summary>
+      <div class="filter-dd-body" id="filter-dd-foto-body"></div>
+    </details>
   </div>
 </div>
 
 <main class="wrap" id="results-foto"></main>
-<div class="wrap"><p class="foto-disclaimer">Miradores, faros, pueblos marineros y playas seleccionados por su interés fotográfico (investigación web, septiembre 2026). La "mejor luz" es una orientación general, no una garantía — comprueba siempre el acceso y la seguridad del lugar in situ, especialmente cerca de acantilados y con mar de fondo.</p></div>
+<div class="wrap"><p class="foto-disclaimer">Miradores, faros, pueblos marineros y playas de la costa seleccionados por su interés fotográfico (investigación web, septiembre 2026). La "mejor luz" es una orientación general, no una garantía — comprueba siempre el acceso y la seguridad del lugar in situ, especialmente cerca de acantilados y con mar de fondo.</p></div>
 </div>
 
-<div id="tab-restaurantes" hidden><div class="wrap"><div class="soon-panel"><h3>🍽️ Restaurantes</h3><p>Próxima ampliación de la guía: sidrerías, marisquerías y restaurantes cerca de cada playa.</p></div></div></div>
+<div id="foto-view-interior" hidden>
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-row">
+      <input type="search" id="qfi" placeholder="Buscar lugar o concejo…">
+      <span class="count" id="count-foto-interior"></span>
+    </div>
+    <details class="filter-dd" id="filter-dd-interior">
+      <summary>Filtros <span id="filter-dd-interior-count"></span></summary>
+      <div class="filter-dd-body" id="filter-dd-interior-body"></div>
+    </details>
+  </div>
+</div>
+<main class="wrap" id="results-foto-interior"></main>
+<div class="wrap"><p class="foto-disclaimer">Miradores, pueblos, cascadas, lagos y desfiladeros del interior de Asturias (Picos de Europa, Somiedo, Redes, Muniellos…), seleccionados por su interés fotográfico (investigación web, septiembre 2026). Distancias aproximadas en coche desde Gijón; la "mejor luz" es orientativa — comprueba siempre el acceso y la meteorología antes de ir, especialmente en alta montaña.</p></div>
+</div>
+</div>
+
+<div id="tab-restaurantes" hidden>
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-row">
+      <input type="search" id="qr" placeholder="Buscar restaurante o concejo…">
+      <span class="count" id="count-rest"></span>
+    </div>
+    <details class="filter-dd" id="filter-dd-rest">
+      <summary>Filtros <span id="filter-dd-rest-count"></span></summary>
+      <div class="filter-dd-body" id="filter-dd-rest-body"></div>
+    </details>
+  </div>
+</div>
+<main class="wrap"><div id="results-rest"></div></main>
+<div class="wrap"><p class="foto-disclaimer">Restaurantes de Asturias con estrella Michelín, Sol Repsol o muy bien valorados en Google (investigación web, septiembre 2026). Tiques medios orientativos por persona (sin bebida, salvo que se indique lo contrario); pueden variar según menú, temporada y carta. Distancia aproximada en coche desde Gijón.</p></div>
+</div>
+
+<div id="tab-sidrerias" hidden>
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-row">
+      <input type="search" id="qs" placeholder="Buscar sidrería o concejo…">
+      <button type="button" class="fav-toggle" id="sidra-premiada-chip">🏆 Solo premiadas</button>
+      <span class="count" id="count-sidra"></span>
+    </div>
+  </div>
+</div>
+<main class="wrap"><div id="results-sidra"></div></main>
+<div class="wrap"><p class="foto-disclaimer">Sidrerías de Asturias, con las premiadas en concursos de escanciado y certámenes sidreros (como Gijón de Sidra o el Campeonato de Escanciadores de Asturias) destacadas (investigación web, septiembre 2026). No es un listado exhaustivo de las cientos de sidrerías de la región, sino una selección amplia repartida por toda Asturias.</p></div>
+</div>
+
 <div id="tab-sitios" hidden><div class="wrap"><div class="soon-panel"><h3>🗺️ Qué ver</h3><p>Próxima ampliación de la guía: pueblos, miradores y rutas para completar el itinerario.</p></div></div></div>
 
 <div id="enlace-modal" class="enlace-modal" hidden>
@@ -407,15 +512,15 @@ function slug(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036
 function buildVerticalMap(svgId, list, anchorPrefix){
   const svg = document.getElementById(svgId);
   if(!svg) return;
-  const W = 320, rowH = 54, padTop = 34, padBottom = 14, cx = 30;
+  const W = 320, rowH = 32, padTop = 24, padBottom = 10, cx = 24;
   const H = padTop + list.length*rowH + padBottom;
   let items = [];
-  items.push(`<line x1="${cx}" y1="10" x2="${cx}" y2="${H-padBottom}" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/>`);
-  items.push(`<a href="#${anchorPrefix}gijon" class="cm-node-v cm-gijon-v"><rect x="0" y="0" width="${W}" height="${padTop}" fill="transparent" style="pointer-events:all"/><circle cx="${cx}" cy="10" r="7" fill="var(--accent)" stroke="var(--bg-elev)" stroke-width="2"/><text class="cm-name-v" x="${cx+18}" y="15">Gijón</text></a>`);
+  items.push(`<line x1="${cx}" y1="9" x2="${cx}" y2="${H-padBottom}" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/>`);
+  items.push(`<a href="#${anchorPrefix}gijon" class="cm-node-v cm-gijon-v"><rect x="0" y="0" width="${W}" height="${padTop}" fill="transparent" style="pointer-events:all"/><circle cx="${cx}" cy="9" r="6" fill="var(--accent)" stroke="var(--bg-elev)" stroke-width="2"/><text class="cm-name-v" x="${cx+14}" y="13">Gijón</text></a>`);
   list.forEach((c,i)=>{
     const y = padTop + rowH*i + rowH/2;
     const distTxt = c.dist_km===0 ? 'en Gijón' : `≈ ${c.dist_km.toFixed(0)} km`;
-    items.push(`<a href="#${anchorPrefix}${slug(c.nombre)}" class="cm-node-v"><rect x="0" y="${padTop+rowH*i}" width="${W}" height="${rowH}" fill="transparent" style="pointer-events:all"/><circle cx="${cx}" cy="${y}" r="7" fill="var(--sea)"/><text class="cm-name-v" x="${cx+18}" y="${(y-4).toFixed(1)}">${c.nombre}</text><text class="cm-label-v" x="${cx+18}" y="${(y+16).toFixed(1)}">${distTxt}</text></a>`);
+    items.push(`<a href="#${anchorPrefix}${slug(c.nombre)}" class="cm-node-v"><rect x="0" y="${padTop+rowH*i}" width="${W}" height="${rowH}" fill="transparent" style="pointer-events:all"/><circle cx="${cx}" cy="${y}" r="6" fill="var(--sea)"/><text class="cm-name-v" x="${cx+14}" y="${(y+4.5).toFixed(1)}">${c.nombre} <tspan class="cm-label-v">${distTxt}</tspan></text></a>`);
   });
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.innerHTML = items.join('');
@@ -428,9 +533,10 @@ function buildMap(){
 }
 
 // ---------- ruta fotográfica ----------
-const TIPO_LABELS = { mirador:'Mirador', faro:'Faro', pueblo:'Pueblo marinero', playa:'Playa', 'fenomeno-natural':'Fenómeno natural', monumento:'Monumento' };
-const TIPO_ICONS = { mirador:'🔭', faro:'🗼', pueblo:'🏘️', playa:'🏖️', 'fenomeno-natural':'💦', monumento:'🗿' };
+const TIPO_LABELS = { mirador:'Mirador', faro:'Faro', pueblo:'Pueblo', playa:'Playa', 'fenomeno-natural':'Fenómeno natural', monumento:'Monumento', cascada:'Cascada', lago:'Lago/embalse', desfiladero:'Desfiladero', 'montaña':'Montaña', otro:'Otro punto' };
+const TIPO_ICONS = { mirador:'🔭', faro:'🗼', pueblo:'🏘️', playa:'🏖️', 'fenomeno-natural':'💦', monumento:'🗿', cascada:'💧', lago:'🏞️', desfiladero:'🏔️', 'montaña':'⛰️', otro:'📍' };
 const TIPO_FILTERS = ['mirador','faro','pueblo','playa','fenomeno-natural','monumento'];
+const TIPO_FILTERS_INTERIOR = ['mirador','pueblo','cascada','lago','desfiladero','montaña','otro'];
 
 function fotoDocId(p){ return 'foto--'+slug(p.concejo)+'--'+slug(p.nombre); }
 
@@ -467,15 +573,17 @@ function fotoConcejoBlockHTML(c){
 
 let activeFotoTipos = new Set();
 function buildFotoChipbar(){
-  const bar = document.getElementById('chipbar-foto');
-  if(!bar) return;
-  bar.innerHTML = TIPO_FILTERS.map(t=>`<span class="chip" data-tipo="${t}">${TIPO_ICONS[t]} ${TIPO_LABELS[t]}</span>`).join('');
-  bar.querySelectorAll('.chip[data-tipo]').forEach(ch=>ch.addEventListener('click', ()=>{ ch.classList.toggle('on'); applyFotoFilters(); }));
+  const body = document.getElementById('filter-dd-foto-body');
+  if(!body) return;
+  body.innerHTML = TIPO_FILTERS.map(t=>`<label class="dd-check"><input type="checkbox" value="${t}"> ${TIPO_ICONS[t]} ${TIPO_LABELS[t]}</label>`).join('');
+  body.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', applyFotoFilters));
 }
 
 function applyFotoFilters(){
   const q = (document.getElementById('qf')?.value||'').trim().toLowerCase();
-  activeFotoTipos = new Set([...document.querySelectorAll('#chipbar-foto .chip.on')].map(c=>c.dataset.tipo));
+  activeFotoTipos = new Set([...document.querySelectorAll('#filter-dd-foto-body input:checked')].map(c=>c.value));
+  const ddCount = document.getElementById('filter-dd-foto-count');
+  if(ddCount) ddCount.textContent = activeFotoTipos.size ? `(${activeFotoTipos.size})` : '';
   let total=0, shown=0;
   document.querySelectorAll('#results-foto .concejo-block').forEach(block=>{
     let anyVisible = false;
@@ -510,6 +618,163 @@ function initFotoTab(){
   applyFotoFilters();
 }
 
+// ---------- ruta fotográfica: interior ----------
+function initFotoInteriorTab(){
+  const body = document.getElementById('filter-dd-interior-body');
+  if(body){
+    body.innerHTML = TIPO_FILTERS_INTERIOR.map(t=>`<label class="dd-check"><input type="checkbox" value="${t}"> ${TIPO_ICONS[t]||''} ${TIPO_LABELS[t]||t}</label>`).join('');
+    body.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', applyFotoInteriorFilters));
+  }
+  const pts = (DATA.ruta_foto_interior||[]).slice().sort((a,b)=>a.dist_km-b.dist_km);
+  document.getElementById('results-foto-interior').innerHTML = pts.map(fotoCardHTML).join('');
+  const qfi = document.getElementById('qfi');
+  if(qfi) qfi.addEventListener('input', applyFotoInteriorFilters);
+  applyFotoInteriorFilters();
+}
+
+function applyFotoInteriorFilters(){
+  const q = (document.getElementById('qfi')?.value||'').trim().toLowerCase();
+  const activeTipos = new Set([...document.querySelectorAll('#filter-dd-interior-body input:checked')].map(c=>c.value));
+  const ddCount = document.getElementById('filter-dd-interior-count');
+  if(ddCount) ddCount.textContent = activeTipos.size ? `(${activeTipos.size})` : '';
+  let total=0, shown=0;
+  document.querySelectorAll('#results-foto-interior .foto-card').forEach(card=>{
+    total++;
+    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+    const matchesTipo = activeTipos.size===0 || activeTipos.has(card.dataset.tipo);
+    const visible = matchesQ && matchesTipo;
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+  const countEl = document.getElementById('count-foto-interior');
+  if(countEl) countEl.textContent = `${shown} de ${total} lugares`;
+}
+
+function initFotoSubtabs(){
+  const btnCosta = document.getElementById('foto-sub-costa');
+  const btnInterior = document.getElementById('foto-sub-interior');
+  if(!btnCosta || !btnInterior) return;
+  btnCosta.addEventListener('click', ()=>{
+    btnCosta.classList.add('sub-active'); btnInterior.classList.remove('sub-active');
+    document.getElementById('foto-view-costa').hidden = false;
+    document.getElementById('foto-view-interior').hidden = true;
+  });
+  btnInterior.addEventListener('click', ()=>{
+    btnInterior.classList.add('sub-active'); btnCosta.classList.remove('sub-active');
+    document.getElementById('foto-view-costa').hidden = true;
+    document.getElementById('foto-view-interior').hidden = false;
+  });
+}
+
+// ---------- restaurantes ----------
+const REST_FILTERS = [
+  {key:'michelin', label:'⭐ Estrella Michelín'},
+  {key:'sol', label:'☀️ Sol Repsol'},
+  {key:'google', label:'👍 Muy valorado en Google'},
+];
+function restBadgeKey(d){ return d.includes('Michelín') ? 'michelin' : (d.includes('Sol') ? 'sol' : 'google'); }
+function restDocId(r){ return 'rest--'+slug(r.concejo)+'--'+slug(r.nombre); }
+
+function restCardHTML(r){
+  const distTxt = r.dist_km===0 ? 'En Gijón' : `≈ ${r.dist_km.toFixed(0)} km de Gijón`;
+  const lugarTxt = r.localidad ? `${r.localidad} (${r.concejo})` : r.concejo;
+  const metaTxt = (r.dist_km===0 && !r.localidad) ? distTxt : `${lugarTxt} · ${distTxt}`;
+  const gmapQ = encodeURIComponent(`${r.nombre}, ${r.localidad||r.concejo}, Asturias, España`);
+  const badgesHTML = r.distincion.map(d=>`<span class="dist-badge badge-${restBadgeKey(d)}">${d}</span>`).join('');
+  return `<article class="rest-card" data-docid="${restDocId(r)}" data-name="${r.nombre.toLowerCase()}" data-concejo="${r.concejo}" data-dist="${r.distincion.map(restBadgeKey).join(',')}">
+    <div class="rest-head"><h4>${r.nombre}</h4><span class="tique">${r.tique_medio}</span></div>
+    <div class="badges">${badgesHTML}</div>
+    <p class="desc">${r.desc}</p>
+    <p class="especialidades"><b>Especialidades:</b> ${r.especialidades}</p>
+    <div class="meta">${metaTxt}</div>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+    </div>
+  </article>`;
+}
+
+function initRestTab(){
+  const body = document.getElementById('filter-dd-rest-body');
+  if(body){
+    body.innerHTML = REST_FILTERS.map(f=>`<label class="dd-check"><input type="checkbox" value="${f.key}"> ${f.label}</label>`).join('');
+    body.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', applyRestFilters));
+  }
+  const items = (DATA.restaurantes||[]).slice().sort((a,b)=>a.dist_km-b.dist_km);
+  document.getElementById('results-rest').innerHTML = items.map(restCardHTML).join('');
+  const qr = document.getElementById('qr');
+  if(qr) qr.addEventListener('input', applyRestFilters);
+  applyRestFilters();
+}
+
+function applyRestFilters(){
+  const q = (document.getElementById('qr')?.value||'').trim().toLowerCase();
+  const active = new Set([...document.querySelectorAll('#filter-dd-rest-body input:checked')].map(c=>c.value));
+  const ddCount = document.getElementById('filter-dd-rest-count');
+  if(ddCount) ddCount.textContent = active.size ? `(${active.size})` : '';
+  let total=0, shown=0;
+  document.querySelectorAll('#results-rest .rest-card').forEach(card=>{
+    total++;
+    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+    const keys = card.dataset.dist.split(',');
+    const matchesFilter = active.size===0 || keys.some(k=>active.has(k));
+    const visible = matchesQ && matchesFilter;
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+  const countEl = document.getElementById('count-rest');
+  if(countEl) countEl.textContent = `${shown} de ${total} restaurantes`;
+}
+
+// ---------- sidrerías ----------
+function sidraDocId(s){ return 'sidra--'+slug(s.concejo)+'--'+slug(s.nombre); }
+
+function sidraCardHTML(s){
+  const distTxt = s.dist_km===0 ? 'En Gijón' : `≈ ${s.dist_km.toFixed(0)} km de Gijón`;
+  const lugarTxt = s.localidad ? `${s.localidad} (${s.concejo})` : s.concejo;
+  const metaTxt = (s.dist_km===0 && !s.localidad) ? distTxt : `${lugarTxt} · ${distTxt}`;
+  const gmapQ = encodeURIComponent(`${s.nombre}, ${s.localidad||s.concejo}, Asturias, España`);
+  return `<article class="sidra-card" data-docid="${sidraDocId(s)}" data-name="${s.nombre.toLowerCase()}" data-concejo="${s.concejo}" data-premiada="${s.premiada?1:0}">
+    <div class="rest-head"><h4>${s.nombre}</h4>${s.premiada?'<span class="badge-premio">🏆 Premiada</span>':''}</div>
+    ${s.premiada && s.premio ? `<p class="premio-txt">${s.premio}</p>` : ''}
+    <p class="desc">${s.desc}</p>
+    <p class="especialidades"><b>Especialidad:</b> ${s.especialidad}</p>
+    <div class="meta">${metaTxt}</div>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+    </div>
+  </article>`;
+}
+
+let sidraPremiadaOnly = false;
+function initSidraTab(){
+  const items = (DATA.sidrerias||[]).slice().sort((a,b)=>a.dist_km-b.dist_km);
+  document.getElementById('results-sidra').innerHTML = items.map(sidraCardHTML).join('');
+  const qs = document.getElementById('qs');
+  if(qs) qs.addEventListener('input', applySidraFilters);
+  const chip = document.getElementById('sidra-premiada-chip');
+  if(chip) chip.addEventListener('click', function(){
+    sidraPremiadaOnly = !sidraPremiadaOnly;
+    this.classList.toggle('on', sidraPremiadaOnly);
+    applySidraFilters();
+  });
+  applySidraFilters();
+}
+
+function applySidraFilters(){
+  const q = (document.getElementById('qs')?.value||'').trim().toLowerCase();
+  let total=0, shown=0;
+  document.querySelectorAll('#results-sidra .sidra-card').forEach(card=>{
+    total++;
+    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+    const matchesPremio = !sidraPremiadaOnly || card.dataset.premiada==='1';
+    const visible = matchesQ && matchesPremio;
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+  const countEl = document.getElementById('count-sidra');
+  if(countEl) countEl.textContent = `${shown} de ${total} sidrerías`;
+}
+
 // ---------- render principal ----------
 function populateConcejoFilter(){
   const sel = document.getElementById('f-concejo');
@@ -522,11 +787,16 @@ function populateConcejoFilter(){
 let favOnly = true;
 
 function buildChipbar(){
-  const bar = document.getElementById('chipbar');
-  bar.innerHTML = `<span class="chip${favOnly?' on':''}" id="fav-only-chip">★ Solo favoritas</span>` +
-    CHIP_FILTERS.map(t=>`<span class="chip" data-tag="${t}">${TAG_LABELS[t]}</span>`).join('');
-  document.getElementById('fav-only-chip').addEventListener('click', function(){ favOnly = !favOnly; this.classList.toggle('on', favOnly); applyFilters(); });
-  bar.querySelectorAll('.chip[data-tag]').forEach(ch=>ch.addEventListener('click', ()=>{ ch.classList.toggle('on'); applyFilters(); }));
+  const favChip = document.getElementById('fav-only-chip');
+  if(favChip){
+    favChip.classList.toggle('on', favOnly);
+    favChip.addEventListener('click', function(){ favOnly = !favOnly; this.classList.toggle('on', favOnly); applyFilters(); });
+  }
+  const body = document.getElementById('filter-dd-body');
+  if(body){
+    body.innerHTML = CHIP_FILTERS.map(t=>`<label class="dd-check"><input type="checkbox" value="${t}"> ${TAG_LABELS[t]}</label>`).join('');
+    body.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', applyFilters));
+  }
 }
 
 function showAllBeaches(){
@@ -542,7 +812,9 @@ function applyFilters(){
   const q = document.getElementById('q').value.trim().toLowerCase();
   const zona = document.getElementById('f-zona').value;
   const concejo = document.getElementById('f-concejo').value;
-  activeTags = new Set([...document.querySelectorAll('.chip[data-tag].on')].map(c=>c.dataset.tag));
+  activeTags = new Set([...document.querySelectorAll('#filter-dd-body input:checked')].map(c=>c.value));
+  const ddCount = document.getElementById('filter-dd-count');
+  if(ddCount) ddCount.textContent = activeTags.size ? `(${activeTags.size})` : '';
 
   let total = 0, shown = 0;
   document.querySelectorAll('#results .concejo-block').forEach(block=>{
@@ -597,13 +869,17 @@ function init(){
   applyFilters();
 
   initFotoTab();
+  initFotoInteriorTab();
+  initFotoSubtabs();
+  initRestTab();
+  initSidraTab();
 
   document.querySelectorAll('nav.tabs button').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       if(btn.classList.contains('soon')) return;
       document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
-      ['playas','foto','restaurantes','sitios'].forEach(t=>{
+      ['playas','foto','restaurantes','sidrerias','sitios'].forEach(t=>{
         document.getElementById('tab-'+t).hidden = (t!==btn.dataset.tab);
       });
     });

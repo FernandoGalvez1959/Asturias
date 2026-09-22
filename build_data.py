@@ -370,12 +370,25 @@ for c in concejos:
 print(f"Total concejos: {len(concejos)}")
 print(f"Total playas: {len(playas)}")
 
-data = dict(concejos=[dict(nombre=c["nombre"], zona=c["zona"], dist_km=c["dist_km"], lat=c["lat"], lon=c["lon"], mareas_slug=c["mareas_slug"], n=len(c["beaches"])) for c in concejos], playas=playas, ruta_foto=ruta_foto)
+from extra_data import build_extra
+restaurantes, sidrerias, ruta_foto_interior = build_extra(concejos)
+print(f"Total restaurantes: {len(restaurantes)}")
+print(f"Total sidrerías: {len(sidrerias)}")
+print(f"Total rutas fotográficas de interior: {len(ruta_foto_interior)}")
 
-with open("datos.json", "w", encoding="utf-8") as f:
+data = dict(
+    concejos=[dict(nombre=c["nombre"], zona=c["zona"], dist_km=c["dist_km"], lat=c["lat"], lon=c["lon"], mareas_slug=c["mareas_slug"], n=len(c["beaches"])) for c in concejos],
+    playas=playas,
+    ruta_foto=ruta_foto,
+    ruta_foto_interior=ruta_foto_interior,
+    restaurantes=restaurantes,
+    sidrerias=sidrerias,
+)
+
+with open("playas.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=1)
 
-with open("datos.min.json", "w", encoding="utf-8") as f:
+with open("playas.min.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
 
-print("Escrito datos.json y datos.min.json")
+print("Escrito playas.json y playas.min.json")
