@@ -1,0 +1,6154 @@
+{
+ "concejos": [
+  {
+   "nombre": "Castropol",
+   "zona": "oeste",
+   "dist_km": 123.1,
+   "lat": 43.5636,
+   "lon": -6.9636,
+   "mareas_slug": "castropol",
+   "n": 3
+  },
+  {
+   "nombre": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "n": 12
+  },
+  {
+   "nombre": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "n": 6
+  },
+  {
+   "nombre": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "n": 6
+  },
+  {
+   "nombre": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "n": 6
+  },
+  {
+   "nombre": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "n": 26
+  },
+  {
+   "nombre": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "n": 26
+  },
+  {
+   "nombre": "Soto del Barco",
+   "zona": "oeste",
+   "dist_km": 45.0,
+   "lat": 43.5766,
+   "lon": -6.0561,
+   "mareas_slug": "san-juan-de-la-arena",
+   "n": 1
+  },
+  {
+   "nombre": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "n": 10
+  },
+  {
+   "nombre": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "n": 10
+  },
+  {
+   "nombre": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "n": 17
+  },
+  {
+   "nombre": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "n": 8
+  },
+  {
+   "nombre": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "n": 7
+  },
+  {
+   "nombre": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "n": 7
+  },
+  {
+   "nombre": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "n": 6
+  },
+  {
+   "nombre": "Caravia",
+   "zona": "este",
+   "dist_km": 54.6,
+   "lat": 43.5028,
+   "lon": -5.1547,
+   "mareas_slug": "caravia",
+   "n": 4
+  },
+  {
+   "nombre": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "mareas_slug": "ribadesella",
+   "n": 5
+  },
+  {
+   "nombre": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "n": 36
+  },
+  {
+   "nombre": "Ribadedeva",
+   "zona": "este",
+   "dist_km": 110.6,
+   "lat": 43.3921,
+   "lon": -4.5087,
+   "mareas_slug": "la-franca",
+   "n": 3
+  }
+ ],
+ "playas": [
+  {
+   "nombre": "Arnao",
+   "concejo": "Castropol",
+   "zona": "oeste",
+   "dist_km": 123.1,
+   "lat": 43.5636,
+   "lon": -6.9636,
+   "mareas_slug": "castropol",
+   "desc": "Arena blanca y fina, aguas tranquilas, cerca de la zona recreativa de Arnao.",
+   "tags": [
+    "arena-blanca",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Figueras",
+   "concejo": "Castropol",
+   "zona": "oeste",
+   "dist_km": 123.1,
+   "lat": 43.5636,
+   "lon": -6.9636,
+   "mareas_slug": "castropol",
+   "desc": "Escasa ocupación; da acceso a la playa de San Román en marea baja.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "San Román",
+   "concejo": "Castropol",
+   "zona": "oeste",
+   "dist_km": 123.1,
+   "lat": 43.5636,
+   "lon": -6.9636,
+   "mareas_slug": "castropol",
+   "desc": "Solo accesible a través de Figueras con marea baja.",
+   "tags": [
+    "cantos",
+    "dificil-acceso",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "El Figo / El Figu",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Pequeña cala de piedras en entorno rocoso con acantilados, difícil acceso.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Murallón",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Pequeña playa junto a Playa Grande, buenos servicios y alta ocupación.",
+   "tags": [
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "La Grande / Anguileiro / Los Campos",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Extenso arenal con buenos servicios; sede de un campeonato de surf.",
+   "tags": [
+    "arena-dorada",
+    "surf",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "La Paloma / Esteiro",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Arena fina en entorno agreste.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "La Reburdia",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Pequeña playa de arena fina entre acantilados, muy local.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Mexota / A Mixota",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Aguas cristalinas con un islote que la divide en dos.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Pantorgas / Santa Gadea / Ribeiria",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Recogida entre acantilados, arena fina dorada, islotes con especies protegidas; apta para pesca submarina y surf.",
+   "tags": [
+    "arena-dorada",
+    "surf",
+    "buceo",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Peñarronda",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Amplio arenal con un peñasco central, muy popular entre surfistas.",
+   "tags": [
+    "arena-dorada",
+    "surf",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Porcía (Tapia)",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Pequeña playa de buenos servicios en entorno atractivo, en el límite con El Franco.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Represas",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Poco atractivo, entre acantilados y sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Sarello / Sareyo",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Amplio arenal junto a Serantes, paisaje rural entre prados y arena dorada.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Serantes",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "mareas_slug": "tapia-de-casariego",
+   "desc": "Playa rustica de gran anchura, arena fina dorada, tranquila.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Cambaredo",
+   "concejo": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "desc": "Playa rocosa, estrecha y alargada, alto valor ecológico, poco frecuentada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Castelo / Castello",
+   "concejo": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "desc": "Cala de cantos de cuarcita y pizarra, gran interes geológico.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Monellos",
+   "concejo": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "desc": "Pequeña cala rocosa al oeste de Viavélez, rodeada de acantilados bajos.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Porcía (El Franco)",
+   "concejo": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "desc": "Forma triangular, alta ocupación en temporada, marismas y pequeñas dunas.",
+   "tags": [
+    "arena-dorada",
+    "duna",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Pormenande",
+   "concejo": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "desc": "Rocosa pero segura, unida al islote de El Rego por una barra natural, ruta de senderismo.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Torbas (El Franco)",
+   "concejo": "El Franco",
+   "zona": "oeste",
+   "dist_km": 111.3,
+   "lat": 43.575,
+   "lon": -6.81,
+   "mareas_slug": "viavelez",
+   "desc": "Pequeña cala junto a Cabo Blanco, paisaje y aguas de gran calidad.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "A Figueira",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "desc": "Playa rocosa típica de la costa occidental, casi desaparece en pleamar.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Armazá",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "desc": "Aislada y rocosa, con un mirador en lo alto de la Punta del Castello.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Arnelles",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "desc": "Cerca del puerto de Ortiguera, con algunos servicios basicos.",
+   "tags": [
+    "cantos",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "El Barco",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "desc": "Pequeña y aislada, difícil acceso, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Foxos / Ortiguera",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "desc": "En la desembocadura del río Navia.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Torbas (Coana)",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "mareas_slug": "ortiguera",
+   "desc": "Extensa playa de cantos y arena en entorno rural.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Coedo",
+   "concejo": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "desc": "Recondita cala pequeña de canto rodado y arena, cerca de Andés.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Moro / Peñafurada",
+   "concejo": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "desc": "Junto a la playa de Navia, arena oscura gruesa, ocupación media.",
+   "tags": [
+    "arena-oscura"
+   ]
+  },
+  {
+   "nombre": "Fabal",
+   "concejo": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "desc": "Pequeña cala en forma de concha entre acantilados, oleaje fuerte.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Frejulfe / Frexulfe",
+   "concejo": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "desc": "Extenso arenal con sistema dunar junto a Puerto de Vega, oleaje fuerte.",
+   "tags": [
+    "arena-oscura",
+    "duna",
+    "surf"
+   ]
+  },
+  {
+   "nombre": "La Losera",
+   "concejo": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "desc": "Pequeña cala de canto y piedra al oeste de Puerto de Vega.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Navia",
+   "concejo": "Navia",
+   "zona": "oeste",
+   "dist_km": 102.5,
+   "lat": 43.5443,
+   "lon": -6.7192,
+   "mareas_slug": "navia",
+   "desc": "Playa urbana en la desembocadura del río Navia, buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Barayo / La Vega",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Playa virgen de 670 m dentro de la Reserva Natural Parcial de Barayo, estuario del río Barayo.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural",
+    "duna"
+   ]
+  },
+  {
+   "nombre": "Bozo",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Cala aislada de bolos junto a Cabo Busto, oleaje moderado.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Cadavedo / La Ribeirona",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Rural, forma de concha, alta ocupación en verano.",
+   "tags": [
+    "arena-dorada",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Campiecho",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Cala de bolos aislada, apenas visitada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Carretón / Cabretón",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Aislada, acceso a pie difícil, bolos.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Castiel",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Cala rocosa encajonada entre acantilados, acceso muy difícil.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Choureu",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Cala rocosa entre la Punta de Santa Ana y la Punta La Osa.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Chousera",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Pequeña playa de bolos, oleaje fuerte, poco visitada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Churín / Serón",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Acceso muy difícil, bolos, oleaje fuerte, apenas usada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Cueva / La Arena",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Mas frecuentada por estar cerca de un nucleo de población.",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "El Serrón",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Playa de cantos al norte de Cabo Busto, bajo un gran acantilado.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Fontanecha",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Pequeña, acceso por acantilado de 75 m, apenas usada salvo por pescadores.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Escaladina",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Pequeña cala rocosa, oleaje fuerte, poco visitada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Herbosa",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Acceso difícil y oleaje fuerte, uso mínimo.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Las Arreas",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Al este del faro de Luarca, afectada por vertidos urbanos.",
+   "tags": [
+    "cantos",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "Los Molinos",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Aislada, abrupta, difícil acceso a pie, frecuentada por pescadores.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Los Molinos / Cutin",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Al este de Cabo Busto, difícil acceso, uso de pescadores.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Otur",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Playa de arena al oeste de Luarca, sistema dunar degradado, alta ocupación.",
+   "tags": [
+    "arena-dorada",
+    "duna",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Perceberos / La Estaca",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Entorno protegido de gran valor paisajístico, acceso complicado.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Picón",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Pequeña y bonita cala de bolos, oleaje fuerte, poca visita.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Plumineru / Quintana",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Aislada y tranquila, bolos, oleaje fuerte, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Portizuelo",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Bello entorno rocoso y de acantilados, mas frecuentada que sus vecinas.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Primera y Segunda de Luarca",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Playa urbana de Luarca, gran actividad turística en verano, buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Punxeo / El Ferreiro",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Dentro de espacio costero protegido, pocos visitantes, sin infraestructura.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Ribón",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Playa bonita, servicios minimos, baja ocupación, acantilados altos.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Sabugo",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "mareas_slug": "luarca",
+   "desc": "Forma de concha, arena oscura, oleaje fuerte, acceso a pie desde la base del acantilado.",
+   "tags": [
+    "arena-oscura",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Albuerne",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Cantos y arena, encajonada entre acantilados de mas de 50 m.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Calabon",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Difícil acceso, islotes y formaciones rocosas en su sector oeste.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Aguaduz",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Calas y zonas rocosas con vegetación en el sector oeste.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Castrillon",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña y tranquila entre dos puntas, sin servicios.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "El Castro / Caldeirina",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Cala de difícil acceso a través de un valle fluvial.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Riego",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña cala rocosa con tres formaciones rocosas notables, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Silencio / Gaviero / Gavieiru",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Posiblemente la playa mas bonita del occidente asturiano, virgen y con espectaculares islotes.",
+   "tags": [
+    "cantos",
+    "monumento-natural",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Gradas",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Junto a acantilados imponentes al este de Cabo Vidio.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Gueirua / Gairúa",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Entorno muy fotogénico, baja ocupación, sin servicios.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "L'Airin",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Extenso arenal de canto rodado de colores, separada por el islote Farinon.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "La Barquera",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Paisaje protegido, destaca por su riqueza pesquera.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "La Concha de Artedo",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Extensa y resguardada, aguas cristalinas, alta ocupación.",
+   "tags": [
+    "arena-dorada",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "La Corvera",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña, entorno atractivo, baja ocupación, difícil acceso.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Cueva",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "De bolos, se accede por un sendero de mas de 80 m de acantilado.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Las Rubias",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Bonita y aislada, baja ocupación por su difícil acceso.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Los Botes",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña cala aislada, bolos, oleaje fuerte, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Oleiros",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Rodeada de pinares, oleaje fuerte pese a sus aguas limpias.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Peña Doria",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña, malas condiciones de baño por oleaje y viento.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Portiella / Muriello",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña cala con zona marisquera.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Puerto Chico (Cudillero)",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Diminuta cala entre acantilados, baja ocupación, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Pumarín",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "En la localidad de Santa Marina, zona oeste del concejo.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Ribera del Molin",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Rural y tranquila, de bolos, oleaje fuerte.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Río Cabo / Ballota (Cudillero)",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "En la desembocadura de un río que marca el límite del concejo.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "Salencia",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Pequeña playa rural donde un arroyo llega al mar.",
+   "tags": [
+    "cantos",
+    "rural"
+   ]
+  },
+  {
+   "nombre": "San Pedro de Bocamar / San Pedro de la Ribera",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Ubicación aislada pero alta ocupación, buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Sancidiello",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "mareas_slug": "cudillero",
+   "desc": "Junto a acantilados imponentes al este de Cabo Vidio.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Los Quebrantos",
+   "concejo": "Soto del Barco",
+   "zona": "oeste",
+   "dist_km": 45.0,
+   "lat": 43.5766,
+   "lon": -6.0561,
+   "mareas_slug": "san-juan-de-la-arena",
+   "desc": "Extensa playa de arena oscura de 810 m unida al Playon de Bayas, con la desembocadura del Nalon; buenos servicios y apta para surf.",
+   "tags": [
+    "arena-oscura",
+    "surf",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Aguilar",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Amplia playa de arena, muy turística, buenos servicios y oferta gastronomica.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Campofrio",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Al pie de acantilados con vegetación, se extiende al oeste de Aguilar, comparte paseo y servicios.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Cazonera",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Rocosa, de bolos, separada de La Atalaya por pequeños islotes, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Focarón",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Pequeña cala rocosa, oleaje fuerte, poco frecuentada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Garruncho",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Pequeña cala de bolos y rocas al oeste del espigon del puerto.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "La Atalaya",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Aislada, forma de concha, rocosa, separada por pequeñas islas, sin infraestructura.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Guardada",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Pequeña de bolos, oleaje fuerte, poco concurrida.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Las Llanas",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Remota y tranquila, entre acantilados, se accede por una larga escalera.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Xan-Xún",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Pequeña playa aislada de grava, baja ocupación, sin infraestructura.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Xilo / Veneiro",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "mareas_slug": "san-esteban",
+   "desc": "Pequeña, junto a Aguilar, se beneficia de sus servicios.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Arnao (Castrillon)",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Cala resguardada de arena y bolos, muy turística y con buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Bahínas",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Semiurbana, arena oscura y bolos, oleaje moderado, cerca de Santa Maria del Mar.",
+   "tags": [
+    "arena-oscura",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "El Cordial / El Reguero",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Aislada, arena dorada, oleaje fuerte, solo accesible a pie desde Muinelles con marea baja.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Cuerno",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Pequeña, en forma de concha, grava y arena oscura.",
+   "tags": [
+    "arena-oscura",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Munielles",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Compacta, cerca de Bayas, arena oscura, oleaje moderado.",
+   "tags": [
+    "arena-oscura"
+   ]
+  },
+  {
+   "nombre": "Playon de Bayas / El Sablon",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Extensa playa compartida con Soto del Barco, sistema dunar de gran valor ecológico, oleaje peligroso.",
+   "tags": [
+    "arena-dorada",
+    "duna",
+    "monumento-natural"
+   ]
+  },
+  {
+   "nombre": "Requexinos",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Arena oscura, oleaje fuerte, rodeada de colinas con vegetación.",
+   "tags": [
+    "arena-oscura"
+   ]
+  },
+  {
+   "nombre": "Salinas",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Gran playa muy popular con servicio completo, club náutico, alta afluencia.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "San Juan de Nieva / El Espartal",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Protegida, con vegetación dunar, buenas instalaciones, alta ocupación.",
+   "tags": [
+    "arena-dorada",
+    "duna",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Santa Maria del Mar",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "mareas_slug": "salinas",
+   "desc": "Playa de ria en la desembocadura del río Ferrera, buenas instalaciones, alta ocupación.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Aguilera",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Arena dorada gruesa, oleaje fuerte, poco visitada.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Aramar",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Bolos y rocas en una cala resguardada por pequeñas islas.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Banugues",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "En una ensenada con yacimientos paleoliticos, duchas y limpieza.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Carriciega / Carniciega / De Barquera",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Arena dorada dentro del Paisaje Protegido de Cabo de Penas, oleaje fuerte, poca ocupación.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Bigaral / Los Cristales",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Pequeña de arena blanca, poco frecuentada, sobre todo por pescadores.",
+   "tags": [
+    "arena-blanca",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Dique",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Pequeña de arena y grava, baja ocupación, sin servicios.",
+   "tags": [
+    "arena-oscura",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Gargantera",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Con forma de concha y rocosa, difícil acceso, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Ribera",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Arena dorada al fondo de la bahia de Luanco, junto al puerto.",
+   "tags": [
+    "arena-dorada",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "Llumeres",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Color rojizo por antiguas minas de hierro, frecuentada por pescadores.",
+   "tags": [
+    "arena-oscura",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Luanco / Santa Marina",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Playa del pueblo pesquero y turístico de Luanco, infraestructura completa.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Moniello",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Pequeña cala de bolos cerca de Luanco, con duchas.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Samarincha / Samarinchón",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Semiurbana, de bolos, poco uso, sin infraestructura.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Samarinchina",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Pequeña cala de aguas tranquilas, baja ocupación, zona de fondeo.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "San Pedro de Antromero",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Valor geológico, con huellas fosiles de dinosaurio.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Tenrero / Verdicio",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Arena dorada gruesa, sistema dunar ecológico, muy popular, yacimientos paleoliticos cerca.",
+   "tags": [
+    "arena-dorada",
+    "duna",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Viodo",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Cala en el Paisaje Protegido de Cabo de Penas, difícil acceso, sin infraestructura.",
+   "tags": [
+    "cantos",
+    "monumento-natural",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Xago",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "mareas_slug": "luanco",
+   "desc": "Extensa playa con notable complejo dunar, alta ocupación, oferta gastronomica modesta.",
+   "tags": [
+    "arena-dorada",
+    "duna",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Candas / La Pregona",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Playa urbana con servicios completos, junto al puerto de Candas.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Carranques 1 y 2",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Calas de interes paisajístico con formaciones geológicas y vegetación.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Huelgues",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Arenosa, ocupación media, cerca de la urbanización de Perlora.",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "La Palmera",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Arena fina en la turística Candas, con instalaciones completas y deportes nauticos.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Rebolleres / Pineres",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "De bolos, entorno algo degradado, sin servicios, poco visitada.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Taluxa",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Pequeña cala de arena y grava, difícil acceso, poco frecuentada salvo pescadores.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Tranqueru",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Rodeada de acantilados en zona de valor ecológico, sin servicios, frecuentada por pescadores.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Xivares 1 y 2",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "mareas_slug": "candas",
+   "desc": "Extensa playa de arena blanca en un entorno paisajístico atractivo.",
+   "tags": [
+    "arena-blanca",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "San Lorenzo",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "La gran playa urbana de Gijon, en pleno centro, excelentes equipamientos: aseos, duchas, alquiler de sombrillas y hamacas, Club Náutico.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Poniente",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "Playa artificial junto al puerto deportivo, arena dorada, mucha afluencia, zona de fondeo.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "El Arbeyal",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "Gran afluencia desde su regeneración en 1995, aguas tranquilas y buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Cervigon / El Rinconin",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "Junto a San Lorenzo, alta afluencia, bastantes equipamientos, admite perros.",
+   "tags": [
+    "arena-oscura",
+    "urbana",
+    "perros",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Estano",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "Pequeña playa semiurbana de arena y grava, servicios de nivel medio.",
+   "tags": [
+    "arena-dorada",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "Peñarrubia",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "Muy estrecha, rodeada de altos acantilados, alta ocupación, playa nudista.",
+   "tags": [
+    "arena-dorada",
+    "nudista",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Cagonera y Serín",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "mareas_slug": "gijon",
+   "desc": "Cerca del Cabo de San Lorenzo, oleaje fuerte y poca afluencia.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Rodiles",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "Gran arenal junto a la ria (Reserva Natural), pinares y eucaliptales, muy popular y con buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural",
+    "surf",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Tazones",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "En el pintoresco pueblo pesquero de Tazones, buen nivel de equipamientos.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "España",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "En la desembocadura del río España, rodeada de acantilados, oleaje fuerte y alta afluencia.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Ñora",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "Pequeña cala de arena flanqueada por acantilados, nivel medio de servicios y alta ocupación.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Puntal",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "En el interior de la ria de Villaviciosa (Reserva Natural), arena dorada y rocas, zona arbolada.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural"
+   ]
+  },
+  {
+   "nombre": "Merón",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "Pequeña playa con forma de concha de arena y grava.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Misiego",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "mareas_slug": "villaviciosa",
+   "desc": "En la ria, aguas tranquilas y arena dorada, apenas tiene infraestructuras.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Isla",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "desc": "Urbana, arena dorada, frente a un pequeño islote, paseo marítimo y buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "La Griega",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "desc": "Gran arenal dorado en la desembocadura del río Libardon, huellas de dinosaurio y charcas naturales con marea baja.",
+   "tags": [
+    "arena-dorada",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "El Astillero / Playa de Lastres",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "desc": "En el pueblo marinero de Lastres, nivel de servicios bajo pero mucho interes turístico.",
+   "tags": [
+    "cantos",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "Escanu",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "desc": "Urbana, en pleno casco de Lastres, junto al puerto.",
+   "tags": [
+    "cantos",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "La Espasa (Colunga)",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "desc": "En la desembocadura del río Espasa, límite con Caravia, arena dorada y buen nivel de servicios.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Salmoriera / El Barrigon",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "mareas_slug": "lastres",
+   "desc": "Pequeña, forma de concha, arena dorada, muy turística junto a La Isla.",
+   "tags": [
+    "arena-dorada",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "Arenal de Moris / Caravia",
+   "concejo": "Caravia",
+   "zona": "este",
+   "dist_km": 54.6,
+   "lat": 43.5028,
+   "lon": -5.1547,
+   "mareas_slug": "caravia",
+   "desc": "Extensa playa en forma de concha, arena dorada, muy turística y con buen nivel de servicios.",
+   "tags": [
+    "arena-dorada",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Beciella / Barciella",
+   "concejo": "Caravia",
+   "zona": "este",
+   "dist_km": 54.6,
+   "lat": 43.5028,
+   "lon": -5.1547,
+   "mareas_slug": "caravia",
+   "desc": "Aislada y tranquila, bolos y arena, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Viso / Moracey",
+   "concejo": "Caravia",
+   "zona": "este",
+   "dist_km": 54.6,
+   "lat": 43.5028,
+   "lon": -5.1547,
+   "mareas_slug": "caravia",
+   "desc": "Enclavada dentro de los extensos arenales de Caravia.",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "La Espasa (Caravia)",
+   "concejo": "Caravia",
+   "zona": "este",
+   "dist_km": 54.6,
+   "lat": 43.5028,
+   "lon": -5.1547,
+   "mareas_slug": "caravia",
+   "desc": "Comparte estuario con Colunga, buen nivel de servicios, accesible.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Santa Marina",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "mareas_slug": "ribadesella",
+   "desc": "Playa principal de Ribadesella, gran infraestructura turística y patrimonio cultural.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Vega / Berbes",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "mareas_slug": "ribadesella",
+   "desc": "Extenso arenal con dunas, Monumento Natural, buena accesibilidad y servicio de rescate.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural",
+    "duna",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "La Atalaya",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "mareas_slug": "ribadesella",
+   "desc": "Diminuta cala junto al puerto, fácil acceso a pie desde el casco urbano.",
+   "tags": [
+    "cantos",
+    "urbana"
+   ]
+  },
+  {
+   "nombre": "Arra",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "mareas_slug": "ribadesella",
+   "desc": "Cala rocosa junto al límite con Llanes, zona de buceo adecuada.",
+   "tags": [
+    "cantos",
+    "buceo",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Guadamia / Aguamia",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "mareas_slug": "ribadesella",
+   "desc": "En la desembocadura, paisaje kárstico, oleaje y corrientes fuertes.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Torimbia",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Amplia y virgen, muy fotogénica, tradicionalmente nudista.",
+   "tags": [
+    "arena-dorada",
+    "nudista",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Gulpiyuri",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña playa de interior, alimentada por galerías subterráneas a 100 m del mar, Monumento Natural.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural"
+   ]
+  },
+  {
+   "nombre": "San Antolín",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Extensa playa de arena blanca junto a un monasterio románico, ventosa y con oleaje fuerte.",
+   "tags": [
+    "arena-blanca",
+    "surf"
+   ]
+  },
+  {
+   "nombre": "Cuevas del Mar",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "En la desembocadura de un río, con espectaculares cavidades kársticas.",
+   "tags": [
+    "cantos",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Toranda / Niembro",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Gran arenal junto a la ria de Niembro, muy popular.",
+   "tags": [
+    "arena-dorada",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Andrin",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Entorno rocoso rodeado de acantilados, oleaje y corrientes fuertes.",
+   "tags": [
+    "arena-dorada",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Ballota",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Bello entorno con un islote caracteristico frente a la playa (Castro Ballota).",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "Barro",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Arena blanca, aguas claras, buenos servicios, conecta con Sorraos en marea baja.",
+   "tags": [
+    "arena-blanca",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Borizo / Borizu",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Arena blanca, muy turística, conecta con la Isla de Borizo en marea baja.",
+   "tags": [
+    "arena-blanca",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Buelna / Arenillas",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña cala con formaciones kársticas (El Picón), ideal para familias, sin servicios.",
+   "tags": [
+    "cantos",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Cobijeru",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Cala semicircular al pie de un acantilado, aguas tranquilas por fisuras rocosas, Monumento Natural kárstico.",
+   "tags": [
+    "cantos",
+    "monumento-natural"
+   ]
+  },
+  {
+   "nombre": "Cue / Antilles / Canales",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Entorno rocoso, arena blanca fina, aguas tranquilas, conecta con un islote en marea baja.",
+   "tags": [
+    "arena-blanca",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "El Portiello de San Martín / La Capilla",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña cala resguardada entre grandes rocas, baja ocupación.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "El Sablon",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Playa urbana de Llanes, alta ocupación, paseo marítimo y buenos servicios.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Vidiago",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Playa dividida en dos tramos, entorno tranquilo.",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "San Antonio",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña cala natural.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Toró",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Ideal para los mas pequeños.",
+   "tags": [
+    "arena-dorada",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "El Canal",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña playa cerca de Villanueva de Pria, aguas tranquilas.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Palombina (Celorio)",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "En Celorio, con creciente desarrollo turístico, arena dorada.",
+   "tags": [
+    "arena-dorada",
+    "urbana",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Guadamia / Aguamia (Llanes)",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Paisaje kárstico, oleaje y corrientes fuertes.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Acacia / Las Gaviotas / Jorconera",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Solo accesible en barco, aislada entre acantilados.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Almenada",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "En la desembocadura de un río, difícil acceso, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Entrada",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Arena blanca, aguas tranquilas, poca afluencia, entorno de ria.",
+   "tags": [
+    "arena-blanca"
+   ]
+  },
+  {
+   "nombre": "La Huelga",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "En la desembocadura de un río, alta ocupación cerca de Hontoria.",
+   "tags": [
+    "arena-dorada",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "La Tala / Naranxu",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña, rocosa y de grava, corrientes y oleaje fuertes, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "La Tayada",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña, arena dorada, en paisaje protegido, desaparece en marea alta.",
+   "tags": [
+    "arena-dorada",
+    "monumento-natural"
+   ]
+  },
+  {
+   "nombre": "Las Camaras / Los Frailes",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Arena blanca, paseo marítimo, duchas y telefonos.",
+   "tags": [
+    "arena-blanca",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Pendueles / Castiello",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Rodeada de acantilados, acceso por escaleras, arena oscura, unida a un islote por un tombolo.",
+   "tags": [
+    "arena-oscura",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Pestaña / Portaquinos",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña cala, se accede caminando desde Torimbia, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Poo",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Cerca del pueblo de Poo, arena blanca, aguas tranquilas, alta ocupación, ideal para familias.",
+   "tags": [
+    "arena-blanca",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "Portiellu de Cué",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Arena y rocas, aguas claras, ocupación media.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Puerto Chico / Puertu Chicu",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Arena y bolos, muy popular, paseo marítimo, servicios adecuados.",
+   "tags": [
+    "cantos",
+    "accesible"
+   ]
+  },
+  {
+   "nombre": "Cebías",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Playa de acceso rodado en el oriente del concejo.",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "Troenzo",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña playa de acceso rodado.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "Villanueva",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Playa de acceso rodado cerca de Villanueva de Pria.",
+   "tags": [
+    "arena-dorada"
+   ]
+  },
+  {
+   "nombre": "Xiglú",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "mareas_slug": "llanes",
+   "desc": "Pequeña playa de acceso rodado.",
+   "tags": [
+    "cantos"
+   ]
+  },
+  {
+   "nombre": "La Franca",
+   "concejo": "Ribadedeva",
+   "zona": "este",
+   "dist_km": 110.6,
+   "lat": 43.3921,
+   "lon": -4.5087,
+   "mareas_slug": "la-franca",
+   "desc": "Arena blanca fina en la desembocadura del río Cabra, oleaje fuerte, buen nivel de servicios, alta afluencia.",
+   "tags": [
+    "arena-blanca",
+    "accesible",
+    "familias"
+   ]
+  },
+  {
+   "nombre": "El Oso",
+   "concejo": "Ribadedeva",
+   "zona": "este",
+   "dist_km": 110.6,
+   "lat": 43.3921,
+   "lon": -4.5087,
+   "mareas_slug": "la-franca",
+   "desc": "Rocosa, rodeada de altos acantilados, acceso difícil desde Pimiango o desde La Franca en marea baja.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  },
+  {
+   "nombre": "Mendia / Regolguero",
+   "concejo": "Ribadedeva",
+   "zona": "este",
+   "dist_km": 110.6,
+   "lat": 43.3921,
+   "lon": -4.5087,
+   "mareas_slug": "la-franca",
+   "desc": "Rocosa entre acantilados, oleaje fuerte, solo accesible en marea baja, sin servicios.",
+   "tags": [
+    "cantos",
+    "dificil-acceso"
+   ]
+  }
+ ],
+ "ruta_foto": [
+  {
+   "nombre": "Mirador de la Mirandiella",
+   "tipo": "mirador",
+   "concejo": "Castropol",
+   "zona": "oeste",
+   "dist_km": 123.1,
+   "lat": 43.5636,
+   "lon": -6.9636,
+   "desc": "Junto a la iglesia de Santiago Apóstol, con vistas abiertas sobre la Ría del Eo y la costa gallega al otro lado.",
+   "mejor_luz": "Media mañana, con la marea alta llenando la ría de agua."
+  },
+  {
+   "nombre": "Faro de Tapia",
+   "tipo": "faro",
+   "concejo": "Tapia de Casariego",
+   "zona": "oeste",
+   "dist_km": 120.1,
+   "lat": 43.5709,
+   "lon": -6.943,
+   "desc": "Pequeño faro de 1859 sobre la punta rocosa que separa las dos playas de Tapia, con vistas a la Playa de Anguileiro.",
+   "mejor_luz": "Atardecer, cuando el sol bajo ilumina la torre y las playas de ambos lados."
+  },
+  {
+   "nombre": "Faro de San Agustín (Ortiguera)",
+   "tipo": "faro",
+   "concejo": "Coaña",
+   "zona": "oeste",
+   "dist_km": 107.8,
+   "lat": 43.5636,
+   "lon": -6.7635,
+   "desc": "Faro de rayas blancas y azules muy reconocible, en un entorno agreste sobre acantilados.",
+   "mejor_luz": "Días de cielo despejado a mediodía, por el contraste de color del faro."
+  },
+  {
+   "nombre": "Ermita de la Regalina",
+   "tipo": "mirador",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "desc": "Pequeña ermita encaramada en un acantilado sobre el mar en Cadavedo, uno de los rincones más fotografiados de la costa occidental.",
+   "mejor_luz": "Última hora de la tarde, luz rasante sobre el acantilado y el mar de fondo."
+  },
+  {
+   "nombre": "Faro de Luarca",
+   "tipo": "faro",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "desc": "Construido en 1862 sobre la Punta Focicón, domina la villa de Luarca y su cementerio marinero.",
+   "mejor_luz": "Atardecer, con el faro a contraluz sobre el puerto."
+  },
+  {
+   "nombre": "Pueblo de Cudillero",
+   "tipo": "pueblo",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "desc": "Casas de colores apiñadas en anfiteatro sobre una cala, uno de los pueblos marineros más fotografiados de Asturias.",
+   "mejor_luz": "Media mañana desde el mirador de la iglesia, o al atardecer con luz cálida sobre las fachadas."
+  },
+  {
+   "nombre": "Faro de Cabo Vidio",
+   "tipo": "faro",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "desc": "A más de 100 m sobre el mar, uno de los acantilados más altos y espectaculares de la costa asturiana.",
+   "mejor_luz": "Atardecer despejado, con el sol poniéndose sobre el océano hacia Galicia."
+  },
+  {
+   "nombre": "Faro de San Esteban de Pravia",
+   "tipo": "faro",
+   "concejo": "Muros de Nalón",
+   "zona": "oeste",
+   "dist_km": 47.5,
+   "lat": 43.5606,
+   "lon": -6.0961,
+   "desc": "En la desembocadura del río Nalón, junto al puerto y las playas de Aguilar y San Esteban.",
+   "mejor_luz": "Atardecer, con el faro recortado sobre la ría."
+  },
+  {
+   "nombre": "Faro de Cabo Peñas",
+   "tipo": "faro",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "desc": "El faro más importante de Asturias, en el punto más septentrional del Principado, con museo marítimo y acantilados de gran altura.",
+   "mejor_luz": "Amanecer o anochecer con niebla baja; también espectacular con mar de fondo en días de temporal."
+  },
+  {
+   "nombre": "Pueblo de Candás",
+   "tipo": "pueblo",
+   "concejo": "Carreño",
+   "zona": "oeste",
+   "dist_km": 16.1,
+   "lat": 43.5847,
+   "lon": -5.7742,
+   "desc": "Villa marinera con puerto pesquero activo, paseo marítimo y el Cristo del Mar vigilando la bocana.",
+   "mejor_luz": "Atardecer desde el paseo, con las barcas del puerto en primer plano."
+  },
+  {
+   "nombre": "Elogio del Horizonte",
+   "tipo": "monumento",
+   "concejo": "Gijón",
+   "zona": "gijon",
+   "dist_km": 0,
+   "lat": 43.5378,
+   "lon": -5.6544,
+   "desc": "Escultura monumental de Eduardo Chillida en el Cerro de Santa Catalina, con vistas de 360° sobre la bahía y el mar Cantábrico.",
+   "mejor_luz": "Amanecer, muy popular para fotografiar el sol saliendo a través de la escultura."
+  },
+  {
+   "nombre": "Pueblo de Tazones",
+   "tipo": "pueblo",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "desc": "Pueblo pesquero de casas de colores escalonadas sobre un pequeño puerto, en la bocana de la ría de Villaviciosa.",
+   "mejor_luz": "Media tarde, con luz suave sobre las fachadas y los acantilados del entorno."
+  },
+  {
+   "nombre": "Mirador del Fitu",
+   "tipo": "mirador",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "desc": "Balcón panorámico en la Sierra del Sueve a más de 600 m de altitud, con vistas simultáneas del mar Cantábrico y los Picos de Europa.",
+   "mejor_luz": "Amanecer en días despejados de otoño o invierno, cuando el mar de nubes cubre los valles."
+  },
+  {
+   "nombre": "Pueblo de Lastres",
+   "tipo": "pueblo",
+   "concejo": "Colunga",
+   "zona": "este",
+   "dist_km": 41.8,
+   "lat": 43.5136,
+   "lon": -5.2667,
+   "desc": "Villa marinera escalonada sobre un acantilado, con su faro y el puerto pesquero; escenario de la serie 'Doctor Mateo'.",
+   "mejor_luz": "Desde el Mirador de San Roque, al atardecer con luz cálida sobre los tejados."
+  },
+  {
+   "nombre": "Faro de Ribadesella (Tereñes)",
+   "tipo": "faro",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "desc": "Sobre un acantilado sobre la desembocadura del río Sella, con vistas a la playa de Santa Marina y el casco urbano.",
+   "mejor_luz": "Atardecer, con el faro a contraluz sobre la ría del Sella."
+  },
+  {
+   "nombre": "Bufones de Pría",
+   "tipo": "fenomeno-natural",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "desc": "Chimeneas naturales en el terreno kárstico que expulsan agua y aire con estruendo al romper las olas por debajo; el grupo más occidental de los bufones asturianos.",
+   "mejor_luz": "Marea alta con oleaje fuerte, cuando los chorros de agua alcanzan más altura (mejor en otoño e invierno, con precaución)."
+  },
+  {
+   "nombre": "Faro de Llanes",
+   "tipo": "faro",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "desc": "Pequeño faro de 1860 sobre el Paseo de San Pedro, junto al puerto y los famosos Cubos de la Memoria de Ibarrola.",
+   "mejor_luz": "Atardecer, con el faro y los Cubos de la Memoria en el mismo encuadre."
+  },
+  {
+   "nombre": "Faro de San Emeterio (Pimiango)",
+   "tipo": "faro",
+   "concejo": "Ribadedeva",
+   "zona": "este",
+   "dist_km": 110.6,
+   "lat": 43.3921,
+   "lon": -4.5087,
+   "desc": "En el extremo oriental de la costa asturiana, cerca de la Cueva del Pindal, con vistas hacia Cantabria.",
+   "mejor_luz": "Atardecer despejado, punto elevado con horizonte marino amplio."
+  },
+  {
+   "nombre": "Barayo / La Vega",
+   "tipo": "playa",
+   "concejo": "Valdés",
+   "zona": "oeste",
+   "dist_km": 86.0,
+   "lat": 43.5445,
+   "lon": -6.5339,
+   "desc": "Playa virgen de 670 m dentro de la Reserva Natural Parcial de Barayo, con dunas, marisma y el estuario del río Barayo.",
+   "mejor_luz": "Amanecer o marea baja, cuando queda al descubierto todo el estuario."
+  },
+  {
+   "nombre": "El Silencio / Gaviero / Gavieiru",
+   "tipo": "playa",
+   "concejo": "Cudillero",
+   "zona": "oeste",
+   "dist_km": 55.4,
+   "lat": 43.5644,
+   "lon": -6.1466,
+   "desc": "Posiblemente la playa más fotogénica del occidente asturiano: virgen, con espectaculares islotes y acantilados.",
+   "mejor_luz": "Marea baja para acceder a la arena y encuadrar los islotes; luz rasante de última hora de la tarde."
+  },
+  {
+   "nombre": "Playón de Bayas / El Sablón",
+   "tipo": "playa",
+   "concejo": "Castrillón",
+   "zona": "oeste",
+   "dist_km": 35.1,
+   "lat": 43.5827,
+   "lon": -5.9927,
+   "desc": "Extensa playa con un sistema dunar de gran valor ecológico compartida con Soto del Barco.",
+   "mejor_luz": "Amanecer, con la luz baja recorriendo las dunas."
+  },
+  {
+   "nombre": "Carriciega / Carniciega / De Barquera",
+   "tipo": "playa",
+   "concejo": "Gozón",
+   "zona": "oeste",
+   "dist_km": 20.1,
+   "lat": 43.6103,
+   "lon": -5.793,
+   "desc": "Cala de arena dorada dentro del Paisaje Protegido de Cabo de Peñas, poco frecuentada.",
+   "mejor_luz": "Última hora de la tarde, con los acantilados del cabo como telón de fondo."
+  },
+  {
+   "nombre": "Rodiles",
+   "tipo": "playa",
+   "concejo": "Villaviciosa",
+   "zona": "este",
+   "dist_km": 29.1,
+   "lat": 43.5333,
+   "lon": -5.3944,
+   "desc": "Gran arenal junto a la ría de Villaviciosa (Reserva Natural), con pinares y eucaliptales al fondo.",
+   "mejor_luz": "Amanecer desde la desembocadura de la ría, con niebla frecuente en otoño."
+  },
+  {
+   "nombre": "Vega / Berbes",
+   "tipo": "playa",
+   "concejo": "Ribadesella",
+   "zona": "este",
+   "dist_km": 62.0,
+   "lat": 43.4642,
+   "lon": -5.0575,
+   "desc": "Extenso arenal con dunas declarado Monumento Natural, con buena accesibilidad.",
+   "mejor_luz": "Atardecer, con el sistema dunar iluminado de lado."
+  },
+  {
+   "nombre": "Torimbia",
+   "tipo": "playa",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "desc": "Playa amplia y virgen, una de las más fotogénicas de Llanes, a la que solo se accede a pie.",
+   "mejor_luz": "Media mañana, cuando el sol ilumina de frente la cala rodeada de acantilados."
+  },
+  {
+   "nombre": "Gulpiyuri",
+   "tipo": "playa",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "desc": "Playa de interior alimentada por galerías subterráneas a 100 m del mar, Monumento Natural único en España.",
+   "mejor_luz": "Cualquier hora con cielo despejado; el contraste del prado verde alrededor de la arena y el agua turquesa es lo llamativo."
+  },
+  {
+   "nombre": "Cobijeru",
+   "tipo": "playa",
+   "concejo": "Llanes",
+   "zona": "este",
+   "dist_km": 88.8,
+   "lat": 43.4203,
+   "lon": -4.755,
+   "desc": "Cala semicircular al pie de un acantilado, con aguas que entran por fisuras rocosas; Monumento Natural kárstico.",
+   "mejor_luz": "Marea baja, cuando se puede bajar a la arena y ver el arco rocoso completo."
+  }
+ ],
+ "ruta_foto_interior": [
+  {
+   "nombre": "Lagos de Covadonga (Enol y Ercina)",
+   "concejo": "Cangas de Onís",
+   "tipo": "lago",
+   "desc": "Dos lagos glaciares a más de 1000 m de altitud rodeados de picos calizos; reflejos del Macizo Occidental y ganado pastando en los Picos de Europa.",
+   "mejor_luz": "Amanecer, antes de la afluencia de tráfico y con niebla frecuente en las mañanas de otoño",
+   "dist_km": 95
+  },
+  {
+   "nombre": "Mirador de la Reina",
+   "concejo": "Cangas de Onís",
+   "tipo": "mirador",
+   "desc": "Balcón sobre el desfiladero de Los Beyos y los valles hacia Covadonga, con vistas escalonadas de las montañas calizas.",
+   "mejor_luz": "Atardecer, luz rasante dorada sobre las crestas",
+   "dist_km": 92
+  },
+  {
+   "nombre": "Mirador del Rey",
+   "concejo": "Cangas de Onís",
+   "tipo": "mirador",
+   "desc": "Vista panorámica de la Basílica de Covadonga y del valle hacia el santuario, enmarcada por paredones rocosos.",
+   "mejor_luz": "Mañana, luz suave sobre la fachada de la basílica",
+   "dist_km": 85
+  },
+  {
+   "nombre": "Puente Romano de Cangas de Onís",
+   "concejo": "Cangas de Onís",
+   "tipo": "otro",
+   "desc": "Puente medieval (atribuido erróneamente a época romana) sobre el río Sella con la Cruz de la Victoria colgando en el arco central.",
+   "mejor_luz": "Última hora de la tarde, reflejos del puente en el agua",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Mirador del Pozo de la Oración (Camarmeña)",
+   "concejo": "Cabrales",
+   "tipo": "mirador",
+   "desc": "Uno de los mejores puntos para fotografiar el Naranjo de Bulnes (Picu Urriellu) recortado sobre el pueblo de Bulnes.",
+   "mejor_luz": "Atardecer, cuando el pico se tiñe de rojo (alpenglow)",
+   "dist_km": 108
+  },
+  {
+   "nombre": "Bulnes",
+   "concejo": "Cabrales",
+   "tipo": "pueblo",
+   "desc": "Aldea de piedra sin acceso rodado, encajonada bajo el Naranjo de Bulnes, accesible a pie o en funicular desde Poncebos.",
+   "mejor_luz": "Mañana temprano, con niebla en el fondo del valle",
+   "dist_km": 112
+  },
+  {
+   "nombre": "Poncebos y desfiladero del Cares",
+   "concejo": "Cabrales",
+   "tipo": "desfiladero",
+   "desc": "Inicio de la Ruta del Cares, garganta vertical excavada por el río entre paredes calizas de cientos de metros.",
+   "mejor_luz": "Mañana, cuando el sol entra directamente al cañón",
+   "dist_km": 100
+  },
+  {
+   "nombre": "Desfiladero de los Beyos",
+   "concejo": "Amieva / Ponga",
+   "tipo": "desfiladero",
+   "desc": "Cañón de unos 20 km excavado por el río Sella, con carretera y vía de tren sinuosas entre paredes rocosas casi verticales.",
+   "mejor_luz": "Media mañana, cuando la luz alcanza el fondo del desfiladero",
+   "dist_km": 88
+  },
+  {
+   "nombre": "Alto del Cabanón",
+   "concejo": "Ponga",
+   "tipo": "mirador",
+   "desc": "Vista espectacular de las cumbres de los macizos Occidental y Central de Picos de Europa desde un puerto de montaña remoto.",
+   "mejor_luz": "Atardecer, con los picos iluminados y el valle en sombra",
+   "dist_km": 105
+  },
+  {
+   "nombre": "El Fito",
+   "concejo": "Parres",
+   "tipo": "mirador",
+   "desc": "Mirador circular considerado uno de los mejores de la península: panorámica de 360º con la costa, la ría de Ribadesella y los Picos de Europa al fondo.",
+   "mejor_luz": "Mañana despejada, mejor visibilidad hacia la costa y las cumbres",
+   "dist_km": 55
+  },
+  {
+   "nombre": "San Juan de Beleño",
+   "concejo": "Ponga",
+   "tipo": "pueblo",
+   "desc": "Capital del valle de Ponga, punto de partida hacia el Pico Pierzu y el Bosque de Peloño, con arquitectura tradicional de montaña.",
+   "mejor_luz": "Otoño, cuando el hayedo circundante cambia de color",
+   "dist_km": 95
+  },
+  {
+   "nombre": "Casielles",
+   "concejo": "Ponga",
+   "tipo": "mirador",
+   "desc": "Pequeño pueblo encaramado sobre una carretera de 21 curvas cerradas, con vistas dramáticas del valle de Ponga.",
+   "mejor_luz": "Atardecer, luz lateral que resalta las curvas de la carretera",
+   "dist_km": 98
+  },
+  {
+   "nombre": "Lagos de Saliencia",
+   "concejo": "Somiedo",
+   "tipo": "lago",
+   "desc": "Conjunto de lagos glaciares de alta montaña (Calabazosa, La Cueva, Cerveriz, Almagrera) en un circo rodeado de picos pizarrosos.",
+   "mejor_luz": "Amanecer, aguas en calma antes de que se levante el viento",
+   "dist_km": 112
+  },
+  {
+   "nombre": "Lago del Valle (Valle del Lago)",
+   "concejo": "Somiedo",
+   "tipo": "lago",
+   "desc": "El mayor lago glaciar de Asturias, con un mirador natural que domina el valle y la braña con teitos al fondo.",
+   "mejor_luz": "Atardecer, con niebla frecuente en otoño sobre la superficie del lago",
+   "dist_km": 118
+  },
+  {
+   "nombre": "Braña de La Pornacal",
+   "concejo": "Somiedo",
+   "tipo": "otro",
+   "desc": "La mayor braña de teitos (cabañas de techo vegetal) de Asturias, uno de los conjuntos etnográficos de montaña mejor conservados.",
+   "mejor_luz": "Amanecer con niebla baja, muy característica del valle en otoño",
+   "dist_km": 95
+  },
+  {
+   "nombre": "Desfiladero de las Xanas",
+   "concejo": "Proaza / Teverga",
+   "tipo": "desfiladero",
+   "desc": "Conocido como 'el pequeño Cares', un cañón estrecho tallado por el arroyo Cabria con pasarelas colgadas sobre el agua.",
+   "mejor_luz": "Mediodía, cuando la luz vertical entra hasta el fondo del cañón estrecho",
+   "dist_km": 50
+  },
+  {
+   "nombre": "Bandujo",
+   "concejo": "Proaza",
+   "tipo": "pueblo",
+   "desc": "Pueblo medieval de piedra con torre defensiva e iglesia románica, encaramado sobre el valle del Trubia.",
+   "mejor_luz": "Atardecer, luz cálida sobre la piedra dorada de las fachadas",
+   "dist_km": 52
+  },
+  {
+   "nombre": "Senda del Oso (valle del Trubia)",
+   "concejo": "Teverga / Proaza",
+   "tipo": "otro",
+   "desc": "Antiguo trazado de vía verde junto al río Trubia entre túneles y desfiladeros, con recinto de osos pardos en semilibertad.",
+   "mejor_luz": "Mañana, luz filtrada entre el bosque de ribera",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Puente colgante de Cangas del Narcea",
+   "concejo": "Cangas del Narcea",
+   "tipo": "otro",
+   "desc": "Pasarela colgante sobre el río Narcea que conecta dos barrios de la villa, con vistas de la Colegiata de Santa María Magdalena.",
+   "mejor_luz": "Atardecer, con la villa iluminada de luz dorada",
+   "dist_km": 108
+  },
+  {
+   "nombre": "Monasterio de Corias",
+   "concejo": "Cangas del Narcea",
+   "tipo": "otro",
+   "desc": "Gran monasterio benedictino (el 'Escorial asturiano') sobre una colina dominando el valle del Narcea.",
+   "mejor_luz": "Atardecer, luz rasante sobre la fachada monumental",
+   "dist_km": 110
+  },
+  {
+   "nombre": "Cascada del Xiblu",
+   "concejo": "Cangas del Narcea",
+   "tipo": "cascada",
+   "desc": "Espectacular salto de agua de unos 80 metros en el entorno de Rengos, poco conocido y rodeado de bosque atlántico.",
+   "mejor_luz": "Tras lluvias, luz difusa de día nublado para evitar contrastes fuertes en el agua",
+   "dist_km": 135
+  },
+  {
+   "nombre": "Bosque de Muniellos",
+   "concejo": "Ibias",
+   "tipo": "otro",
+   "desc": "Uno de los robledales mejor conservados de Europa, Reserva de la Biosfera, con acceso limitado y luz filtrada entre robles centenarios.",
+   "mejor_luz": "Otoño, colores del follaje con luz filtrada de media mañana",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Embalse de la Florida (valle de Degaña)",
+   "concejo": "Degaña",
+   "tipo": "lago",
+   "desc": "Embalse de montaña rodeado de bosques y picos del Parque Natural de las Fuentes del Narcea, Degaña e Ibias.",
+   "mejor_luz": "Amanecer con niebla sobre el agua, frecuente en otoño",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Mirador de A Paicega sobre el Embalse de Grandas de Salime",
+   "concejo": "Grandas de Salime",
+   "tipo": "mirador",
+   "desc": "Vistas del gran embalse serpenteante entre montañas del occidente asturiano, con la presa al fondo.",
+   "mejor_luz": "Atardecer, cuando la luz baja resalta los meandros del embalse",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Lago Ubales",
+   "concejo": "Caso",
+   "tipo": "lago",
+   "desc": "Pequeño lago de montaña cerca del puerto de Tarna, con reflejos de las cumbres del Parque Natural de Redes.",
+   "mejor_luz": "Amanecer, aguas en calma antes del viento del mediodía",
+   "dist_km": 78
+  },
+  {
+   "nombre": "Tabayón del Mongallu",
+   "concejo": "Caso",
+   "tipo": "cascada",
+   "desc": "Cascada de más de 60 metros de caída libre, accesible en ruta de senderismo desde Tarna, una de las más altas de Asturias.",
+   "mejor_luz": "Día nublado tras lluvias, para captar bien el caudal sin contrastes",
+   "dist_km": 80
+  },
+  {
+   "nombre": "Embalse de Rioseco / Tanes",
+   "concejo": "Caso / Sobrescobio",
+   "tipo": "lago",
+   "desc": "Embalse alargado entre montañas del Parque Natural de Redes, con miradores desde Campiellos y Llaíñes.",
+   "mejor_luz": "Atardecer, luz dorada reflejada en el agua desde el mirador de Campiellos",
+   "dist_km": 65
+  },
+  {
+   "nombre": "Brañagallones",
+   "concejo": "Caso",
+   "tipo": "otro",
+   "desc": "Vega de alta montaña considerada una de las más bellas de Asturias, con prados verdes rodeados de picos del Parque de Redes.",
+   "mejor_luz": "Amanecer de verano, niebla baja disipándose sobre el prado",
+   "dist_km": 85
+  }
+ ],
+ "restaurantes": [
+  {
+   "nombre": "Casa Marcial",
+   "concejo": "Parres",
+   "localidad": "Arriondas",
+   "distincion": [
+    "3 estrellas Michelín",
+    "3 soles Repsol"
+   ],
+   "especialidades": "Alta cocina asturiana de vanguardia, producto de huerta propia, pescado de río",
+   "tique_medio": "165-220€ (menús degustación Fitu/Cachuchu)",
+   "desc": "El único tres estrellas Michelín de Asturias, dirigido por Nacho Manzano y su familia, referencia nacional de la cocina asturiana contemporánea.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "El Corral del Indianu",
+   "concejo": "Parres",
+   "localidad": "Arriondas",
+   "distincion": [
+    "1 estrella Michelín",
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina moderna de producto asturiano: ostras del Eo, pitu de caleya, quesos",
+   "tique_medio": "95-130€ aprox (menú degustación)",
+   "desc": "Restaurante del chef José Antonio Campoviejo que busca la emoción a través del detalle partiendo de la despensa asturiana.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Auga",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "1 estrella Michelín",
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina tradicional actualizada, pescado y marisco del Cantábrico",
+   "tique_medio": "70-100€ aprox",
+   "desc": "Situado en el puerto deportivo de Gijón, con terraza frente al mar y una carta que varía según el mercado, dirigido por el chef Gonzalo Pañeda.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Marcos",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "1 estrella Michelín"
+   ],
+   "especialidades": "Cocina moderna de autor, atún rojo, caza, setas silvestres",
+   "tique_medio": "120-160€ aprox (menús Río/Libertad)",
+   "desc": "Íntimo restaurante de solo 12 comensales con cocina a la vista, dirigido por el chef Marcos Mistry.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "El Retiro",
+   "concejo": "Llanes",
+   "localidad": "Pancar",
+   "distincion": [
+    "1 estrella Michelín",
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina actual asturiana, bacalao, fusión asturiano-asiática",
+   "tique_medio": "110-150€ aprox (menú San Patricio)",
+   "desc": "Dirigido por Ricardo González Sotres, combina un bistró informal con una propuesta gastronómica de alta cocina en Pancar, Llanes.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Ferpel Gastronómico",
+   "concejo": "Coaña",
+   "localidad": "Ortiguera",
+   "distincion": [
+    "1 estrella Michelín",
+    "1 sol Repsol"
+   ],
+   "especialidades": "Producto autóctono del occidente asturiano, pescado de la zona",
+   "tique_medio": "100-140€ aprox",
+   "desc": "Restaurante familiar en Ortiguera dirigido por el chef Elio Fernández, con vistas y compromiso con la tradición rural del occidente asturiano.",
+   "dist_km": 107.8
+  },
+  {
+   "nombre": "Real Balneario",
+   "concejo": "Castrillón",
+   "localidad": "Salinas",
+   "distincion": [
+    "1 estrella Michelín",
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina de mercado, pescado y marisco del Cantábrico, lubina al champagne",
+   "tique_medio": "90-130€ aprox",
+   "desc": "Situado en primera línea de playa en Salinas, con más de 50 años de historia y el chef Isaac Loya al frente.",
+   "dist_km": 35.1
+  },
+  {
+   "nombre": "Monte",
+   "concejo": "Lena",
+   "localidad": "San Feliz",
+   "distincion": [
+    "1 estrella Michelín",
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de proximidad y de temporada, producto de la comarca de Lena",
+   "tique_medio": "100-140€ aprox",
+   "desc": "El chef Xune Andrade elabora una cocina moderna en la que el 90% de los productos proceden de un radio de 20 km.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Casa Gerardo",
+   "concejo": "Carreño",
+   "localidad": "Prendes",
+   "distincion": [
+    "1 estrella Michelín",
+    "3 soles Repsol"
+   ],
+   "especialidades": "Fabada, arroz con leche, cocina asturiana renovada",
+   "tique_medio": "90-150€ aprox (menús 80-200€; carta 25-66€/plato)",
+   "desc": "Uno de los restaurantes más antiguos de España (140+ años), famoso por su fabada y su arroz con leche, dirigido por la familia Morán.",
+   "dist_km": 16.1
+  },
+  {
+   "nombre": "Ayalga",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "distincion": [
+    "1 estrella Michelín",
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina moderna, pescado de anzuelo, producto local",
+   "tique_medio": "110-150€ aprox",
+   "desc": "Restaurante del Hotel Villa Rosario, en un palacete de 1914 con vistas al Cantábrico, dirigido por el chef Israel Moreno.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Regueiro",
+   "concejo": "Navia",
+   "localidad": "Tox",
+   "distincion": [
+    "1 estrella Michelín",
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina fusión (india, mexicana, asiática) con producto asturiano",
+   "tique_medio": "85-120€ aprox (menús Corto/Diego/Hedonista)",
+   "desc": "En una aldea de 86 vecinos, el chef Diego Fernández sorprende con una fusión audaz de sabores internacionales y producto local.",
+   "dist_km": 102.5
+  },
+  {
+   "nombre": "Casa Fermín",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "2 soles Repsol"
+   ],
+   "especialidades": "Cocina asturiana clásica y creativa, fabada",
+   "tique_medio": "35-60€ aprox",
+   "desc": "Clásico centenario de Oviedo que combina la artesanía tradicional con técnicas contemporáneas.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "La Huertona",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "distincion": [
+    "2 soles Repsol"
+   ],
+   "especialidades": "Pescado a la parrilla, producto de temporada, huerta propia",
+   "tique_medio": "60-80€ aprox",
+   "desc": "Restaurante de cocina de producto en Ribadesella, con huerta propia y especializado en pescado a la parrilla.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Alenda",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina creativa de proximidad, ternera asturiana, sidra",
+   "tique_medio": "45-65€ aprox",
+   "desc": "Restaurante con huerta propia en plena comarca de la sidra, con menús degustación centrados en producto regional.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Blanco",
+   "concejo": "Cangas del Narcea",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina asturiana de cuchara reinterpretada, bonito en sidra, jabalí",
+   "tique_medio": "25-35€ aprox",
+   "desc": "Bar-restaurante que reinterpreta la cocina casera asturiana con producto local en pleno occidente.",
+   "dist_km": 110
+  },
+  {
+   "nombre": "Ca'Suso",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina asturiana de autor, croquetas de queso, fabada",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Restaurante familiar dirigido por los hermanos Iván y Vicente, famoso por sus croquetas y su cocina de raíz asturiana.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Casa Belarmino",
+   "concejo": "Gozón",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina asturiana casera, marisco del Cantábrico, pitu de caleya",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Cerca del Cabo Peñas, reinterpreta con técnica los sabores clásicos asturianos y el recuerdo familiar.",
+   "dist_km": 20.1
+  },
+  {
+   "nombre": "Cocina Cabal",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor de mercado con influencia mediterránea",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Dirigido por el chef Vicente Suárez Cabal, con paso por El Celler de Can Roca, apuesta por la solidez y el producto.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Del Arco",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina asturiana contemporánea, guisos, taberna informal",
+   "tique_medio": "40-60€ aprox (menús degustación 75-90€)",
+   "desc": "Clásico contemporáneo en la Plaza de América de Oviedo, con taberna informal en planta baja y comedor gastronómico arriba.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "El Asador de Abel-Casa Farpón",
+   "concejo": "Siero",
+   "localidad": "Argüelles",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Carnes a la brasa, croquetas de jamón, cocina asturiana tradicional",
+   "tique_medio": "25-35€ aprox",
+   "desc": "A medio camino entre casa de comidas tradicional y asador contemporáneo, con parrilla de carbón como protagonista.",
+   "dist_km": 20
+  },
+  {
+   "nombre": "El Molín de Mingo",
+   "concejo": "Cangas de Onís",
+   "localidad": "Peruyes",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Fabada, arroz con pitu, cocina casera asturiana",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Instalado en un antiguo molino rehabilitado y rodeado de vegetación, dirigido por Dulce Martínez.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Éleonore",
+   "concejo": "Castrillón",
+   "localidad": "Salinas",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor, langostino cántabro, venado",
+   "tique_medio": "65-90€ aprox",
+   "desc": "Restaurante boutique en el paseo de Salinas con vistas al Cantábrico, dirigido por la chef Cristina Arias.",
+   "dist_km": 35.1
+  },
+  {
+   "nombre": "Farragua",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor, pilpiles de verduras, escabeches, casquería",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Propuesta creativa del chef Ricardo Señorán en Gijón, con un menú especial dedicado a la casquería.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Güeyu-Mar",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Pescado y marisco a la parrilla, cocina marinera ahumada",
+   "tique_medio": "45-70€ aprox (el pescado se cobra a peso)",
+   "desc": "Frente a la playa de Vega, referencia nacional en pescado a la parrilla dirigido por el chef Abel Álvarez.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Gunea",
+   "concejo": "Castrillón",
+   "localidad": "Cruz de Illas",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina asturiana de mercado con toques vascos",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Restaurante rural donde el chef Pablo Montero moderniza recetas tradicionales asturianas con producto de temporada.",
+   "dist_km": 35.1
+  },
+  {
+   "nombre": "Los Llaureles",
+   "concejo": "Cabranes",
+   "localidad": "Torazo",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor, verduras, ceviches, menú único degustación",
+   "tique_medio": "45-60€ aprox",
+   "desc": "Íntimo restaurante rural de solo ocho mesas en la comarca de la sidra, con un único menú degustación creativo.",
+   "dist_km": 35
+  },
+  {
+   "nombre": "Married Cocina",
+   "concejo": "Llanes",
+   "localidad": "Hontoria",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor con técnica francesa y guisos asturianos",
+   "tique_medio": "45-65€ aprox (menús degustación 65-90€)",
+   "desc": "El chef César Casado fusiona la tradición del oriente asturiano con técnica francesa e inspiración en la nouvelle cuisine.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Mesón El Centro",
+   "concejo": "Navia",
+   "localidad": "Puerto de Vega",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Pescado y marisco fresco de lonja, cocina tradicional marinera",
+   "tique_medio": "40-55€ aprox (menú degustación 48€)",
+   "desc": "En el pintoresco puerto pesquero de Puerto de Vega, especializado en pescado fresco de la lonja local.",
+   "dist_km": 102.5
+  },
+  {
+   "nombre": "Narbasu",
+   "concejo": "Piloña",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina asturiana de mercado, croquetas, arroz con pitu",
+   "tique_medio": "45-55€ aprox (menú degustación 50€)",
+   "desc": "Proyecto de los hermanos Manzano (Casa Marcial) en un palacete rural, homenaje al producto y la memoria asturiana.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Pedro Martino",
+   "concejo": "Oviedo",
+   "localidad": "Caces",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor asturiana, potes reinterpretados",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Con vistas al valle del Nalón, ofrece una interpretación particular de la asturianidad culinaria.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Quince Nudos",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Arroces, marisco, cocina de ambiente marinero",
+   "tique_medio": "40-55€ aprox",
+   "desc": "Pequeño restaurante marinero del chef Bruno M. Lombán, conocido por sus arroces y producto fresco local.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Roble by Jairo Rodríguez",
+   "concejo": "Lena",
+   "localidad": "Pola de Lena",
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor de proximidad, pan y conservas propias",
+   "tique_medio": "45-65€ aprox (menú degustación 90€)",
+   "desc": "El chef Jairo Rodríguez cocina en solitario con producto de proximidad, pan y anchoas curadas en casa.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Yume",
+   "concejo": "Avilés",
+   "localidad": null,
+   "distincion": [
+    "1 sol Repsol"
+   ],
+   "especialidades": "Cocina de autor con influencias asiáticas y producto asturiano",
+   "tique_medio": "30-65€ según menú",
+   "desc": "Situado en la Torre Niemeyer de Avilés, propuesta transgresora del chef Adrián San Julián.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "El Pescador",
+   "concejo": "Cudillero",
+   "localidad": null,
+   "distincion": [
+    "Muy valorado en Google"
+   ],
+   "especialidades": "Marisco, calderetas de pescado, paella marinera",
+   "tique_medio": "40-60€ aprox",
+   "desc": "Restaurante marinero en el puerto de Cudillero con barco de pesca propio, con 4,5/5 en Google y cerca de 2.000 reseñas.",
+   "dist_km": 55.4
+  },
+  {
+   "nombre": "El Barómetro",
+   "concejo": "Valdés",
+   "localidad": "Luarca",
+   "distincion": [
+    "Muy valorado en Google"
+   ],
+   "especialidades": "Marisco y pescado fresco, cocina marinera",
+   "tique_medio": "35-50€ aprox",
+   "desc": "Clásico del puerto de Luarca, el restaurante mejor valorado de la villa por su pescado y marisco frescos.",
+   "dist_km": 86.0
+  },
+  {
+   "nombre": "Gloria",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina asturiana actualizada, guisos y producto de temporada",
+   "tique_medio": "35-45€ aprox",
+   "desc": "Restaurante informal de los hermanos Nacho y Esther Manzano (Casa Marcial) en la Plaza Florencio Rodríguez. Figura en la Guía Michelín sin estrella.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Gloria",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina asturiana actualizada, guisos y producto de temporada",
+   "tique_medio": "35-45€ aprox",
+   "desc": "Segunda casa de la familia Manzano en Oviedo, mismo concepto desenfadado que el de Gijón. Recomendado por la Guía Michelín.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Abarike",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Pescados y mariscos del Cantábrico, menús degustación",
+   "tique_medio": "45-60€ aprox",
+   "desc": "Restaurante gastronómico liderado por la chef Lara Roguez, especializada en producto del mar. Presente en la Guía Michelín.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sancho La Merced",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina asturiana de mercado",
+   "tique_medio": "35-50€ aprox",
+   "desc": "Restaurante gijonés de cocina actual con base en producto local, incluido en la selección de la Guía Michelín.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Fūmu",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Fusión japonesa-asturiana, sushi con producto local",
+   "tique_medio": "30-45€ aprox",
+   "desc": "Propuesta de fusión nipona-asturiana en Gijón, recogida en la Guía Michelín.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "La Tabla",
+   "concejo": "Gijón",
+   "localidad": "Fano",
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina asturiana tradicional, carnes a la brasa",
+   "tique_medio": "30-45€ aprox",
+   "desc": "Clásico de la parroquia gijonesa de Fano, abierto desde 1973, recomendado en la Guía Michelín.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "El Recetario",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina de mercado actualizada",
+   "tique_medio": "30-40€ aprox",
+   "desc": "Bib Gourmand de la Guía Michelín en Gijón: buena relación calidad-precio con cocina de temporada.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Le Bistró",
+   "concejo": "Llanes",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina de bistró franco-asturiana",
+   "tique_medio": "30-45€ aprox",
+   "desc": "Bib Gourmand de la Guía Michelín en Llanes, con un formato de bistró de producto.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "El Bálamu",
+   "concejo": "Llanes",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Pescado y marisco a la parrilla frente al mar",
+   "tique_medio": "40-60€ aprox",
+   "desc": "Chiringuito-restaurante de referencia junto a la playa de Toró, recomendado por la Guía Michelín.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Cabo Vidio",
+   "concejo": "Cudillero",
+   "localidad": "Soto de Luiña",
+   "distincion": [
+    "Recomendado Michelín",
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Pescados y mariscos, terraza con vistas",
+   "tique_medio": "40-60€ aprox",
+   "desc": "Restaurante con terraza sobre el cabo, parada gastronómica clásica de la Costa Verde, citado por Michelín y Repsol.",
+   "dist_km": 55.4
+  },
+  {
+   "nombre": "Casa Eutimio",
+   "concejo": "Colunga",
+   "localidad": "Lastres",
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Merluza a la sidra, arroces y pescado de lonja",
+   "tique_medio": "35-50€ aprox",
+   "desc": "Clásico marinero del puerto de Lastres, recomendado en la Guía Michelín.",
+   "dist_km": 41.8
+  },
+  {
+   "nombre": "El Cenador del Azul",
+   "concejo": "Mieres",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina de autor de temporada",
+   "tique_medio": "35-50€ aprox",
+   "desc": "Propuesta de cocina de autor en el centro de Mieres, incluida en la Guía Michelín.",
+   "dist_km": 48
+  },
+  {
+   "nombre": "El Pandora",
+   "concejo": "Avilés",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina contemporánea de mercado",
+   "tique_medio": "35-50€ aprox",
+   "desc": "Restaurante de cocina actual en el casco histórico de Avilés, recomendado por Michelín.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Casa Chuchu",
+   "concejo": "Mieres",
+   "localidad": "Turón",
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Sidrería y cocina de cuchara",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Casa de comidas tradicional de la cuenca minera, en la parroquia de Turón, citada por la Guía Michelín.",
+   "dist_km": 48
+  },
+  {
+   "nombre": "Arraigo",
+   "concejo": "Llanera",
+   "localidad": "Posada de Llanera",
+   "distincion": [
+    "Recomendado Michelín"
+   ],
+   "especialidades": "Cocina de raíz asturiana con toques actuales",
+   "tique_medio": "35-50€ aprox",
+   "desc": "Restaurante cercano al aeropuerto de Asturias con cocina de raíz reinterpretada, recomendado por Michelín.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "El Planeta",
+   "concejo": "Gijón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Sidrería, pescados (sardinas, bonito)",
+   "tique_medio": "30-40€ aprox",
+   "desc": "Sidrería histórica de Cimadevilla, especializada en pescado a la parrilla; cuenta con Solete de la Guía Repsol.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Casa Puyo",
+   "concejo": "Oviedo",
+   "localidad": "Trubia",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina casera, platos de cuchara",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Casa de comidas tradicional en la parroquia ovetense de Trubia, con Solete Repsol.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Parrilla La Veguca",
+   "concejo": "Llanes",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Carnes y pescados a la brasa",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Parrilla llanisca reconocida con Solete Repsol por su producto a la brasa.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Meraki",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina mediterránea-asturiana de mercado",
+   "tique_medio": "25-35€ aprox",
+   "desc": "Restaurante informal en Oviedo con Solete Repsol, cocina de mercado en ambiente desenfadado.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "La Reguerina",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Sidrería, cocina casera con huerta propia",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Sidrería en la comarca de la sidra con Solete Repsol y producto de huerta propia.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "La Jamonería",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Jamón ibérico y tapeo de producto selecto",
+   "tique_medio": "20-35€ aprox",
+   "desc": "Especialistas en jamón y tapeo de calidad en Oviedo, con Solete de la Guía Repsol.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Tierra de Agua",
+   "concejo": "Caso",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina de montaña",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Restaurante-terraza en el Parque Natural de Redes (Caso), con Solete Repsol.",
+   "dist_km": 78
+  },
+  {
+   "nombre": "Las Terrazas de Sardalla",
+   "concejo": "Ribadesella",
+   "localidad": "Sardalla",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina tradicional asturiana con vistas",
+   "tique_medio": "25-35€ aprox",
+   "desc": "Terraza-restaurante con vistas al valle en Sardalla (Ribadesella), reconocida con Solete Repsol.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "La Mar de Fondo",
+   "concejo": "Navia",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Pescados y mariscos frente a la ría",
+   "tique_medio": "25-35€ aprox",
+   "desc": "Terraza junto a la ría de Navia con Solete de la Guía Repsol.",
+   "dist_km": 102.5
+  },
+  {
+   "nombre": "Casa Benigna",
+   "concejo": "Ponga",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Fabada y cocina de puchero",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Casa de comidas en el Parque Natural de Ponga, referencia de fabada con Solete Repsol.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "Casa Xico",
+   "concejo": "Llanes",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Fabada y platos de cuchara",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Sidrería-asador tradicional en Llanes, distinguida con Solete de la Guía Repsol.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Casa Pilar",
+   "concejo": "Llanes",
+   "localidad": "Nueva",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Fabada asturiana",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Restaurante tradicional en Nueva de Llanes, célebre por su fabada; 1 Sol Repsol.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Casa Adela",
+   "concejo": "Langreo",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina casera y fabada",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Casa de comidas de la cuenca del Nalón con Solete de la Guía Repsol.",
+   "dist_km": 32
+  },
+  {
+   "nombre": "Casa Eladia",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina casera asturiana",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Restaurante tradicional en la comarca de la sidra, con Solete Repsol.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Casa Ricardo",
+   "concejo": "Ponga",
+   "localidad": "Sellaño",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Fabada y platos típicos de montaña",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Casa de comidas de montaña en Sellaño (Ponga), con Solete de la Guía Repsol.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "La Nueva Allandesa",
+   "concejo": "Allande",
+   "localidad": "Pola de Allande",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina tradicional del occidente asturiano",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Restaurante de referencia en Pola de Allande, con Solete de la Guía Repsol.",
+   "dist_km": 95
+  },
+  {
+   "nombre": "El Torneiro",
+   "concejo": "Villayón",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina tradicional del occidente asturiano",
+   "tique_medio": "20-30€ aprox",
+   "desc": "Restaurante rural en Villayón, reconocido con Solete Repsol.",
+   "dist_km": 90
+  },
+  {
+   "nombre": "Casa Poli",
+   "concejo": "Llanes",
+   "localidad": "Vidiago",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Marisco y pescado",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Clásico de Vidiago (Llanes) con la distinción 'Solete con Solera' de la Guía Repsol.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Casa Marisa",
+   "concejo": "Ribadedeva",
+   "localidad": "Colombres",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina asturiana de producto",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Restaurante de referencia en el oriente asturiano, en Colombres, citado como parada gastronómica de la A-8.",
+   "dist_km": 110.6
+  },
+  {
+   "nombre": "Leypon",
+   "concejo": "Llanes",
+   "localidad": null,
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Pescados y mariscos",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Restaurante costero en Llanes especializado en producto del mar, incluido entre las paradas gastronómicas recomendadas por Repsol.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "El Cafetín",
+   "concejo": "Colunga",
+   "localidad": "Lastres",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Cocina marinera con vistas al puerto",
+   "tique_medio": "25-40€ aprox",
+   "desc": "Restaurante con vistas al puerto de Lastres, recomendado por la Guía Repsol.",
+   "dist_km": 41.8
+  },
+  {
+   "nombre": "Casa Seín",
+   "concejo": "Ribadedeva",
+   "localidad": "Bustio",
+   "distincion": [
+    "Recomendado Repsol"
+   ],
+   "especialidades": "Angulas y marisco",
+   "tique_medio": "30-50€ aprox",
+   "desc": "Especialistas en angulas y marisco en Bustio, junto a la ría del Deva; con Solete de la Guía Repsol.",
+   "dist_km": 110.6
+  }
+ ],
+ "sidrerias": [
+  {
+   "nombre": "Sobiñagu",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Sidrería con más encanto, Gijón de Sidra 2025; Mejor Sidrería, Gijón de Sidra 2023",
+   "especialidad": "Cocina asturiana con producto de mar y su 'Bombón Sobiñagu'",
+   "desc": "Sidrería-restaurante de ambiente animado en Gijón, habitual entre las más premiadas del certamen Gijón de Sidra.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "La Maniega",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Sidrería, Gijón de Sidra 2024; Mejor Equipo Sidrería-Llagar (con Sidra Trabanco), Gijón de Sidra 2025",
+   "especialidad": "Pescados, mariscos y cocina tradicional asturiana",
+   "desc": "Sidrería-restaurante gijonesa muy popular, elegida mejor sidrería en la 15ª edición de Gijón de Sidra.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería Champel",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Sidrería, Gijón de Sidra 2025",
+   "especialidad": "Cocina asturiana de mercado",
+   "desc": "Sidrería de barrio en Gijón, reconocida en la última edición del certamen Gijón de Sidra.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "El Tendido",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Escanciadora, Gijón de Sidra 2024 (Jessica García); finalista Sidrería con más encanto 2025",
+   "especialidad": "Parrilla y pescado a la brasa",
+   "desc": "Sidrería-restaurante gijonesa conocida por su parrilla, premiada en el escanciado del certamen Gijón de Sidra.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "La Tonada de la Guía",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Sidrería con más encanto, Gijón de Sidra 2024; finalista en 2025",
+   "especialidad": "Cocina asturiana con parrilla",
+   "desc": "Sidrería tradicional en Gijón distinguida por su ambiente en el certamen Gijón de Sidra.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Mesón Puente Romano",
+   "concejo": "Cangas de Onís",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Finalista Sidrería con más encanto, Gijón de Sidra 2025",
+   "especialidad": "Cocina asturiana de cuchara y parrilla",
+   "desc": "Sidrería-mesón junto al puente romano de Cangas de Onís, con reconocimiento en un certamen regional de sidra.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Peces de Madera",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Finalista Sidrería con más encanto, Gijón de Sidra 2025",
+   "especialidad": "Cocina asturiana de autor con producto de temporada",
+   "desc": "Sidrería-restaurante gijonesa de ambiente actual dentro de la tradición sidrera.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Tururú Sidrería",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Plato ('Crema de berza y su torrezno'), Gijón de Sidra 2024",
+   "especialidad": "Cocina tradicional de cuchara",
+   "desc": "Sidrería gijonesa centrada en platos de cuchara y cocina de siempre.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Restaurante Bar Cabaña Sidrería (Llagarín del Cabaña)",
+   "concejo": "Aller",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Equipo Sidrería-Llagar (con Sidra Frutos), Gijón de Sidra 2024",
+   "especialidad": "Cocina de montaña y carnes a la parrilla",
+   "desc": "Sidrería con llagar propio en Cabañaquinta, concejo de Aller, en la montaña central asturiana.",
+   "dist_km": 65
+  },
+  {
+   "nombre": "Sidrería Avenida",
+   "concejo": "Colunga",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Escanciador, Gijón de Sidra 2023 (Wilkin Aquiles)",
+   "especialidad": "Cocina asturiana tradicional",
+   "desc": "Sidrería de la Comarca de la Sidra ubicada en Colunga, con reconocimiento al escanciado.",
+   "dist_km": 41.8
+  },
+  {
+   "nombre": "El Chaflán",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Equipo Sidrería-Llagar y Premio a la Trayectoria (Lucinda Álvarez), Gijón de Sidra 2023",
+   "especialidad": "Pescados a la parrilla y carne a la piedra",
+   "desc": "Sidrería clásica gijonesa, muy popular por su parrilla y su larga trayectoria.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "La Montera Picona de Ramón",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Sidrería con más encanto, Gijón de Sidra 2023; Mejor Equipo de Escanciadores, Campeonato de Asturias 2024",
+   "especialidad": "Cocina tradicional asturiana y pescado de rula",
+   "desc": "Sidrería gijonesa de gran tradición escanciadora, cantera habitual de campeones regionales.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Los Pomares",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "1er premio Concurso Mejor Fabada del Mundo 2015; finalista Gijón de Sidra 2023",
+   "especialidad": "Fabada asturiana",
+   "desc": "Sidrería-restaurante gijonesa de gran tradición, célebre por su fabada premiada.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "La Cabaña del Santu",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Finalista, Gijón de Sidra 2023",
+   "especialidad": "Cocina asturiana con pescados y mariscos",
+   "desc": "Sidrería de referencia en Gijón, con ambiente típico y buena reputación gastronómica.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "La Casona de Jovellanos",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Premio a la Trayectoria / 'Cocinar con corazón' (María Luisa Acera), Gijón de Sidra 2024",
+   "especialidad": "Cocina asturiana en casona histórica",
+   "desc": "Sidrería histórica ubicada en un hotel-casona del centro de Gijón.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Bodegas Anchón",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Finalista Sub-25 y Top 10, Campeonato de Escanciadores de Asturias 2024 (Isabella Padrón)",
+   "especialidad": "Cocina casera asturiana",
+   "desc": "Sidrería de ambiente de bodega tradicional en Gijón, cantera de jóvenes escanciadores.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería Tierra Astur",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Campeón Regional de Escanciadores 2024 y 2025 (Salvador Ondó); 2º Mejor Equipo, Campeonato de Asturias 2024",
+   "especialidad": "Embutidos, quesos y matanza asturiana",
+   "desc": "Gran sidrería-tienda de referencia en Oviedo, con llagar propio y una de las cadenas sidreras más conocidas de Asturias.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Sidrería El Portal",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": true,
+   "premio": "3er Mejor Equipo, Campeonato de Escanciadores de Asturias 2024",
+   "especialidad": "Cocina tradicional asturiana y pescado",
+   "desc": "Sidrería-restaurante en el centro de Villaviciosa, corazón de la Comarca de la Sidra.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Sidrería La Marina",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado fresco del Cantábrico",
+   "desc": "Chigre animado en el barrio de El Carmen de Gijón, de servicio rápido.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería El Cruce",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Fabada asturiana y caza",
+   "desc": "Sidrería tradicional en Cabueñes (Gijón) con terrazas familiares y precios asequibles.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "El Restallu",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Arroz con bogavante y marisco",
+   "desc": "Sidrería-restaurante gijonesa muy popular, imprescindible reservar por su arroz con marisco.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Casa Trabanco",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Carnes a la parrilla y bacalao a la sidra",
+   "desc": "Llagar con sidrería y producción propia en Lavandera (Gijón), ofrece visitas guiadas al proceso de elaboración.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería El Globo",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana de raciones abundantes",
+   "desc": "Sidrería céntrica de Gijón con ambiente clásico y sangría de sidra.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Restaurante Sidrería La Galana",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Menú del día y cocina asturiana",
+   "desc": "Chigre tradicional en la Plaza Mayor de Gijón, con decoración de madera típica.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería Candasu",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Marisco y pescado",
+   "desc": "Sidrería con varios ambientes en la zona de Nuevo Gijón.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería El Mallu",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana de raciones generosas",
+   "desc": "Sidrería gijonesa muy concurrida, conviene reservar con antelación.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidrería El Alleranu Casa Javi",
+   "concejo": "Gijón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado y marisco a la parrilla",
+   "desc": "Sidrería gijonesa conocida por el trato cercano y el pescado a la parrilla.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Las Güelas Gascona",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana tradicional",
+   "desc": "Sidrería situada en pleno bulevar de la sidra (calle Gascona) de Oviedo.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "La Pumarada",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Marisquería y sidrería",
+   "desc": "Sidrería-marisquería de referencia en el centro de Oviedo.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Sidrería La Finca",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina de producto de huerta y sidra",
+   "desc": "Sidrería-agrobar en Oviedo con enfoque en producto de proximidad.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Sidrería La Cabaña",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana tradicional",
+   "desc": "Sidrería situada en la calle Gascona, el histórico bulevar de la sidra de Oviedo.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Sidrería Bedriñana",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina de mar y tierra",
+   "desc": "Sidrería en la parroquia de Bedriñana, Villaviciosa, corazón de la comarca sidrera.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Sidrería La Tierrina",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina tradicional asturiana",
+   "desc": "Sidrería familiar en el concejo de Villaviciosa.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Sidrería Restaurante Plaza",
+   "concejo": "Nava",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana tradicional",
+   "desc": "Sidrería en pleno centro de Nava, la 'capital de la sidra'.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Llagar Sidra Estrada",
+   "concejo": "Nava",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural de elaboración propia",
+   "desc": "Llagar con sidrería en Nava donde se degusta sidra de producción propia.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Sidrería El Chigre",
+   "concejo": "Avilés",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pinchos y tapas asturianas",
+   "desc": "Chigre tradicional en el centro de Avilés, de ambiente castizo.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Sidrería Tierra Astur Avilés",
+   "concejo": "Avilés",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Embutidos, quesos y matanza asturiana",
+   "desc": "Sucursal avilesina de la conocida cadena de sidrerías Tierra Astur.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Casa Marisa",
+   "concejo": "Avilés",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana casera",
+   "desc": "Sidrería-restaurante familiar en el centro de Avilés.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "La Taberna de Mario",
+   "concejo": "Avilés",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Tapas y pinchos asturianos",
+   "desc": "Sidrería-taberna en la Plaza del Carbayo de Avilés.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Sidrería La Ovetense",
+   "concejo": "Cangas de Onís",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana de montaña",
+   "desc": "Sidrería tradicional en el centro de Cangas de Onís, puerta de los Picos de Europa.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Restaurante Sidrería La Guía",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado y marisco",
+   "desc": "Sidrería-restaurante en el casco urbano de Ribadesella con amplia terraza.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Sidrería Carroceu",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado del Cantábrico",
+   "desc": "Sidrería junto al muelle de Ribadesella, con vistas a la playa.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Sidrería El Puerto",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Marisco y pescado",
+   "desc": "Sidrería renovada en la villa marinera de Ribadesella.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Sidrería El Antoju",
+   "concejo": "Llanes",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana tradicional",
+   "desc": "Sidrería muy valorada en el casco histórico de Llanes.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Sidrería La Casona de Llanes",
+   "concejo": "Llanes",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina tradicional asturiana",
+   "desc": "Sidrería en el corazón de Llanes, en un edificio de carácter tradicional.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Sidrería Narcea",
+   "concejo": "Cangas del Narcea",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina tradicional del occidente asturiano",
+   "desc": "Sidrería regentada por familia local en Cangas del Narcea, conocida por su hospitalidad.",
+   "dist_km": 110
+  },
+  {
+   "nombre": "Sidrería El Remo",
+   "concejo": "Cudillero",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado y marisco fresco",
+   "desc": "Sidrería con vistas al puerto pesquero de Cudillero.",
+   "dist_km": 55.4
+  },
+  {
+   "nombre": "Sidrería Feudo Real",
+   "concejo": "Grado",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana de mercado",
+   "desc": "Sidrería de ambiente rústico-moderno en Grado, occidente central de Asturias.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Sidrería Casa Ricardo",
+   "concejo": "Salas",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Escalopines al cabrales y cocina de interior",
+   "desc": "Sidrería tradicional en la villa de Salas, occidente de Asturias.",
+   "dist_km": 65
+  },
+  {
+   "nombre": "Sidrería Antolín",
+   "concejo": "Navia",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado de rula y marisco",
+   "desc": "Sidrería costera en Navia especializada en pescado fresco.",
+   "dist_km": 102.5
+  },
+  {
+   "nombre": "Sidrería Casa Jano",
+   "concejo": "Vegadeo",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Parrilla de carnes",
+   "desc": "Sidrería con amplia terraza en Vegadeo, extremo occidental de Asturias.",
+   "dist_km": 130
+  },
+  {
+   "nombre": "Sidrería Bar Brisas Candasinas",
+   "concejo": "Carreño",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Pescado y marisco",
+   "desc": "Sidrería marinera en la villa de Candás, concejo de Carreño.",
+   "dist_km": 16.1
+  },
+  {
+   "nombre": "Sidrería El Gayo",
+   "concejo": "Gozón",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina marinera",
+   "desc": "Sidrería en Luanco, villa pesquera del concejo de Gozón.",
+   "dist_km": 20.1
+  },
+  {
+   "nombre": "Sidrería El Parque",
+   "concejo": "Siero",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina asturiana tradicional",
+   "desc": "Sidrería clásica en Pola de Siero, en el centro de Asturias.",
+   "dist_km": 20
+  },
+  {
+   "nombre": "Sidrería El Llagar",
+   "concejo": "Colunga",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Cocina de mar y montaña",
+   "desc": "Sidrería en Colunga, entre la costa y la Comarca de la Sidra.",
+   "dist_km": 41.8
+  }
+ ],
+ "lagares": [
+  {
+   "nombre": "Sidra Trabanco",
+   "concejo": "Gijón",
+   "localidad": "Lavandera",
+   "premiada": true,
+   "premio": "Mejor Sidra - Gijón de Sidra 2025 (Sidra Tradicional Amarilla)",
+   "especialidad": "Sidra natural tradicional",
+   "desc": "Uno de los llagares más conocidos de Asturias, con visitas guiadas, tienda y sidrería propia junto a las pumaradas.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidra Acebal",
+   "concejo": "Gijón",
+   "localidad": "Cabueñes",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar tradicional en Cabueñes, parada habitual de la Ruta de la Sidra de Gijón, con venta directa al público.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidra Piñera",
+   "concejo": "Gijón",
+   "localidad": "Deva",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar familiar en la carretera Caldones-Deva, con producción y venta directa en el propio recinto.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidra J.R.",
+   "concejo": "Gijón",
+   "localidad": "Alto Infanzón",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Pequeño llagar familiar gijonés con venta directa, menos conocido que los grandes llagares de la zona.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidra Menéndez",
+   "concejo": "Gijón",
+   "localidad": "Fano",
+   "premiada": true,
+   "premio": "Manzana acogida a la D.O.P. Sidra de Asturias; pomaradas certificadas en cultivo ecológico",
+   "especialidad": "Sidra ecológica D.O.P.",
+   "desc": "Llagar con larga tradición familiar en Fano, elaborado en toneles de castaño, con tienda propia y venta directa.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Llagar Bernueces",
+   "concejo": "Gijón",
+   "localidad": "Bernueces",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar tradicional gijonés, una de las seis paradas oficiales de la Ruta de la Sidra de Gijón.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Llagar de Sidra Cabueñes",
+   "concejo": "Gijón",
+   "localidad": "Cabueñes",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar-sidrería en el barrio de Cabueñes con producción propia y venta directa.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidra Canal",
+   "concejo": "Gijón",
+   "localidad": "Lavandera",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural (elaborando desde 1955)",
+   "desc": "Llagar familiar gijonés con más de 65 años de tradición, sidrería propia y venta directa.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Sidra Fran",
+   "concejo": "Siero",
+   "localidad": "Lugones",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar en Lugones con tienda y sidrería, punto de venta directa en el área metropolitana de Siero.",
+   "dist_km": 20
+  },
+  {
+   "nombre": "Llagar Quelo",
+   "concejo": "Siero",
+   "localidad": "Tiñana",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar-restaurante en Tiñana con producción propia, venta directa y organización de eventos.",
+   "dist_km": 20
+  },
+  {
+   "nombre": "Sidra Fonciello",
+   "concejo": "Siero",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural, venta online",
+   "desc": "Llagar sierense con tienda física y online de sidra natural, además de visitas al lagar.",
+   "dist_km": 20
+  },
+  {
+   "nombre": "Sidra Alonso",
+   "concejo": "Langreo",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar-sidrería en Langreo, uno de los pocos puntos de venta directa de sidra en la cuenca del Nalón.",
+   "dist_km": 32
+  },
+  {
+   "nombre": "Llagar Panizales",
+   "concejo": "Mieres",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar en Mieres con venta y degustación, representando la producción sidrera de las cuencas mineras.",
+   "dist_km": 48
+  },
+  {
+   "nombre": "Sidra Herminio",
+   "concejo": "Oviedo",
+   "localidad": "Colloto",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural (fundada en 1943)",
+   "desc": "Histórico llagar familiar en Colloto con más de 80 años de tradición, llagar propio y venta directa.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Sidra Castañón",
+   "concejo": "Villaviciosa",
+   "localidad": "Quintueles",
+   "premiada": true,
+   "premio": "Ganador del Concurso de Sidra Natural con su marca Val de Boides D.O.P.",
+   "especialidad": "Val de Boides D.O.P.",
+   "desc": "Llagar familiar desde 1938, referente de la D.O.P. Sidra de Asturias con numerosos premios en concursos de sidra natural.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Sidra Cortina",
+   "concejo": "Villaviciosa",
+   "localidad": "Amandi",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural y sidra de hielo",
+   "desc": "Llagar en Amandi, cuna histórica de la sidra asturiana, con gama que incluye sidra de hielo y venta directa.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Sidra El Gaitero",
+   "concejo": "Villaviciosa",
+   "localidad": "La Espuncia",
+   "premiada": true,
+   "premio": "Trayectoria de reconocimientos desde 1890; marca sidrera asturiana más exportada internacionalmente",
+   "especialidad": "Sidra achampanada/espumosa",
+   "desc": "La sidrera más antigua y de mayor proyección internacional de Asturias, con museo, visitas guiadas y tienda.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar Sidra Coro",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar villaviciosino con producción y venta directa, integrado en la ruta sidrera local.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar Sidra Vigón",
+   "concejo": "Villaviciosa",
+   "localidad": "Tornón",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar familiar en Tornón con tienda propia y venta directa al público.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar Sidra Frutos",
+   "concejo": "Villaviciosa",
+   "localidad": "Quintueles",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar en Quintueles con venta directa, uno de los puntos habituales de la fiesta sidrera de Villaviciosa.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar Mayador (M. Busto)",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Ganador de la cata popular en la Fiesta de la Sidra Natural de Villaviciosa",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar villaviciosino reconocido en la cata popular de la fiesta local de la sidra.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar Buznego",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar histórico, participante habitual de la Fiesta de la Sidra Natural de Villaviciosa.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar El Gobernador",
+   "concejo": "Villaviciosa",
+   "localidad": "Sopeña",
+   "premiada": true,
+   "premio": "Premio a la etiqueta más bonita, Fiesta de la Sidra de Villaviciosa",
+   "especialidad": "Sidra Sopeña",
+   "desc": "Llagar en Sopeña conocido por su marca 'Sopeña' y reconocido por el diseño de su etiqueta.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Llagar Sidra Muñiz",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar villaviciosino con venta directa y presencia habitual en la fiesta local de la sidra.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Sidra Viuda de Angelón (Pomar)",
+   "concejo": "Nava",
+   "localidad": "Villa",
+   "premiada": true,
+   "premio": "Mejor Sidra de Asturias (varios años desde 1982); Sidra Más Prestosa - Gijón de Sidra 2025; Oro en Sagardo Forum 2025",
+   "especialidad": "Sidra de hielo, natural y achampanada",
+   "desc": "Uno de los llagares más laureados de Asturias, con décadas de premios en concursos regionales e internacionales.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Llagar Orizón",
+   "concejo": "Nava",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar navetu con venta directa, integrado en la ruta sidrera de la Comarca de la Sidra.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Llagar Sidra Zapatero",
+   "concejo": "Nava",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar familiar en Nava con producción y venta directa al público.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Sidra Viuda de Corsino",
+   "concejo": "Nava",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mejor Sidra Local - Festival de la Sidra de Nava 2026",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar histórico de Nava galardonado como mejor sidra local en el festival del concejo.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Llagar Foncueva",
+   "concejo": "Sariego",
+   "localidad": null,
+   "premiada": true,
+   "premio": "Mencionado entre las mejores sidras de Asturias y del Festival de Nava (junto a Viuda de Corsino)",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar sariegano reconocido entre las mejores sidras de la región en certámenes recientes.",
+   "dist_km": 42
+  },
+  {
+   "nombre": "Llagar Ismael Bastián",
+   "concejo": "Sariego",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural artesanal",
+   "desc": "Pequeño llagar familiar en Sariego, de producción limitada, con visitas y venta directa.",
+   "dist_km": 42
+  },
+  {
+   "nombre": "Sidra Crespo",
+   "concejo": "Colunga",
+   "localidad": null,
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra natural",
+   "desc": "Llagar en Colunga con visitas guiadas organizadas junto al ayuntamiento y venta directa.",
+   "dist_km": 41.8
+  },
+  {
+   "nombre": "Llagar Finca Ecológica El Noceu",
+   "concejo": "Colunga",
+   "localidad": "Santiago",
+   "premiada": false,
+   "premio": "",
+   "especialidad": "Sidra ecológica",
+   "desc": "Llagar ecológico en Santiago de Colunga, con producción respetuosa con el medio y venta directa.",
+   "dist_km": 41.8
+  }
+ ],
+ "sitios": [
+  {
+   "nombre": "Casco histórico y Cubos de la Memoria",
+   "concejo": "Llanes",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "El paseo de San Pedro, sobre el acantilado junto al puerto, combina la muralla medieval con los coloristas Cubos de la Memoria pintados por Agustín Ibarrola. Es la postal más fotografiada de la villa y un paseo obligado junto al puerto pesquero.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Basílica de Santa María del Conceyu",
+   "concejo": "Llanes",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Iglesia gótica del siglo XIII-XIV situada en pleno casco urbano de Llanes, con un notable rosetón y portada esculpida. Es el principal monumento religioso de la villa y punto de referencia del centro histórico.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Playa de Gulpiyuri",
+   "concejo": "Llanes",
+   "localidad": "Naves",
+   "categoria": "otro",
+   "desc": "Monumento Natural único: una playa de arena situada a 100 metros del mar, en el interior de un prado, alimentada por el oleaje a través de galerías subterráneas kársticas. Uno de los fenómenos geológicos más curiosos de la costa asturiana.",
+   "dist_km": 88.8
+  },
+  {
+   "nombre": "Cueva de Tito Bustillo",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "categoria": "cueva",
+   "desc": "Cueva con arte rupestre paleolítico declarada Patrimonio de la Humanidad por la UNESCO, con pinturas de caballos y ciervos de gran calidad. Cuenta con centro de interpretación y visitas guiadas con aforo limitado, por lo que conviene reservar con antelación.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Casco histórico y Barrio de Guía",
+   "concejo": "Ribadesella",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "La villa marinera se reparte a ambos lados de la ría del Sella: el paseo marítimo y casco antiguo en una orilla, y el tradicional Barrio de Guía, de pescadores, en la otra. Es además la salida del famoso Descenso Internacional del Sella.",
+   "dist_km": 62.0
+  },
+  {
+   "nombre": "Cueva de El Pindal",
+   "concejo": "Ribadedeva",
+   "localidad": "Pimiango",
+   "categoria": "cueva",
+   "desc": "Cueva prehistórica sobre los acantilados de Pimiango, con pinturas paleolíticas de bisontes, caballos y el célebre 'pez' rojo, integrada en el Patrimonio Mundial del arte rupestre paleolítico del Cantábrico. Las visitas guiadas incluyen un tramo con vistas al mar desde la propia boca de la cueva.",
+   "dist_km": 110.6
+  },
+  {
+   "nombre": "Colombres y la Quinta Guadalupe",
+   "concejo": "Ribadedeva",
+   "localidad": "Colombres",
+   "categoria": "patrimonio",
+   "desc": "Colombres es la capital de la 'ruta de los indianos', con vistosos palacetes construidos por emigrantes que hicieron fortuna en América. Destaca la Quinta Guadalupe, sede de la Fundación Archivo de Indianos, con su jardín y arquitectura de inspiración colonial.",
+   "dist_km": 110.6
+  },
+  {
+   "nombre": "Puente Romano de Cangas de Onís",
+   "concejo": "Cangas de Onís",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Símbolo de Asturias, este puente medieval (de origen bajomedieval pese a su nombre popular) cruza el río Sella con su característica réplica de la Cruz de la Victoria colgando del arco central. Es el lugar más fotografiado de la primera capital del Reino de Asturias.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Santuario de Covadonga",
+   "concejo": "Cangas de Onís",
+   "localidad": "Covadonga",
+   "categoria": "monumento",
+   "desc": "Lugar fundacional de la Reconquista: la Basílica neorrománica y la Santa Cueva, con la imagen de la Virgen y el sepulcro de Don Pelayo, atraen cada año a miles de peregrinos y visitantes. El entorno, con la cascada junto a la cueva, es de gran valor simbólico y paisajístico.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Lagos de Covadonga (Enol y Ercina)",
+   "concejo": "Cangas de Onís",
+   "localidad": "Covadonga",
+   "categoria": "otro",
+   "desc": "Dos lagos de origen glaciar en pleno macizo de los Picos de Europa, rodeados de prados de alta montaña donde pastan vacas y caballos en verano. El acceso en temporada alta está restringido a autobús lanzadera desde Cangas de Onís por la gran afluencia.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Parque Nacional de los Picos de Europa",
+   "concejo": "Cangas de Onís",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Primer Parque Nacional de España (1918), con imponentes macizos calizos, gargantas y cumbres de más de 2.600 m. Cangas de Onís es la puerta de entrada principal, con oficinas de información y acceso a numerosas rutas de senderismo.",
+   "dist_km": 75
+  },
+  {
+   "nombre": "Cueva del Buxu",
+   "concejo": "Onís",
+   "localidad": "Cardes",
+   "categoria": "cueva",
+   "desc": "Pequeña cueva con grabados y pinturas paleolíticas de caballos, ciervos y signos, parte también del conjunto de arte rupestre del Cantábrico reconocido por la UNESCO. Las visitas son en grupos muy reducidos, lo que la hace una experiencia íntima.",
+   "dist_km": 80
+  },
+  {
+   "nombre": "La Cuevona de Cuevas del Agua",
+   "concejo": "Onís",
+   "localidad": "Cuevas",
+   "categoria": "otro",
+   "desc": "Curiosa cueva natural de más de 300 metros por la que discurre tanto un río como una carretera asfaltada de un solo carril, algo insólito en España. Es una parada muy popular entre familias por lo peculiar de atravesarla en coche o a pie.",
+   "dist_km": 80
+  },
+  {
+   "nombre": "Desfiladero de los Beyos",
+   "concejo": "Amieva",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Espectacular garganta excavada por el río Sella entre paredes calizas casi verticales, que se recorre por la carretera N-625 entre Amieva y Ponga. Varios miradores a lo largo del trayecto ofrecen vistas vertiginosas del cañón.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "Sames",
+   "concejo": "Amieva",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Capital del concejo de Amieva, es un pueblo tradicional de arquitectura de montaña rodeado de prados y bosques, con su iglesia parroquial como centro. Sirve de base habitual para excursiones a los Picos de Europa y al desfiladero de los Beyos.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "Parque Natural de Ponga",
+   "concejo": "Ponga",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Reserva de la Biosfera con uno de los hayedos mejor conservados de Europa, además de tejos centenarios, roquedos calizos y una rica fauna (oso pardo, rebeco). Sus pueblos de pastores y sus rutas de senderismo lo convierten en un destino para amantes de la naturaleza poco masificado.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "San Juan de Beleño",
+   "concejo": "Ponga",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Capital administrativa de Ponga, con arquitectura tradicional de piedra y hórreos, enclavada en un valle rodeado de montañas. Es el punto de partida habitual para adentrarse en el Parque Natural de Ponga.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "Parque Natural de Redes",
+   "concejo": "Caso",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Reserva de la Biosfera compartida con Sobrescobio, con el impresionante Bosque de Peloño (uno de los mejores hayedos de la Cordillera Cantábrica) y valles de gran valor ecológico. Es hábitat de oso pardo, urogallo y otras especies protegidas.",
+   "dist_km": 78
+  },
+  {
+   "nombre": "Puerto y Campa de Tarna",
+   "concejo": "Caso",
+   "localidad": "Tarna",
+   "categoria": "mirador",
+   "desc": "El pequeño pueblo de Tarna, junto al puerto de montaña que da paso a León, ofrece amplias vistas de prados de alta montaña y antiguas brañas de pastores. Fue sede de una histórica estación de esquí y conserva un fuerte carácter rural.",
+   "dist_km": 78
+  },
+  {
+   "nombre": "Monumento Natural Ruta del Alba",
+   "concejo": "Sobrescobio",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Ruta que sigue el curso del río Alba entre bosques y pasarelas de madera junto a pozas de aguas cristalinas, dentro del Parque Natural de Redes. Es uno de los paseos fluviales más populares y accesibles de la comarca.",
+   "dist_km": 72
+  },
+  {
+   "nombre": "Ecomuseo Molín de Xuacu",
+   "concejo": "Sobrescobio",
+   "localidad": "Rioseco",
+   "categoria": "museo",
+   "desc": "Conjunto etnográfico junto al río Alba que recupera antiguos molinos hidráulicos y muestra oficios tradicionales de la zona, como la fabricación de mantas de lana (la 'llagüería'). Un buen complemento cultural a la visita del Parque Natural de Redes.",
+   "dist_km": 72
+  },
+  {
+   "nombre": "Mirador del Fitu",
+   "concejo": "Parres",
+   "localidad": null,
+   "categoria": "mirador",
+   "desc": "Situado en la Sierra del Sueve a más de 600 m de altitud, su curiosa plataforma circular ofrece vistas de 360 grados que abarcan la costa asturiana, la ría de Ribadesella y los picos nevados de Picos de Europa en días claros. Es uno de los miradores más famosos y fotografiados de Asturias.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Arriondas",
+   "concejo": "Parres",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Villa fluvial a orillas del Sella, conocida internacionalmente por ser la salida del Descenso Internacional del Sella cada agosto, una de las fiestas más multitudinarias de Asturias. Su casco urbano y paseo junto al río son agradables para el paseo y la gastronomía.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Espinaredo",
+   "concejo": "Piloña",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Conocido como el pueblo con más hórreos y paneras de Asturias en relación a su tamaño, conserva un urbanismo tradicional casi intacto junto a un molino de agua. Es una parada muy fotogénica para entender la arquitectura rural asturiana.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Iglesia de Santa María de Villamayor",
+   "concejo": "Piloña",
+   "localidad": "Villamayor",
+   "categoria": "monumento",
+   "desc": "Templo románico del siglo XIII con una portada esculpida de notable calidad, uno de los mejores ejemplos de arte románico rural de Asturias. Se encuentra en un entorno tranquilo típico de la campiña de Piloña.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Bulnes y el Naranjo de Bulnes",
+   "concejo": "Cabrales",
+   "localidad": "Bulnes",
+   "categoria": "otro",
+   "desc": "Pueblo enclavado en el corazón del Macizo Central de los Picos de Europa, accesible solo a pie o mediante un funicular subterráneo desde Poncebos (el único de este tipo en España). Es la base tradicional de los alpinistas que ascienden al Naranjo de Bulnes (Picu Urriellu), la torre caliza más icónica de la cordillera.",
+   "dist_km": 105
+  },
+  {
+   "nombre": "Garganta del Cares (Ruta del Cares)",
+   "concejo": "Cabrales",
+   "localidad": "Poncebos",
+   "categoria": "otro",
+   "desc": "Considerada una de las mejores rutas de senderismo de España, discurre tallada en la roca entre desfiladeros de más de 1.000 metros de desnivel, uniendo Poncebos con Caín. Un recorrido espectacular apto para cualquier persona con un mínimo de forma física.",
+   "dist_km": 105
+  },
+  {
+   "nombre": "Cueva-exposición del Queso de Cabrales",
+   "concejo": "Cabrales",
+   "localidad": "Arenas de Cabrales",
+   "categoria": "museo",
+   "desc": "Espacio museístico instalado en una auténtica cueva de maduración que explica el proceso de elaboración del famoso queso de Cabrales, con Denominación de Origen Protegida. Incluye degustación y es una parada muy recomendable para entender la cultura gastronómica de la zona.",
+   "dist_km": 105
+  },
+  {
+   "nombre": "Alles",
+   "concejo": "Peñamellera Alta",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Capital del concejo, es un pueblo tranquilo de arquitectura tradicional montañesa rodeado de prados verdes al pie de los Picos de Europa. Buena base para rutas de senderismo menos concurridas que las de Cangas de Onís o Cabrales.",
+   "dist_km": 105
+  },
+  {
+   "nombre": "Cueva de Coímbre",
+   "concejo": "Peñamellera Alta",
+   "localidad": null,
+   "categoria": "cueva",
+   "desc": "Yacimiento con arte rupestre paleolítico, parte del conjunto de cuevas del Cantábrico reconocidas por su valor científico. Su entorno, en un paraje kárstico apenas transitado, resulta atractivo incluso para quien no pueda acceder al interior.",
+   "dist_km": 105
+  },
+  {
+   "nombre": "Panes",
+   "concejo": "Peñamellera Baja",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Capital del concejo y puerta oriental de acceso a los Picos de Europa desde Cantabria, con un pequeño casco histórico junto al río Cares-Deva. Es un buen punto de paso y avituallamiento para quienes se adentran hacia Cabrales o Peñamellera Alta.",
+   "dist_km": 100
+  },
+  {
+   "nombre": "Lastres",
+   "concejo": "Colunga",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Uno de los pueblos marineros más bonitos de Asturias (parte de la red 'Los Pueblos más Bonitos de España'), con sus calles empedradas en cuesta, el puerto pesquero y el faro asomado al Cantábrico. Ganó popularidad como escenario de la serie 'Doctor Mateo'.",
+   "dist_km": 41.8
+  },
+  {
+   "nombre": "Museo del Jurásico de Asturias (MUJA)",
+   "concejo": "Colunga",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Museo con forma de huella de dinosaurio situado en un acantilado con vistas al mar, dedicado a la rica 'Costa de los Dinosaurios' asturiana, con réplicas a tamaño real e icnitas (huellas fósiles) originales. Muy recomendable para visitar en familia junto con un paseo por la costa cercana a Lastres.",
+   "dist_km": 41.8
+  },
+  {
+   "nombre": "Sierra del Sueve y Hayedo de la Biescona",
+   "concejo": "Caravia",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Macizo montañoso que se alza muy cerca del mar, con el Hayedo de la Biescona como uno de los pocos bosques de hayas de Europa próximos a la costa. La ruta de la Forquita y Cerracín permite conocer su arquitectura tradicional y su fauna, incluidos los asturcones (caballos autóctonos) en semilibertad.",
+   "dist_km": 54.6
+  },
+  {
+   "nombre": "Catedral de San Salvador y Cámara Santa",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Catedral gótica que alberga la Cámara Santa (Patrimonio de la Humanidad), con orfebrería prerrománica como la Cruz de los Ángeles y la Cruz de la Victoria, símbolo de Asturias. Su claustro y torre son de visita obligada en el corazón de la ciudad.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Casco histórico de Oviedo",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Paseo por la Plaza de la Catedral, el Fontán, la calle Rosal y el Ayuntamiento, con esculturas urbanas (Woody Allen, La Regenta) y arquitectura señorial. Es uno de los cascos históricos mejor conservados del norte de España.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Santa María del Naranco",
+   "concejo": "Oviedo",
+   "localidad": "Monte Naranco",
+   "categoria": "monumento",
+   "desc": "Antiguo palacio real de Ramiro I del siglo IX, joya del Prerrománico Asturiano y Patrimonio de la Humanidad. Sus arcos peraltados y balcones con vistas a Oviedo lo convierten en el monumento prerrománico más fotografiado de Asturias.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "San Miguel de Lillo",
+   "concejo": "Oviedo",
+   "localidad": "Monte Naranco",
+   "categoria": "monumento",
+   "desc": "Iglesia prerrománica del siglo IX situada junto a Santa María del Naranco, Patrimonio de la Humanidad, con relieves esculpidos únicos en sus jambas que representan escenas circenses romanas. Se visita en el mismo recorrido que el palacio de Naranco.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Iglesia de San Julián de los Prados (Santullano)",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "La iglesia prerrománica más grande conservada de Europa (siglo IX), Patrimonio de la Humanidad, célebre por sus pinturas murales de tradición pompeyana, únicas en su género. Un imprescindible menos conocido que los monumentos del Naranco.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Fuente de Foncalada",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Única obra pública civil conservada del Prerrománico Asturiano (siglo IX), integrada en el casco histórico de Oviedo y también inscrita como Patrimonio de la Humanidad. Pequeña pero con gran valor simbólico como testimonio del urbanismo de la corte astur.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Museo de Bellas Artes de Asturias",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Una de las mejores pinacotecas de España, con obras de Goya, El Greco, Picasso y grandes pintores asturianos, instalada en varios palacios históricos del casco antiguo. Entrada gratuita y colección en constante ampliación.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Museo Arqueológico de Asturias",
+   "concejo": "Oviedo",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Ubicado en el antiguo monasterio de San Vicente, repasa la prehistoria y la historia de Asturias desde el Paleolítico hasta la Edad Media, con piezas del arte rupestre y del reino astur. Complementa perfectamente la visita al Prerrománico.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Cerro de Santa Catalina y Cimavilla",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "mirador",
+   "desc": "Barrio marinero más antiguo de Gijón, con calles estrechas, sidrerías y el mirador donde se alza el 'Elogio del Horizonte' de Chillida, símbolo de la ciudad frente al Cantábrico. Excelente panorámica de la playa de San Lorenzo y el puerto.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Universidad Laboral de Gijón",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Uno de los edificios más grandes de España, con una torre mirador de más de 100 m y un impresionante teatro y capilla. Hoy es Laboral Ciudad de la Cultura, con visitas guiadas a su arquitectura monumental de los años 50.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Museo del Ferrocarril de Asturias",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Instalado en la antigua estación de Norte, reúne locomotoras históricas, vagones y material ferroviario que narran la industrialización de Asturias. Uno de los museos ferroviarios más completos de España.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Museo del Pueblo de Asturias",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Conjunto etnográfico al aire libre con hórreos, una gaita gigante y la Gaita de Oro, dedicado a la cultura y las tradiciones asturianas. Incluye también el Muséu del Pueblu d'Asturies y el archivo fotográfico regional.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Termas Romanas de Campo Valdés",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Restos arqueológicos de unas termas públicas romanas del siglo I-II, visibles bajo la playa de San Lorenzo, junto a la iglesia de San Pedro. Testimonio del origen romano de Gijón (Gigia).",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Palacio de Revillagigedo",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Palacio barroco del siglo XVII en la plaza del Marqués, sede de exposiciones de arte contemporáneo, con una fachada emblemática frente al puerto deportivo de Gijón.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Jardín Botánico Atlántico",
+   "concejo": "Gijón",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Amplio jardín botánico dedicado a la flora del norte de la Península y otras regiones atlánticas, con invernaderos, huertas tradicionales y bosques temáticos. Un espacio verde muy popular para familias.",
+   "dist_km": 0
+  },
+  {
+   "nombre": "Casco histórico de Avilés",
+   "concejo": "Avilés",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Considerado uno de los cascos históricos con más encanto de Asturias, con soportales medievales en la calle Galiana, la Plaza de España y palacios señoriales. Su recuperación urbana lo convirtió en referencia de revitalización histórica.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Centro Niemeyer",
+   "concejo": "Avilés",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Complejo cultural diseñado por el arquitecto brasileño Oscar Niemeyer junto a la ría de Avilés, con auditorio, cúpula panorámica y torre mirador. Programa exposiciones, conciertos y actividades culturales todo el año.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Iglesia de San Nicolás de Bari",
+   "concejo": "Avilés",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Antiguo convento franciscano del siglo XIII en el corazón del casco histórico de Avilés, con un claustro gótico y capillas funerarias de linajes avilesinos. Uno de los edificios religiosos más notables de la villa.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Palacio de Camposagrado",
+   "concejo": "Avilés",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Palacio barroco del siglo XVIII con una fachada blasonada característica, hoy sede de instituciones culturales, situado en pleno casco antiguo avilesino junto a otros palacios señoriales.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Iglesia y barrio de Sabugo",
+   "concejo": "Avilés",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Antiguo barrio de pescadores de Avilés con la iglesia de Santo Tomás de Sabugo, escenario de la tradicional 'procesión de los Descalzos'. Conserva un ambiente popular distinto al del casco noble de la villa.",
+   "dist_km": 25
+  },
+  {
+   "nombre": "Palacio de Meres",
+   "concejo": "Siero",
+   "localidad": "Meres",
+   "categoria": "patrimonio",
+   "desc": "Finca histórica con palacio, llagar de sidra y un jardín de esculturas contemporáneas al aire libre, combinando patrimonio civil y arte moderno en un entorno rural. Ofrece visitas guiadas y cata de sidra.",
+   "dist_km": 20
+  },
+  {
+   "nombre": "Iglesia de Santa María de Lugo de Llanera",
+   "concejo": "Llanera",
+   "localidad": "Lugo de Llanera",
+   "categoria": "monumento",
+   "desc": "Templo románico bien conservado, uno de los pocos ejemplos de esta corriente arquitectónica en el concejo, situado en el núcleo histórico de Lugo de Llanera.",
+   "dist_km": 28
+  },
+  {
+   "nombre": "Casco histórico de Noreña",
+   "concejo": "Noreña",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "El municipio más pequeño de Asturias, con un centro compacto y animado, célebre por su gastronomía en torno al chosco (embutido con IGP) y su feria anual. Ideal para una parada corta y sidrería.",
+   "dist_km": 22
+  },
+  {
+   "nombre": "Torre de Podes",
+   "concejo": "Gozón",
+   "localidad": "Podes",
+   "categoria": "monumento",
+   "desc": "Torre defensiva medieval de los siglos XIV-XV, uno de los pocos vestigios de arquitectura militar del concejo, en el interior rural de Gozón alejado de la costa.",
+   "dist_km": 20.1
+  },
+  {
+   "nombre": "Casco histórico y ría de Villaviciosa",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Capital de la comarca de la sidra, con la iglesia gótica de Santa María de la Oliva, casonas indianas y calles porticadas. Punto de partida ideal para conocer los llagares de la zona.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Monasterio de San Salvador de Valdediós (El Conventín)",
+   "concejo": "Villaviciosa",
+   "localidad": "Valdediós",
+   "categoria": "monumento",
+   "desc": "Iglesia prerrománica del siglo IX, Patrimonio de la Humanidad, integrada en un conjunto monástico posterior de estilo cisterciense. Conocida como 'Vallis Dei', combina en un mismo recinto dos etapas del arte asturiano.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Ría de Villaviciosa (Reserva Natural Parcial)",
+   "concejo": "Villaviciosa",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Estuario protegido de gran valor ecológico, refugio de aves migratorias y zona de marismas navegable en piragua o a pie por sus senderos. Uno de los espacios naturales más importantes de la costa central asturiana.",
+   "dist_km": 29.1
+  },
+  {
+   "nombre": "Museo de la Sidra de Asturias",
+   "concejo": "Nava",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Museo interactivo dedicado a la cultura sidrera asturiana, con audiovisuales, cata guiada y el escanciado tradicional. Nava es la capital de la Fiesta de la Sidra Natural, declarada de Interés Turístico Nacional.",
+   "dist_km": 38
+  },
+  {
+   "nombre": "Ecomuseo Minero Valle de Samuño",
+   "concejo": "Langreo",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Recorrido en tren minero histórico y visita guiada al interior de una mina de carbón, con antiguos mineros como guías. Una de las experiencias de turismo industrial más completas de las Cuencas.",
+   "dist_km": 32
+  },
+  {
+   "nombre": "Casco histórico de Sama de Langreo",
+   "concejo": "Langreo",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Núcleo urbano marcado por el pasado industrial y minero, con edificios modernistas, el Pozo Fondón y la iglesia de Santiago Apóstol, testimonio del auge industrial asturiano de finales del XIX.",
+   "dist_km": 32
+  },
+  {
+   "nombre": "Pozo Santa Bárbara",
+   "concejo": "Mieres",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Castillete minero emblemático visible desde la autovía, símbolo del pasado hullero de Mieres y de la identidad de las Cuencas Mineras asturianas.",
+   "dist_km": 48
+  },
+  {
+   "nombre": "Santa Cristina de Lena",
+   "concejo": "Lena",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Iglesia prerrománica del siglo IX construida sobre una plataforma rocosa junto a la vía del tren, Patrimonio de la Humanidad. Su iconostasio de piedra es único en el arte prerrománico europeo.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Puerto de Pajares / Valgrande-Pajares",
+   "concejo": "Lena",
+   "localidad": null,
+   "categoria": "mirador",
+   "desc": "Puerto de montaña histórico frontera con León, con panorámicas espectaculares de la Cordillera Cantábrica y estación de esquí en invierno. Punto de referencia histórico del Camino de Santiago y las vías de comunicación asturianas.",
+   "dist_km": 55
+  },
+  {
+   "nombre": "Cueva Huerta",
+   "concejo": "Aller",
+   "localidad": null,
+   "categoria": "cueva",
+   "desc": "Uno de los sistemas kársticos más largos de Asturias, con visitas guiadas a sus galerías, formaciones de estalactitas y un río subterráneo. Atractivo natural y espeleológico poco masificado.",
+   "dist_km": 65
+  },
+  {
+   "nombre": "Museo de la Minería y de la Industria (MUMI)",
+   "concejo": "San Martín del Rey Aurelio",
+   "localidad": "El Entrego",
+   "categoria": "museo",
+   "desc": "Museo de referencia sobre la minería del carbón en España, con una réplica de galería subterránea y maquinaria original. Pieza clave para entender la historia industrial de las Cuencas Mineras.",
+   "dist_km": 35
+  },
+  {
+   "nombre": "Pozo Sotón",
+   "concejo": "San Martín del Rey Aurelio",
+   "localidad": "Sotrondio",
+   "categoria": "patrimonio",
+   "desc": "Antigua mina en funcionamiento hasta hace pocos años, hoy ofrece la visita minera más auténtica de Asturias: bajada real en jaula hasta las galerías con exmineros como guías.",
+   "dist_km": 35
+  },
+  {
+   "nombre": "Senda del Oso y Casa del Oso",
+   "concejo": "Proaza",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Vía verde sobre una antigua vía minera que recorre los valles de Proaza, Teverga y Quirós, con la Casa del Oso donde viven en semilibertad ejemplares de oso pardo cantábrico. Ruta ideal en bici o a pie apta para toda la familia.",
+   "dist_km": 50
+  },
+  {
+   "nombre": "Desfiladero de las Xanas",
+   "concejo": "Teverga",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Espectacular garganta fluvial excavada por el arroyo de las Xanas, con senderos entre paredes de roca caliza y pequeñas cascadas. Una de las rutas de naturaleza más populares del centro de Asturias.",
+   "dist_km": 52
+  },
+  {
+   "nombre": "Parque de la Prehistoria de Asturias",
+   "concejo": "Teverga",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Único parque temático de Europa dedicado íntegramente al arte rupestre paleolítico, con réplicas exactas de Altamira, Tito Bustillo y otras cuevas Patrimonio de la Humanidad. Complemento perfecto de una visita a la Senda del Oso.",
+   "dist_km": 52
+  },
+  {
+   "nombre": "Iglesia prerrománica de San Adriano de Tuñón",
+   "concejo": "Santo Adriano",
+   "localidad": "Tuñón",
+   "categoria": "monumento",
+   "desc": "Templo de época asturiana (siglo IX) de estilo mozárabe-prerrománico, situado en un entorno rural tranquilo junto al río Trubia, en la entrada de la Senda del Oso. Menos visitado que los grandes monumentos de Oviedo pero de gran valor histórico.",
+   "dist_km": 48
+  },
+  {
+   "nombre": "Taramundi (pueblo)",
+   "concejo": "Taramundi",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Pueblo pionero del turismo rural en España, con arquitectura tradicional en piedra y pizarra encajada en un valle verde de Los Oscos. Su casco es punto de partida de la famosa Ruta del Agua y sigue siendo cuna de la artesanía cuchillera asturiana.",
+   "dist_km": 140
+  },
+  {
+   "nombre": "Ruta del Agua (molinos y batanes)",
+   "concejo": "Taramundi",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Sendero circular corto que enlaza mazos, batanes, un molino harinero y una serrería, todos movidos por la fuerza del agua y restaurados como museo etnográfico al aire libre. Es la mejor forma de entender la vida tradicional de Los Oscos y muy asequible para toda la familia.",
+   "dist_km": 140
+  },
+  {
+   "nombre": "Museo Etnográfico de Grandas de Salime \"Pepe el Ferreiro\"",
+   "concejo": "Grandas de Salime",
+   "localidad": null,
+   "categoria": "museo",
+   "desc": "Uno de los museos etnográficos más completos de España, reunido por el 'coleccionista' Pepe el Ferreiro en un antiguo colegio, con miles de piezas sobre oficios, agricultura y vida rural asturiana. Incluye una capilla de arte contemporáneo pintada por artistas invitados, algo insólito en un museo rural.",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Castro de Chao Samartín",
+   "concejo": "Grandas de Salime",
+   "localidad": "Villaseca",
+   "categoria": "patrimonio",
+   "desc": "Poblado fortificado astur-romano de gran importancia arqueológica, con restos de viviendas, un edificio termal y objetos que muestran el paso de la cultura castreña a la romanización. Cuenta con un museo anexo que exhibe más de 350 piezas halladas en las excavaciones.",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Parque Natural de Somiedo",
+   "concejo": "Somiedo",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Reserva de la Biosfera con el sistema lacustre glaciar más importante de la Cordillera Cantábrica (Lagos de Saliencia, Lago del Valle) y una de las poblaciones más estables de oso pardo cantábrico. Sus valles combinan naturaleza salvaje con un paisaje ganadero tradicional único.",
+   "dist_km": 112
+  },
+  {
+   "nombre": "Brañas de teitos de La Pornacal",
+   "concejo": "Somiedo",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "El mayor conjunto de brañas (asentamientos ganaderos de altura) con cabañas de teito -cubierta vegetal de escoba- de toda Asturias, declarado Monumento Natural. Es una imagen vivísima de la trashumancia vaqueira que aún se practica en el parque.",
+   "dist_km": 112
+  },
+  {
+   "nombre": "Cudillero (pueblo)",
+   "concejo": "Cudillero",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Villa marinera construida en anfiteatro sobre un puerto natural, con casas de colores escalonadas y calles empinadas que bajan hasta la lonja. Su mirador de El Pico y el barrio pescador son de los rincones más fotografiados de Asturias.",
+   "dist_km": 55.4
+  },
+  {
+   "nombre": "Conjunto monumental de Salas (Torre, Palacio y Colegiata)",
+   "concejo": "Salas",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Villa del Camino Primitivo con cuatro Monumentos Nacionales en su casco: la Torre de la Villa (s. XIV), el Palacio de Valdés-Salas unido a ella por un arco, la Colegiata de Santa María la Mayor con el sepulcro renacentista de Fernando de Valdés y la iglesia prerrománica de San Martín. Muy recomendable combinarla con la cercana cascada de Nonaya.",
+   "dist_km": 65
+  },
+  {
+   "nombre": "Monasterio de San Juan Bautista de Corias",
+   "concejo": "Cangas del Narcea",
+   "localidad": "Corias",
+   "categoria": "monumento",
+   "desc": "Uno de los monasterios benedictinos más grandes de España, con una imponente fachada barroca sobre el río Narcea; hoy alberga un Parador y bodega. Su iglesia y claustros pueden visitarse y ofrecen una de las estampas monumentales más notables del occidente asturiano.",
+   "dist_km": 110
+  },
+  {
+   "nombre": "Hayedo de Monasterio de Hermo",
+   "concejo": "Cangas del Narcea",
+   "localidad": "Monasterio de Hermo",
+   "categoria": "parque-natural",
+   "desc": "Uno de los hayedos mejor conservados y más extensos de la península ibérica, dentro del Parque Natural de las Fuentes del Narcea, Degaña e Ibias. Espectacular en otoño por el color del follaje y hábitat de fauna protegida como el urogallo.",
+   "dist_km": 110
+  },
+  {
+   "nombre": "Parque Natural de Muniellos",
+   "concejo": "Ibias",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Reserva Natural Integral y Reserva de la Biosfera que protege el robledal mejor conservado de España y uno de los más extensos de Europa, refugio de oso pardo y urogallo. El acceso está muy restringido (máximo 20 visitantes al día con reserva previa), lo que lo convierte en una experiencia de naturaleza casi virgen.",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Parque Natural de las Fuentes del Narcea, Degaña e Ibias",
+   "concejo": "Degaña",
+   "localidad": null,
+   "categoria": "parque-natural",
+   "desc": "Extenso espacio protegido de montaña que da nombre al concejo, con bosques atlánticos, la Reserva Regional de Caza de Degaña y paisajes de alta montaña poco transitados. Es la puerta de entrada menos conocida a este gran macizo forestal del suroccidente asturiano.",
+   "dist_km": 150
+  },
+  {
+   "nombre": "Castro de Coaña",
+   "concejo": "Coaña",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Uno de los poblados fortificados prerromanos mejor conservados de España, habitado entre los siglos IV a.C. y I d.C., con viviendas circulares, calles empedradas y un recinto termal de uso ritual. Un centro de interpretación explica la cultura castreña y la posterior explotación romana del oro cercano.",
+   "dist_km": 107.8
+  },
+  {
+   "nombre": "Cueva de la Peña (Candamo)",
+   "concejo": "Candamo",
+   "localidad": "San Román",
+   "categoria": "cueva",
+   "desc": "Cueva con arte rupestre paleolítico declarada Patrimonio Mundial por la UNESCO, la cavidad con pinturas del Paleolítico más occidental de Europa. Las visitas son guiadas y muy limitadas (grupos reducidos con reserva obligatoria), con un centro de interpretación en el Palacio Valdés-Bazán.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Luarca",
+   "concejo": "Valdés",
+   "localidad": "Luarca",
+   "categoria": "pueblo",
+   "desc": "La 'villa blanca de la costa verde', con su puerto pesquero repartido a ambos lados de la ría, calles empinadas y el singular cementerio en lo alto del cabo con vistas al mar. Su casco histórico de casas de indianos y su faro completan un paseo obligado.",
+   "dist_km": 86.0
+  },
+  {
+   "nombre": "Ferrería de Mazonovo",
+   "concejo": "Santa Eulalia de Oscos",
+   "localidad": "Mazonovo",
+   "categoria": "patrimonio",
+   "desc": "Una de las ferrerías hidráulicas más antiguas conservadas de Asturias (principios del s. XVIII), donde se forjaba hierro con la fuerza del agua del río. Forma parte del paisaje fluvial de Los Oscos, con zonas de baño cercanas en el Agüeira.",
+   "dist_km": 140
+  },
+  {
+   "nombre": "Monasterio de Santa María de Villanueva de Oscos",
+   "concejo": "Villanueva de Oscos",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Monasterio cisterciense del siglo XII, restaurado, que da nombre al concejo y conserva elementos románicos y barrocos. Su entorno rural y el cercano ecomuseo del pan completan una visita centrada en la vida monástica y agrícola de la comarca.",
+   "dist_km": 135
+  },
+  {
+   "nombre": "Palacio de Mon",
+   "concejo": "San Martín de Oscos",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Palacio barroco de los siglos XVII-XVIII con una fachada blasonada muy vistosa, uno de los edificios civiles más notables de Los Oscos. Representa el poder de los antiguos linajes ferreiros de la comarca.",
+   "dist_km": 140
+  },
+  {
+   "nombre": "Castro de Pendia",
+   "concejo": "Boal",
+   "localidad": "Pendia",
+   "categoria": "patrimonio",
+   "desc": "Poblado castreño considerado seña de identidad de Boal y de todo el Parque Histórico del Navia, con restos de murallas y viviendas sobre un cordal con vistas al valle. Se puede combinar con el Centro de Interpretación del Hierro de Rozadas, dedicado a ferreiros y claveros.",
+   "dist_km": 110
+  },
+  {
+   "nombre": "Aldea de Argul",
+   "concejo": "Pesoz",
+   "localidad": "Argul",
+   "categoria": "pueblo",
+   "desc": "Pequeña aldea medieval construida literalmente sobre y entre grandes rocas, con casas de piedra conectadas por túneles y pasos elevados. Es uno de los pueblos con trazado más singular y sorprendente del occidente asturiano.",
+   "dist_km": 135
+  },
+  {
+   "nombre": "Santesteba",
+   "concejo": "Illano",
+   "localidad": "Santesteba",
+   "categoria": "pueblo",
+   "desc": "Pueblo de casas de pizarra y madera del siglo XIX, aferrado a las rocas sobre el río Navia, en uno de los concejos más despoblados y silvestres de Asturias. Su aislamiento ha conservado un paisaje rural casi intacto.",
+   "dist_km": 120
+  },
+  {
+   "nombre": "Cascadas de Oneta",
+   "concejo": "Villayón",
+   "localidad": "Oneta",
+   "categoria": "otro",
+   "desc": "Conjunto de tres saltos de agua escalonados en un entorno boscoso, accesibles por una ruta corta y muy popular en primavera y tras las lluvias. Uno de los rincones naturales más visitados del concejo de Villayón.",
+   "dist_km": 90
+  },
+  {
+   "nombre": "Monasterio de Santa María la Real de Obona",
+   "concejo": "Tineo",
+   "localidad": "Obona",
+   "categoria": "monumento",
+   "desc": "Antiguo monasterio benedictino en un paraje boscoso apartado, con una iglesia de origen medieval y fachada barroca; en sus documentos aparece la primera referencia escrita a la sidra asturiana. Un lugar tranquilo y con mucha carga histórica dentro del extenso concejo de Tineo.",
+   "dist_km": 85
+  },
+  {
+   "nombre": "Tapia de Casariego (pueblo)",
+   "concejo": "Tapia de Casariego",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Villa marinera con un puerto pintoresco entre acantilados, casco histórico de casas de indianos y ambiente surfero por sus olas de calidad. Su paseo marítimo y la iglesia parroquial completan un recorrido corto pero muy agradable.",
+   "dist_km": 120.1
+  },
+  {
+   "nombre": "Castropol (mirador de la ría del Eo)",
+   "concejo": "Castropol",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Villa señorial asomada a la ría del Eo, con casas blasonadas, soportales y un paseo con vistas privilegiadas a Galicia al otro lado del agua. Su conjunto histórico-artístico es uno de los mejor conservados del extremo occidental asturiano.",
+   "dist_km": 123.1
+  },
+  {
+   "nombre": "Puente de los Santos y ría del Eo",
+   "concejo": "Vegadeo",
+   "localidad": null,
+   "categoria": "otro",
+   "desc": "Vegadeo es la puerta de entrada a Asturias desde Galicia por la ría del Eo, con un puente histórico y un entorno natural protegido como Reserva de la Biosfera transfronteriza. Su mercado y su casco comercial reflejan el papel de capital de comarca del municipio.",
+   "dist_km": 130
+  },
+  {
+   "nombre": "Minas de oro romanas de El Valle-Boinás y Aula del Oro",
+   "concejo": "Belmonte de Miranda",
+   "localidad": null,
+   "categoria": "patrimonio",
+   "desc": "Restos de una de las mayores explotaciones auríferas de época romana en Asturias, con galerías y canales que se pueden visitar junto a un centro de interpretación (Aula del Oro) sobre la técnica de la ruina montium. Un testimonio poco conocido de la ingeniería minera romana.",
+   "dist_km": 65
+  },
+  {
+   "nombre": "Pola de Allande",
+   "concejo": "Allande",
+   "localidad": "Pola de Allande",
+   "categoria": "pueblo",
+   "desc": "Capital de un concejo montañoso atravesado por el Camino Primitivo de Santiago, con casonas indianas, un pequeño casco histórico y el exigente puerto del Palo como telón de fondo. Punto de partida habitual para etapas de peregrinación hacia Galicia.",
+   "dist_km": 95
+  },
+  {
+   "nombre": "Iglesia prerrománica de Santianes de Pravia",
+   "concejo": "Pravia",
+   "localidad": "Santianes",
+   "categoria": "monumento",
+   "desc": "Templo del siglo VIII vinculado al rey Silo, cuando Pravia fue durante un breve periodo capital del Reino de Asturias; es uno de los edificios prerrománicos más antiguos que se conservan. El casco histórico de Pravia, con soportales y plaza porticada, completa la visita.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Miudes",
+   "concejo": "El Franco",
+   "localidad": "Miudes",
+   "categoria": "pueblo",
+   "desc": "Pequeño pueblo marinero de casas blancas y tejados de pizarra colgado sobre los acantilados, muy fotogénico y con encanto tradicional. Representa bien la arquitectura costera del concejo de El Franco.",
+   "dist_km": 111.3
+  },
+  {
+   "nombre": "San Tirso de Abres",
+   "concejo": "San Tirso de Abres",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Villa fronteriza con Galicia en la confluencia de los ríos Eo y Agüeira, etapa del Camino Primitivo interior y con la iglesia de San Juan Bautista como principal hito religioso. Su entorno fluvial es tranquilo y muy verde.",
+   "dist_km": 135
+  },
+  {
+   "nombre": "Navia (pueblo y ría)",
+   "concejo": "Navia",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Villa marinera en la desembocadura del río Navia, con un paseo fluvial, playa urbana y un casco con arquitectura indiana de los emigrantes que hicieron fortuna en América. Buen punto de partida para explorar el Parque Histórico del Navia y sus castros.",
+   "dist_km": 102.5
+  },
+  {
+   "nombre": "Casco histórico de Grado (Iglesia de Santa María y palacios)",
+   "concejo": "Grado",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Villa mercado del valle del Nalón con soportales, palacios señoriales y la iglesia de Santa María, dentro de una de las rutas del románico asturiano. Su mercado semanal es uno de los más animados y tradicionales de la región.",
+   "dist_km": 45
+  },
+  {
+   "nombre": "Castillo de San Martín",
+   "concejo": "Soto del Barco",
+   "localidad": null,
+   "categoria": "monumento",
+   "desc": "Restos de una fortaleza medieval sobre un promontorio que domina la ría del Nalón, con un mirador desde el que se ve todo el estuario hasta la desembocadura. Un rincón histórico poco masificado en la comarca del Bajo Nalón.",
+   "dist_km": 45.0
+  },
+  {
+   "nombre": "Muros de Nalón (pueblo indiano)",
+   "concejo": "Muros de Nalón",
+   "localidad": null,
+   "categoria": "pueblo",
+   "desc": "Pequeña villa de la comarca de las Cinco Villas del Bajo Nalón, con arquitectura de indianos, chalés modernistas y un ambiente veraniego tranquilo. Su paseo marítimo y su entorno pesquero completan bien una ruta por el litoral occidental.",
+   "dist_km": 47.5
+  }
+ ]
+}
