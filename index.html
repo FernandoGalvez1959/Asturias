@@ -41,8 +41,18 @@
   a{color:inherit}
   .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
   header.top{padding:28px 0 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--sky1),var(--bg) 140%)}
+  .title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
   h1{font-size:clamp(26px,4vw,34px);margin:0 0 6px;letter-spacing:-.01em}
   .sub{color:var(--ink-dim);margin:0 0 18px;font-size:16px;max-width:62ch}
+  .sync-badge{border:1px solid transparent;background:none;padding:7px 14px 7px 12px;border-radius:999px;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .sync-badge.on{background:#e3f5ea;color:#1d7a41;border-color:#a9dcbc}
+  .sync-badge.off{background:#fce8e6;color:#b3261e;border-color:#f0b8b2}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .sync-badge.on{background:#123821;color:#7be3a4;border-color:#2f8f5c}
+    :root:not([data-theme="light"]) .sync-badge.off{background:#3a1414;color:#ff9a90;border-color:#a83a30}
+  }
+  :root[data-theme="dark"] .sync-badge.on{background:#123821;color:#7be3a4;border-color:#2f8f5c}
+  :root[data-theme="dark"] .sync-badge.off{background:#3a1414;color:#ff9a90;border-color:#a83a30}
   nav.tabs{display:flex;gap:8px;flex-wrap:wrap}
   nav.tabs button{border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);padding:10px 16px;border-radius:999px;font-size:15px;cursor:pointer}
   nav.tabs button.active{background:var(--sea);border-color:var(--sea);color:#fff;font-weight:600}
@@ -216,7 +226,10 @@
 
 <header class="top">
   <div class="wrap">
-    <h1>🏖️ Asturias</h1>
+    <div class="title-row">
+      <h1>🏖️ Asturias</h1>
+      <button type="button" class="sync-badge" id="sync-status-btn" hidden></button>
+    </div>
     <p class="sub">Guía personal de Asturias, siempre con la distancia aproximada en coche desde Gijón: las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo; rutas fotográficas de costa (miradores, faros, pueblos marineros) y de interior (Picos de Europa, Somiedo, cascadas, desfiladeros); restaurantes con estrella Michelín, Sol Repsol o recomendados en esas guías; sidrerías tradicionales con las premiadas destacadas; lagares donde comprar sidra directamente al productor; y una pestaña "Qué ver" con pueblos, monumentos, museos, cuevas y parques naturales de todos los concejos de Asturias.</p>
     <nav class="tabs">
       <button class="active" data-tab="playas">🏖️ Playas</button>
@@ -1492,6 +1505,7 @@ function init(){
 // entre dispositivos) | 'local' (guardado solo en este dispositivo, sin sesión) | 'none'
 let db = null, assetsCap = null, downloadsCap = null, storageMode = 'none';
 let fbApi = null, fbUser = null, fbUnsubEstado = null, fbUnsubCustom = null;
+let syncBadgeWired = false;
 const estadoMap = {}; // docId -> {favorito, nota, gasto, fotos:[{id,url}]}
 const customMap = {}; // docId -> {id, tipo:'restaurante'|'lagar', nombre, concejo, ...}
 const MAX_FOTOS = 3;
@@ -1803,14 +1817,48 @@ function traducirErrorFirebase(e){
 function updateCloudSyncUI(user){
   const out = document.getElementById('cloud-sync-logged-out');
   const inn = document.getElementById('cloud-sync-logged-in');
-  if(!out || !inn) return;
-  if(user){
-    out.hidden = true; inn.hidden = false;
-    const em = document.getElementById('cloud-user-email');
-    if(em) em.textContent = user.email || '';
-  } else {
-    out.hidden = false; inn.hidden = true;
+  if(out && inn){
+    if(user){
+      out.hidden = true; inn.hidden = false;
+      const em = document.getElementById('cloud-user-email');
+      if(em) em.textContent = user.email || '';
+    } else {
+      out.hidden = false; inn.hidden = true;
+    }
   }
+  updateSyncBadge();
+}
+
+// Botón rojo/verde de arriba a la derecha con el estado de la sincronización
+// (solo se muestra fuera de la conversación de Claude, donde la sincronización
+// es por Firebase; dentro de Claude no hace falta, porque ya sincroniza sola).
+function updateSyncBadge(){
+  const btn = document.getElementById('sync-status-btn');
+  if(!btn) return;
+  if(storageMode==='db'){ btn.hidden = true; return; }
+  btn.hidden = false;
+  if(storageMode==='firebase'){
+    btn.className = 'sync-badge on';
+    btn.textContent = '☁️ Sincronizado';
+    btn.title = 'Tus datos se están sincronizando entre tus dispositivos';
+  } else {
+    btn.className = 'sync-badge off';
+    btn.textContent = '☁️ No sincronizado';
+    btn.title = 'Toca para iniciar sesión y sincronizar entre tus dispositivos';
+  }
+}
+
+function wireSyncBadge(){
+  if(syncBadgeWired) return;
+  syncBadgeWired = true;
+  const btn = document.getElementById('sync-status-btn');
+  if(!btn) return;
+  btn.addEventListener('click', ()=>{
+    const tabBtn = document.querySelector('nav.tabs button[data-tab="backup"]');
+    if(tabBtn) tabBtn.click();
+    const panel = document.getElementById('cloud-sync-panel');
+    if(panel) panel.scrollIntoView({behavior:'smooth', block:'start'});
+  });
 }
 
 let cloudSyncPanelWired = false;
@@ -1940,6 +1988,8 @@ async function initCapabilities(){
     //    hay sesión (o no hay conexión), se guarda solo en este dispositivo.
     const cloudPanel = document.getElementById('cloud-sync-panel');
     if(cloudPanel) cloudPanel.hidden = false;
+    wireSyncBadge();
+    updateSyncBadge();
 
     fbApi = await Promise.race([
       window.__firebaseReadyPromise || Promise.resolve(null),
