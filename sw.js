@@ -6,7 +6,7 @@
 // de CACHE (v2, v3, ...). Si no, los móviles que ya visitaron la app se
 // quedan sirviendo para siempre la copia vieja guardada en caché, aunque el
 // archivo en el servidor ya esté arreglado.
-const CACHE = 'asturias-v6';
+const CACHE = 'asturias-v7';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
