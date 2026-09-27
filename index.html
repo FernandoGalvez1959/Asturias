@@ -44,6 +44,18 @@
   .title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
   h1{font-size:clamp(26px,4vw,34px);margin:0 0 6px;letter-spacing:-.01em}
   .sub{color:var(--ink-dim);margin:0 0 18px;font-size:16px;max-width:62ch}
+  .info-btn{border:1px solid var(--line);background:var(--bg-elev);color:var(--ink-dim);padding:7px 13px;border-radius:999px;font-size:13.5px;cursor:pointer;margin-bottom:16px}
+  .info-btn:hover{border-color:var(--sea);color:var(--sea)}
+  .info-overlay{position:fixed;inset:0;background:rgba(20,25,25,.45);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+  .info-overlay[hidden]{display:none}
+  .info-modal{background:var(--bg-elev);border-radius:16px;max-width:560px;width:100%;max-height:82vh;overflow-y:auto;box-shadow:var(--card-shadow);padding:20px 22px 22px}
+  .info-modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;position:sticky;top:-20px;background:var(--bg-elev);padding-top:2px}
+  .info-modal-head h2{font-size:19px;margin:0}
+  .info-close-btn{background:none;border:1px solid var(--line);color:var(--ink-dim);width:32px;height:32px;border-radius:999px;font-size:15px;cursor:pointer;flex:0 0 auto}
+  .info-close-btn:hover{border-color:var(--sea);color:var(--sea)}
+  .info-list{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+  .info-list li{font-size:14.5px;color:var(--ink-dim);line-height:1.5}
+  .info-list li strong{color:var(--ink)}
   .sync-badge{border:1px solid transparent;background:none;padding:7px 14px 7px 12px;border-radius:999px;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
   .sync-badge.on{background:#e3f5ea;color:#1d7a41;border-color:#a9dcbc}
   .sync-badge.off{background:#fce8e6;color:#b3261e;border-color:#f0b8b2}
@@ -93,6 +105,9 @@
   .filter-dd[open] summary{background:var(--sea);border-color:var(--sea);color:#fff}
   .filter-dd[open] summary:after{content:' ▴'}
   .filter-dd-body{position:absolute;top:calc(100% + 6px);left:0;z-index:12;background:var(--bg-elev);border:1px solid var(--line);border-radius:12px;padding:8px 12px;box-shadow:var(--card-shadow);display:flex;flex-direction:column;gap:2px;width:max-content;max-width:min(78vw,260px);max-height:60vh;overflow-y:auto}
+  .dd-zona-label{font-size:12px;color:var(--ink-dim);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin:2px 0 3px}
+  .filter-dd-body select#f-zona{width:100%;margin-bottom:2px}
+  .dd-sep{height:1px;background:var(--line);margin:8px 0 6px}
   .dd-check{display:flex;align-items:center;gap:8px;font-size:14.5px;padding:6px 2px;cursor:pointer;white-space:nowrap;color:var(--ink)}
   .dd-check input{margin:0}
 
@@ -186,7 +201,7 @@
   .rest-card .actions,.sidra-card .actions{display:flex}
   .rest-card .actions a,.sidra-card .actions a{flex:1;text-align:center;font-size:14px;padding:10px 6px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink)}
   .rest-card .actions a:hover,.sidra-card .actions a:hover{border-color:var(--sea);color:var(--sea)}
-  .rest-card .fav-row,.sidra-card .fav-row{margin:0 0 9px}
+  .rest-card .fav-row,.sidra-card .fav-row,.foto-card .fav-row{margin:0 0 9px}
   .rest-card .photo-strip,.sidra-card .photo-strip{margin:0 0 9px}
   .rest-card .note-box,.sidra-card .note-box,.rest-card .gasto-box,.sidra-card .gasto-box,.sidra-card .marca-box,.sidra-card .caja-box{margin:0 0 9px}
 
@@ -230,20 +245,38 @@
       <h1>🏖️ Asturias</h1>
       <button type="button" class="sync-badge" id="sync-status-btn" hidden></button>
     </div>
-    <p class="sub">Guía personal de Asturias, siempre con la distancia aproximada en coche desde Gijón: las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo; rutas fotográficas de costa (miradores, faros, pueblos marineros) y de interior (Picos de Europa, Somiedo, cascadas, desfiladeros); restaurantes con estrella Michelín, Sol Repsol o recomendados en esas guías; sidrerías tradicionales con las premiadas destacadas; lagares donde comprar sidra directamente al productor; y una pestaña "Qué ver" con pueblos, monumentos, museos, cuevas y parques naturales de todos los concejos de Asturias.</p>
+    <button type="button" class="info-btn" id="info-open-btn">ℹ️ Qué contiene</button>
     <nav class="tabs">
-      <button class="active" data-tab="playas">🏖️ Playas</button>
+      <button data-tab="playas">🏖️ Playas</button>
       <button data-tab="foto">📷 Ruta fotográfica</button>
+      <button data-tab="sitios">🗺️ Qué ver</button>
       <button data-tab="restaurantes">🍽️ Restaurantes</button>
       <button data-tab="sidrerias">🍎 Sidrerías</button>
       <button data-tab="lagares">🍏 Lagares</button>
-      <button data-tab="sitios">🗺️ Qué ver</button>
       <button data-tab="backup">💾 Copia de seguridad</button>
     </nav>
   </div>
 </header>
 
-<div id="tab-playas">
+<div class="info-overlay" id="info-overlay" hidden>
+  <div class="info-modal">
+    <div class="info-modal-head">
+      <h2>Qué contiene esta guía</h2>
+      <button type="button" class="info-close-btn" id="info-close-btn" aria-label="Cerrar">✕</button>
+    </div>
+    <ul class="info-list">
+      <li><strong>🏖️ Playas</strong> — las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo, y filtros como tipo de arena, accesibilidad o aptas para kayak y snorkel.</li>
+      <li><strong>📷 Ruta fotográfica</strong> — costa (miradores, faros, pueblos marineros) e interior (Picos de Europa, Somiedo, cascadas, desfiladeros), con la mejor luz para cada punto.</li>
+      <li><strong>🗺️ Qué ver</strong> — pueblos, monumentos, museos, cuevas y parques naturales de todos los concejos de Asturias.</li>
+      <li><strong>🍽️ Restaurantes</strong> — con estrella Michelín, Sol Repsol o recomendados en esas guías.</li>
+      <li><strong>🍎 Sidrerías</strong> — tradicionales, con las premiadas destacadas.</li>
+      <li><strong>🍏 Lagares</strong> — para comprar sidra directamente al productor.</li>
+      <li><strong>💾 Copia de seguridad</strong> — exporta o restaura tus favoritas, notas y fotos, y sincronízalas entre tus dispositivos si quieres.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="tab-playas" hidden>
 <section class="map-wrap">
   <div class="wrap map-row">
     <div class="map-card">
@@ -263,20 +296,24 @@
   <div class="wrap">
     <div class="controls-row">
       <input type="search" id="q" placeholder="Buscar playa o concejo…">
-      <select id="f-zona">
-        <option value="">Toda la costa</option>
-        <option value="oeste">Oeste de Gijón</option>
-        <option value="gijon">Gijón</option>
-        <option value="este">Este de Gijón</option>
-      </select>
-      <select id="f-concejo"><option value="">Todos los concejos</option></select>
+      <select id="f-concejo"><option value="">Elige un concejo…</option></select>
       <span class="count" id="count"></span>
     </div>
     <div class="filters-row">
-      <button type="button" class="fav-toggle on" id="fav-only-chip">★ Solo favoritas</button>
+      <button type="button" class="fav-toggle" id="fav-only-chip">★ Solo favoritas</button>
       <details class="filter-dd" id="filter-dd">
         <summary>Filtros <span id="filter-dd-count"></span></summary>
-        <div class="filter-dd-body" id="filter-dd-body"></div>
+        <div class="filter-dd-body" id="filter-dd-body">
+          <label class="dd-zona-label" for="f-zona">Zona</label>
+          <select id="f-zona">
+            <option value="">Toda la costa</option>
+            <option value="oeste">Oeste de Gijón</option>
+            <option value="gijon">Gijón</option>
+            <option value="este">Este de Gijón</option>
+          </select>
+          <div class="dd-sep"></div>
+          <div id="filter-dd-tags"></div>
+        </div>
       </details>
     </div>
   </div>
@@ -315,10 +352,13 @@
       <input type="search" id="qf" placeholder="Buscar punto o concejo…">
       <span class="count" id="count-foto"></span>
     </div>
-    <details class="filter-dd" id="filter-dd-foto">
-      <summary>Filtros <span id="filter-dd-foto-count"></span></summary>
-      <div class="filter-dd-body" id="filter-dd-foto-body"></div>
-    </details>
+    <div class="filters-row">
+      <button type="button" class="fav-toggle" id="foto-fav-chip">★ Solo favoritos</button>
+      <details class="filter-dd" id="filter-dd-foto">
+        <summary>Filtros <span id="filter-dd-foto-count"></span></summary>
+        <div class="filter-dd-body" id="filter-dd-foto-body"></div>
+      </details>
+    </div>
   </div>
 </div>
 
@@ -333,10 +373,13 @@
       <input type="search" id="qfi" placeholder="Buscar lugar o concejo…">
       <span class="count" id="count-foto-interior"></span>
     </div>
-    <details class="filter-dd" id="filter-dd-interior">
-      <summary>Filtros <span id="filter-dd-interior-count"></span></summary>
-      <div class="filter-dd-body" id="filter-dd-interior-body"></div>
-    </details>
+    <div class="filters-row">
+      <button type="button" class="fav-toggle" id="foto-interior-fav-chip">★ Solo favoritos</button>
+      <details class="filter-dd" id="filter-dd-interior">
+        <summary>Filtros <span id="filter-dd-interior-count"></span></summary>
+        <div class="filter-dd-body" id="filter-dd-interior-body"></div>
+      </details>
+    </div>
   </div>
 </div>
 <main class="wrap" id="results-foto-interior"></main>
@@ -356,6 +399,7 @@
       <div class="filter-dd-body" id="filter-dd-rest-body"></div>
     </details>
     <div class="filters-row">
+      <button type="button" class="fav-toggle" id="rest-fav-chip">★ Solo favoritos</button>
       <details class="add-item-dd disabled" id="rest-add-dd">
         <summary class="add-item-btn" id="rest-add-btn" title="Cargando…">➕ Añadir restaurante</summary>
         <div class="add-item-form" id="rest-add-form">
@@ -386,6 +430,7 @@
       <span class="count" id="count-sidra"></span>
     </div>
     <div class="filters-row">
+      <button type="button" class="fav-toggle" id="sidra-fav-chip">★ Solo favoritas</button>
       <details class="add-item-dd disabled" id="sidra-add-dd">
         <summary class="add-item-btn" id="sidra-add-btn" title="Cargando…">➕ Añadir sidrería</summary>
         <div class="add-item-form" id="sidra-add-form">
@@ -412,10 +457,11 @@
   <div class="wrap">
     <div class="controls-row">
       <input type="search" id="qla" placeholder="Buscar lagar…">
-      <select id="f-concejo-lagar"><option value="">Todos los concejos</option></select>
+      <select id="f-concejo-lagar"><option value="">Elige un concejo…</option></select>
       <span class="count" id="count-lagares"></span>
     </div>
     <div class="filters-row">
+      <button type="button" class="fav-toggle" id="lagar-fav-chip">★ Solo favoritos</button>
       <button type="button" class="fav-toggle" id="lagar-premiado-chip">🏆 Solo premiados</button>
       <button type="button" class="fav-toggle" id="lagar-gijon-chip">📍 Solo de Gijón</button>
       <details class="add-item-dd disabled" id="lagar-add-dd">
@@ -481,13 +527,16 @@
   <div class="wrap">
     <div class="controls-row">
       <input type="search" id="qsi" placeholder="Buscar sitio o concejo…">
-      <select id="f-concejo-sitio"><option value="">Todos los concejos</option></select>
+      <select id="f-concejo-sitio"><option value="">Elige un concejo…</option></select>
       <span class="count" id="count-sitios"></span>
     </div>
-    <details class="filter-dd" id="filter-dd-sitios">
-      <summary>Filtros <span id="filter-dd-sitios-count"></span></summary>
-      <div class="filter-dd-body" id="filter-dd-sitios-body"></div>
-    </details>
+    <div class="filters-row">
+      <button type="button" class="fav-toggle" id="sitios-fav-chip">★ Solo favoritos</button>
+      <details class="filter-dd" id="filter-dd-sitios">
+        <summary>Filtros <span id="filter-dd-sitios-count"></span></summary>
+        <div class="filter-dd-body" id="filter-dd-sitios-body"></div>
+      </details>
+    </div>
   </div>
 </div>
 <main class="wrap" id="results-sitios"></main>
@@ -738,7 +787,8 @@ function fotoDocId(p){ return 'foto--'+slug(p.concejo)+'--'+slug(p.nombre); }
 function fotoCardHTML(p){
   const gmapQ = encodeURIComponent(`${p.nombre.split('/')[0].trim()}, ${p.concejo}, Asturias, España`);
   const gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
-  return `<article class="foto-card" data-docid="${fotoDocId(p)}" data-name="${p.nombre.toLowerCase()}" data-concejo="${p.concejo}" data-tipo="${p.tipo}">
+  const id = fotoDocId(p);
+  return `<article class="foto-card" data-docid="${id}" data-name="${p.nombre.toLowerCase()}" data-concejo="${p.concejo}" data-tipo="${p.tipo}">
     <div class="foto-head">
       <span class="foto-icon">${TIPO_ICONS[p.tipo]||'📷'}</span>
       <h4>${p.nombre}</h4>
@@ -747,6 +797,9 @@ function fotoCardHTML(p){
     <p class="desc">${p.desc}</p>
     <p class="luz"><b>💡 Mejor luz:</b> <span>${p.mejor_luz}</span></p>
     <div class="meta">${p.concejo} · ${p.dist_km===0?'En Gijón':`≈ ${p.dist_km.toFixed(0)} km de Gijón`}</div>
+    <div class="fav-row">
+      <button class="star-btn" data-id="${id}" disabled title="Cargando…">☆</button>
+    </div>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
@@ -774,29 +827,42 @@ function buildFotoChipbar(){
   body.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', applyFotoFilters));
 }
 
+let fotoMostrarTodo = false;
+let fotoFavOnly = false;
 function applyFotoFilters(){
   const q = (document.getElementById('qf')?.value||'').trim().toLowerCase();
   activeFotoTipos = new Set([...document.querySelectorAll('#filter-dd-foto-body input:checked')].map(c=>c.value));
   const ddCount = document.getElementById('filter-dd-foto-count');
   if(ddCount) ddCount.textContent = activeFotoTipos.size ? `(${activeFotoTipos.size})` : '';
+  const sinFiltros = !fotoMostrarTodo && !q && activeFotoTipos.size===0 && !fotoFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-foto .concejo-block').forEach(block=>{
     let anyVisible = false;
     block.querySelectorAll('.foto-card').forEach(card=>{
       total++;
-      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-      const matchesTipo = activeFotoTipos.size===0 || activeFotoTipos.has(card.dataset.tipo);
-      const visible = matchesQ && matchesTipo;
+      let visible = false;
+      if(!sinFiltros){
+        const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+        const matchesTipo = activeFotoTipos.size===0 || activeFotoTipos.has(card.dataset.tipo);
+        const matchesFav = !fotoFavOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+        visible = matchesQ && matchesTipo && matchesFav;
+      }
       card.style.display = visible ? '' : 'none';
       if(visible){ anyVisible = true; shown++; }
     });
     block.style.display = anyVisible ? '' : 'none';
   });
   const countEl = document.getElementById('count-foto');
-  if(countEl) countEl.textContent = `${shown} de ${total} puntos`;
+  if(countEl) countEl.textContent = sinFiltros ? '' : `${shown} de ${total} puntos`;
   const results = document.getElementById('results-foto');
   let emptyEl = document.getElementById('empty-msg-foto');
-  if(shown===0){
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div'); emptyEl.id='empty-msg-foto'; emptyEl.className='fav-banner';
+    emptyEl.innerHTML = `<strong>Busca un punto de interés</strong>Escribe un nombre en el buscador, activa ★ Solo favoritos, o abre Filtros para elegir el tipo (mirador, faro, pueblo…).<button type="button" id="foto-show-all-btn">Ver todos los puntos</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('foto-show-all-btn').addEventListener('click', ()=>{ fotoMostrarTodo = true; applyFotoFilters(); });
+  } else if(shown===0){
     if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-foto'; emptyEl.className='empty'; emptyEl.textContent='No hay puntos que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
   } else if(emptyEl){ emptyEl.remove(); }
 }
@@ -810,6 +876,12 @@ function initFotoTab(){
   buildVerticalMap('map-foto-oeste', fotoOeste, 'foto-c-');
   buildVerticalMap('map-foto-este', fotoEste, 'foto-c-');
   document.getElementById('qf').addEventListener('input', applyFotoFilters);
+  const fotoFavChip = document.getElementById('foto-fav-chip');
+  if(fotoFavChip) fotoFavChip.addEventListener('click', function(){
+    fotoFavOnly = !fotoFavOnly;
+    this.classList.toggle('on', fotoFavOnly);
+    applyFotoFilters();
+  });
   applyFotoFilters();
 }
 
@@ -824,25 +896,49 @@ function initFotoInteriorTab(){
   document.getElementById('results-foto-interior').innerHTML = pts.map(fotoCardHTML).join('');
   const qfi = document.getElementById('qfi');
   if(qfi) qfi.addEventListener('input', applyFotoInteriorFilters);
+  const fotoInteriorFavChip = document.getElementById('foto-interior-fav-chip');
+  if(fotoInteriorFavChip) fotoInteriorFavChip.addEventListener('click', function(){
+    fotoInteriorFavOnly = !fotoInteriorFavOnly;
+    this.classList.toggle('on', fotoInteriorFavOnly);
+    applyFotoInteriorFilters();
+  });
   applyFotoInteriorFilters();
 }
 
+let fotoInteriorMostrarTodo = false;
+let fotoInteriorFavOnly = false;
 function applyFotoInteriorFilters(){
   const q = (document.getElementById('qfi')?.value||'').trim().toLowerCase();
   const activeTipos = new Set([...document.querySelectorAll('#filter-dd-interior-body input:checked')].map(c=>c.value));
   const ddCount = document.getElementById('filter-dd-interior-count');
   if(ddCount) ddCount.textContent = activeTipos.size ? `(${activeTipos.size})` : '';
+  const sinFiltros = !fotoInteriorMostrarTodo && !q && activeTipos.size===0 && !fotoInteriorFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-foto-interior .foto-card').forEach(card=>{
     total++;
-    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-    const matchesTipo = activeTipos.size===0 || activeTipos.has(card.dataset.tipo);
-    const visible = matchesQ && matchesTipo;
+    let visible = false;
+    if(!sinFiltros){
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const matchesTipo = activeTipos.size===0 || activeTipos.has(card.dataset.tipo);
+      const matchesFav = !fotoInteriorFavOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+      visible = matchesQ && matchesTipo && matchesFav;
+    }
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   const countEl = document.getElementById('count-foto-interior');
-  if(countEl) countEl.textContent = `${shown} de ${total} lugares`;
+  if(countEl) countEl.textContent = sinFiltros ? '' : `${shown} de ${total} lugares`;
+  const results = document.getElementById('results-foto-interior');
+  let emptyEl = document.getElementById('empty-msg-foto-interior');
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div'); emptyEl.id='empty-msg-foto-interior'; emptyEl.className='fav-banner';
+    emptyEl.innerHTML = `<strong>Busca un lugar</strong>Escribe un nombre en el buscador, activa ★ Solo favoritos, o abre Filtros para elegir el tipo (mirador, cascada, desfiladero…).<button type="button" id="foto-interior-show-all-btn">Ver todos los lugares</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('foto-interior-show-all-btn').addEventListener('click', ()=>{ fotoInteriorMostrarTodo = true; applyFotoInteriorFilters(); });
+  } else if(shown===0){
+    if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-foto-interior'; emptyEl.className='empty'; emptyEl.textContent='No hay lugares que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
+  } else if(emptyEl){ emptyEl.remove(); }
 }
 
 function initFotoSubtabs(){
@@ -911,26 +1007,50 @@ function initRestTab(){
   document.getElementById('results-rest').innerHTML = items.map(restCardHTML).join('');
   const qr = document.getElementById('qr');
   if(qr) qr.addEventListener('input', applyRestFilters);
+  const restFavChip = document.getElementById('rest-fav-chip');
+  if(restFavChip) restFavChip.addEventListener('click', function(){
+    restFavOnly = !restFavOnly;
+    this.classList.toggle('on', restFavOnly);
+    applyRestFilters();
+  });
   applyRestFilters();
 }
 
+let restMostrarTodo = false;
+let restFavOnly = false;
 function applyRestFilters(){
   const q = (document.getElementById('qr')?.value||'').trim().toLowerCase();
   const active = new Set([...document.querySelectorAll('#filter-dd-rest-body input:checked')].map(c=>c.value));
   const ddCount = document.getElementById('filter-dd-rest-count');
   if(ddCount) ddCount.textContent = active.size ? `(${active.size})` : '';
+  const sinFiltros = !restMostrarTodo && !q && active.size===0 && !restFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-rest .rest-card').forEach(card=>{
     total++;
-    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-    const keys = card.dataset.dist.split(',');
-    const matchesFilter = active.size===0 || keys.some(k=>active.has(k));
-    const visible = matchesQ && matchesFilter;
+    let visible = false;
+    if(!sinFiltros){
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const keys = card.dataset.dist.split(',');
+      const matchesFilter = active.size===0 || keys.some(k=>active.has(k));
+      const matchesFav = !restFavOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+      visible = matchesQ && matchesFilter && matchesFav;
+    }
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   const countEl = document.getElementById('count-rest');
-  if(countEl) countEl.textContent = `${shown} de ${total} restaurantes`;
+  if(countEl) countEl.textContent = sinFiltros ? '' : `${shown} de ${total} restaurantes`;
+  const results = document.getElementById('results-rest');
+  let emptyEl = document.getElementById('empty-msg-rest');
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div'); emptyEl.id='empty-msg-rest'; emptyEl.className='fav-banner';
+    emptyEl.innerHTML = `<strong>Busca un restaurante</strong>Escribe un nombre o concejo en el buscador, activa ★ Solo favoritos, o abre Filtros (Michelín, Sol Repsol…).<button type="button" id="rest-show-all-btn">Ver todos los restaurantes</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('rest-show-all-btn').addEventListener('click', ()=>{ restMostrarTodo = true; applyRestFilters(); });
+  } else if(shown===0){
+    if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-rest'; emptyEl.className='empty'; emptyEl.textContent='No hay restaurantes que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
+  } else if(emptyEl){ emptyEl.remove(); }
 }
 
 // ---------- sidrerías ----------
@@ -975,22 +1095,46 @@ function initSidraTab(){
     this.classList.toggle('on', sidraPremiadaOnly);
     applySidraFilters();
   });
+  const favChip = document.getElementById('sidra-fav-chip');
+  if(favChip) favChip.addEventListener('click', function(){
+    sidraFavOnly = !sidraFavOnly;
+    this.classList.toggle('on', sidraFavOnly);
+    applySidraFilters();
+  });
   applySidraFilters();
 }
 
+let sidraMostrarTodo = false;
+let sidraFavOnly = false;
 function applySidraFilters(){
   const q = (document.getElementById('qs')?.value||'').trim().toLowerCase();
+  const sinFiltros = !sidraMostrarTodo && !q && !sidraPremiadaOnly && !sidraFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-sidra .sidra-card').forEach(card=>{
     total++;
-    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-    const matchesPremio = !sidraPremiadaOnly || card.dataset.premiada==='1';
-    const visible = matchesQ && matchesPremio;
+    let visible = false;
+    if(!sinFiltros){
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const matchesPremio = !sidraPremiadaOnly || card.dataset.premiada==='1';
+      const matchesFav = !sidraFavOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+      visible = matchesQ && matchesPremio && matchesFav;
+    }
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   const countEl = document.getElementById('count-sidra');
-  if(countEl) countEl.textContent = `${shown} de ${total} sidrerías`;
+  if(countEl) countEl.textContent = sinFiltros ? '' : `${shown} de ${total} sidrerías`;
+  const results = document.getElementById('results-sidra');
+  let emptyEl = document.getElementById('empty-msg-sidra');
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div'); emptyEl.id='empty-msg-sidra'; emptyEl.className='fav-banner';
+    emptyEl.innerHTML = `<strong>Busca una sidrería</strong>Escribe un nombre o concejo en el buscador, o activa ★ Solo favoritas / 🏆 Solo premiadas.<button type="button" id="sidra-show-all-btn">Ver todas las sidrerías</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('sidra-show-all-btn').addEventListener('click', ()=>{ sidraMostrarTodo = true; applySidraFilters(); });
+  } else if(shown===0){
+    if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-sidra'; emptyEl.className='empty'; emptyEl.textContent='No hay sidrerías que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
+  } else if(emptyEl){ emptyEl.remove(); }
 }
 
 // ---------- lagares ----------
@@ -1059,25 +1203,49 @@ function initLagaresTab(){
     this.classList.toggle('on', lagarGijonOnly);
     applyLagaresFilters();
   });
+  const chipFav = document.getElementById('lagar-fav-chip');
+  if(chipFav) chipFav.addEventListener('click', function(){
+    lagarFavOnly = !lagarFavOnly;
+    this.classList.toggle('on', lagarFavOnly);
+    applyLagaresFilters();
+  });
   applyLagaresFilters();
 }
 
+let lagarMostrarTodo = false;
+let lagarFavOnly = false;
 function applyLagaresFilters(){
   const q = (document.getElementById('qla')?.value||'').trim().toLowerCase();
   const concejo = document.getElementById('f-concejo-lagar')?.value||'';
+  const sinFiltros = !lagarMostrarTodo && !q && !concejo && !lagarPremiadoOnly && !lagarGijonOnly && !lagarFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-lagares .sidra-card').forEach(card=>{
     total++;
-    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-    const matchesConcejo = !concejo || card.dataset.concejo===concejo;
-    const matchesPremio = !lagarPremiadoOnly || card.dataset.premiada==='1';
-    const matchesGijon = !lagarGijonOnly || card.dataset.concejo==='Gijón';
-    const visible = matchesQ && matchesConcejo && matchesPremio && matchesGijon;
+    let visible = false;
+    if(!sinFiltros){
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const matchesConcejo = !concejo || card.dataset.concejo===concejo;
+      const matchesPremio = !lagarPremiadoOnly || card.dataset.premiada==='1';
+      const matchesGijon = !lagarGijonOnly || card.dataset.concejo==='Gijón';
+      const matchesFav = !lagarFavOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+      visible = matchesQ && matchesConcejo && matchesPremio && matchesGijon && matchesFav;
+    }
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   const countEl = document.getElementById('count-lagares');
-  if(countEl) countEl.textContent = `${shown} de ${total} lagares`;
+  if(countEl) countEl.textContent = sinFiltros ? '' : `${shown} de ${total} lagares`;
+  const results = document.getElementById('results-lagares');
+  let emptyEl = document.getElementById('empty-msg-lagares');
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div'); emptyEl.id='empty-msg-lagares'; emptyEl.className='fav-banner';
+    emptyEl.innerHTML = `<strong>Busca un lagar</strong>Escribe un nombre en el buscador, elige un concejo, o activa ★ Solo favoritos / 🏆 Solo premiados / 📍 Solo de Gijón.<button type="button" id="lagar-show-all-btn">Ver todos los lagares</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('lagar-show-all-btn').addEventListener('click', ()=>{ lagarMostrarTodo = true; applyLagaresFilters(); });
+  } else if(shown===0){
+    if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-lagares'; emptyEl.className='empty'; emptyEl.textContent='No hay lagares que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
+  } else if(emptyEl){ emptyEl.remove(); }
 }
 
 // ---------- fichas propias (restaurantes y lagares añadidos por el usuario) ----------
@@ -1318,10 +1486,14 @@ function sitioCardHTML(s){
   const gmapQ = encodeURIComponent(`${s.nombre}, ${s.localidad||s.concejo}, Asturias, España`);
   const icon = SITIO_CAT_ICONS[s.categoria] || '📍';
   const label = SITIO_CAT_LABELS[s.categoria] || s.categoria;
-  return `<article class="foto-card" data-docid="${sitioDocId(s)}" data-name="${s.nombre.toLowerCase()}" data-concejo="${s.concejo}" data-cat="${s.categoria}">
+  const id = sitioDocId(s);
+  return `<article class="foto-card" data-docid="${id}" data-name="${s.nombre.toLowerCase()}" data-concejo="${s.concejo}" data-cat="${s.categoria}">
     <div class="foto-head"><span class="foto-icon">${icon}</span><h4>${s.nombre}</h4><span class="tipo-badge">${label}</span></div>
     <p class="desc">${s.desc}</p>
     <div class="meta">${metaTxt}</div>
+    <div class="fav-row">
+      <button class="star-btn" data-id="${id}" disabled title="Cargando…">☆</button>
+    </div>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
@@ -1353,27 +1525,51 @@ function initSitiosTab(){
   if(qsi) qsi.addEventListener('input', applySitiosFilters);
   const selConcejo = document.getElementById('f-concejo-sitio');
   if(selConcejo) selConcejo.addEventListener('change', applySitiosFilters);
+  const sitiosFavChip = document.getElementById('sitios-fav-chip');
+  if(sitiosFavChip) sitiosFavChip.addEventListener('click', function(){
+    sitiosFavOnly = !sitiosFavOnly;
+    this.classList.toggle('on', sitiosFavOnly);
+    applySitiosFilters();
+  });
   applySitiosFilters();
 }
 
+let sitiosMostrarTodo = false;
+let sitiosFavOnly = false;
 function applySitiosFilters(){
   const q = (document.getElementById('qsi')?.value||'').trim().toLowerCase();
   const concejo = document.getElementById('f-concejo-sitio')?.value||'';
   const activeCats = new Set([...document.querySelectorAll('#filter-dd-sitios-body input:checked')].map(c=>c.value));
   const ddCount = document.getElementById('filter-dd-sitios-count');
   if(ddCount) ddCount.textContent = activeCats.size ? `(${activeCats.size})` : '';
+  const sinFiltros = !sitiosMostrarTodo && !q && !concejo && activeCats.size===0 && !sitiosFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-sitios .foto-card').forEach(card=>{
     total++;
-    const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-    const matchesConcejo = !concejo || card.dataset.concejo===concejo;
-    const matchesCat = activeCats.size===0 || activeCats.has(card.dataset.cat);
-    const visible = matchesQ && matchesConcejo && matchesCat;
+    let visible = false;
+    if(!sinFiltros){
+      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+      const matchesConcejo = !concejo || card.dataset.concejo===concejo;
+      const matchesCat = activeCats.size===0 || activeCats.has(card.dataset.cat);
+      const matchesFav = !sitiosFavOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+      visible = matchesQ && matchesConcejo && matchesCat && matchesFav;
+    }
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   const countEl = document.getElementById('count-sitios');
-  if(countEl) countEl.textContent = `${shown} de ${total} sitios`;
+  if(countEl) countEl.textContent = sinFiltros ? '' : `${shown} de ${total} sitios`;
+  const results = document.getElementById('results-sitios');
+  let emptyEl = document.getElementById('empty-msg-sitios');
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div'); emptyEl.id='empty-msg-sitios'; emptyEl.className='fav-banner';
+    emptyEl.innerHTML = `<strong>Busca un sitio</strong>Escribe un nombre en el buscador, activa ★ Solo favoritos, elige un concejo, o abre Filtros para elegir el tipo (pueblo, museo, cueva…).<button type="button" id="sitios-show-all-btn">Ver todos los sitios</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('sitios-show-all-btn').addEventListener('click', ()=>{ sitiosMostrarTodo = true; applySitiosFilters(); });
+  } else if(shown===0){
+    if(!emptyEl){ emptyEl = document.createElement('div'); emptyEl.id='empty-msg-sitios'; emptyEl.className='empty'; emptyEl.textContent='No hay sitios que coincidan con la búsqueda/filtros.'; results.appendChild(emptyEl); }
+  } else if(emptyEl){ emptyEl.remove(); }
 }
 
 // ---------- render principal ----------
@@ -1385,7 +1581,8 @@ function populateConcejoFilter(){
     sel.appendChild(opt);
   });
 }
-let favOnly = true;
+let favOnly = false;
+let mostrarTodoManual = false;
 
 function buildChipbar(){
   const favChip = document.getElementById('fav-only-chip');
@@ -1393,7 +1590,7 @@ function buildChipbar(){
     favChip.classList.toggle('on', favOnly);
     favChip.addEventListener('click', function(){ favOnly = !favOnly; this.classList.toggle('on', favOnly); applyFilters(); });
   }
-  const body = document.getElementById('filter-dd-body');
+  const body = document.getElementById('filter-dd-tags');
   if(body){
     body.innerHTML = CHIP_FILTERS.map(t=>`<label class="dd-check"><input type="checkbox" value="${t}"> ${TAG_LABELS[t]}</label>`).join('');
     body.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', applyFilters));
@@ -1402,6 +1599,7 @@ function buildChipbar(){
 
 function showAllBeaches(){
   favOnly = false;
+  mostrarTodoManual = true;
   const chip = document.getElementById('fav-only-chip');
   if(chip) chip.classList.remove('on');
   applyFilters();
@@ -1415,29 +1613,45 @@ function applyFilters(){
   const concejo = document.getElementById('f-concejo').value;
   activeTags = new Set([...document.querySelectorAll('#filter-dd-body input:checked')].map(c=>c.value));
   const ddCount = document.getElementById('filter-dd-count');
-  if(ddCount) ddCount.textContent = activeTags.size ? `(${activeTags.size})` : '';
+  const ddActivos = activeTags.size + (zona ? 1 : 0);
+  if(ddCount) ddCount.textContent = ddActivos ? `(${ddActivos})` : '';
+
+  // Antes de elegir nada (sin buscar, sin concejo, sin zona/filtros ni
+  // "solo favoritas"), no se lista ninguna playa: solo se ve el buscador.
+  const sinFiltros = !mostrarTodoManual && !q && !zona && !concejo && activeTags.size===0 && !favOnly;
 
   let total = 0, shown = 0;
   document.querySelectorAll('#results .concejo-block').forEach(block=>{
     let anyVisible = false;
     block.querySelectorAll('.card').forEach(card=>{
       total++;
-      const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
-      const matchesZona = !zona || card.dataset.zona===zona;
-      const matchesConcejo = !concejo || card.dataset.concejo===concejo;
-      const cardTags = card.dataset.tags.split(',');
-      const matchesTags = activeTags.size===0 || [...activeTags].every(t=>cardTags.includes(t));
-      const matchesFav = !favOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
-      const visible = matchesQ && matchesZona && matchesConcejo && matchesTags && matchesFav;
+      let visible = false;
+      if(!sinFiltros){
+        const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+        const matchesZona = !zona || card.dataset.zona===zona;
+        const matchesConcejo = !concejo || card.dataset.concejo===concejo;
+        const cardTags = card.dataset.tags.split(',');
+        const matchesTags = activeTags.size===0 || [...activeTags].every(t=>cardTags.includes(t));
+        const matchesFav = !favOnly || !!(estadoMap[card.dataset.docid] && estadoMap[card.dataset.docid].favorito);
+        visible = matchesQ && matchesZona && matchesConcejo && matchesTags && matchesFav;
+      }
       card.style.display = visible ? '' : 'none';
       if(visible){ anyVisible = true; shown++; }
     });
     block.style.display = anyVisible ? '' : 'none';
   });
-  document.getElementById('count').textContent = `${shown} de ${total} playas`;
+  document.getElementById('count').textContent = sinFiltros ? '' : `${shown} de ${total} playas`;
   const results = document.getElementById('results');
   let emptyEl = document.getElementById('empty-msg');
-  if(shown===0){
+  if(sinFiltros){
+    if(emptyEl) emptyEl.remove();
+    emptyEl = document.createElement('div');
+    emptyEl.id = 'empty-msg';
+    emptyEl.className = 'fav-banner';
+    emptyEl.innerHTML = `<strong>Busca tu playa</strong>Escribe un nombre en el buscador o elige un concejo. También puedes activar ⭐ Solo favoritas, abrir Filtros, o ver el listado completo.<button type="button" id="show-all-btn">Ver todas las playas</button>`;
+    results.appendChild(emptyEl);
+    document.getElementById('show-all-btn').addEventListener('click', showAllBeaches);
+  } else if(shown===0){
     if(emptyEl) emptyEl.remove();
     emptyEl = document.createElement('div');
     emptyEl.id = 'empty-msg';
@@ -1488,10 +1702,29 @@ function init(){
     });
   });
 
+  // Panel "Qué contiene": se abre con el botón de la cabecera y se cierra con
+  // la X, tocando fuera del recuadro, o con la tecla Escape.
+  const infoOverlay = document.getElementById('info-overlay');
+  const infoOpenBtn = document.getElementById('info-open-btn');
+  const infoCloseBtn = document.getElementById('info-close-btn');
+  if(infoOpenBtn && infoOverlay){
+    infoOpenBtn.addEventListener('click', ()=>{ infoOverlay.hidden = false; });
+  }
+  if(infoCloseBtn && infoOverlay){
+    infoCloseBtn.addEventListener('click', ()=>{ infoOverlay.hidden = true; });
+  }
+  if(infoOverlay){
+    infoOverlay.addEventListener('click', (ev)=>{ if(ev.target===infoOverlay) infoOverlay.hidden = true; });
+    document.addEventListener('keydown', (ev)=>{ if(ev.key==='Escape' && !infoOverlay.hidden) infoOverlay.hidden = true; });
+  }
+
   wireCardInteractions('results');
+  wireCardInteractions('results-foto');
+  wireCardInteractions('results-foto-interior');
   wireCardInteractions('results-rest');
   wireCardInteractions('results-sidra');
   wireCardInteractions('results-lagares');
+  wireCardInteractions('results-sitios');
   initAddItemForms();
   populateConcejosDatalist();
   initCapabilities();
@@ -1624,7 +1857,7 @@ function renderEstado(id){
   const cajaBtn = card.querySelector('.caja-btn');
   const cajaInput = card.querySelector('.caja-input');
   const photoStrip = card.querySelector('.photo-strip');
-  if(!starBtn || !photoStrip) return;
+  if(!starBtn) return;
 
   starBtn.textContent = est.favorito ? '★' : '☆';
   starBtn.classList.toggle('on', !!est.favorito);
@@ -1636,6 +1869,8 @@ function renderEstado(id){
   if(marcaInput && document.activeElement !== marcaInput) marcaInput.value = est.marca || '';
   if(cajaBtn) cajaBtn.classList.toggle('has-note', !!(est.precioCaja && est.precioCaja.trim()));
   if(cajaInput && document.activeElement !== cajaInput) cajaInput.value = est.precioCaja || '';
+
+  if(!photoStrip) return; // esta ficha (p.ej. ruta fotográfica, qué ver) solo tiene favorito, sin fotos/notas
 
   const fotos = est.fotos || [];
   let tiles = fotos.map(f=>`<span class="photo-tile"><img src="${f.url}" loading="lazy" alt=""><button class="rm" data-id="${id}" data-foto="${f.id}" title="Quitar foto">✕</button></span>`).join('');
@@ -1660,7 +1895,7 @@ function renderEstado(id){
   }
 }
 
-function renderAllEstado(){ Object.keys(estadoMap).forEach(renderEstado); document.querySelectorAll('.card, .rest-card, .sidra-card').forEach(c=>renderEstado(c.dataset.docid)); }
+function renderAllEstado(){ Object.keys(estadoMap).forEach(renderEstado); document.querySelectorAll('.card, .rest-card, .sidra-card, .foto-card').forEach(c=>renderEstado(c.dataset.docid)); }
 
 async function saveEstado(id, patch){
   if(storageMode==='none') return;
