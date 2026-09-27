@@ -295,7 +295,7 @@
 <div class="controls">
   <div class="wrap">
     <div class="controls-row">
-      <input type="search" id="q" placeholder="Buscar playa o concejo…">
+      <input type="search" id="q" placeholder="Buscar playa…">
       <select id="f-concejo"><option value="">Elige un concejo…</option></select>
       <span class="count" id="count"></span>
     </div>
@@ -1627,7 +1627,7 @@ function applyFilters(){
       total++;
       let visible = false;
       if(!sinFiltros){
-        const matchesQ = !q || card.dataset.name.includes(q) || card.dataset.concejo.toLowerCase().includes(q);
+        const matchesQ = !q || card.dataset.name.includes(q);
         const matchesZona = !zona || card.dataset.zona===zona;
         const matchesConcejo = !concejo || card.dataset.concejo===concejo;
         const cardTags = card.dataset.tags.split(',');
