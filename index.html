@@ -409,6 +409,7 @@
         <div class="add-item-form" id="rest-add-form">
           <input type="text" id="rest-add-nombre" placeholder="Nombre*">
           <input type="text" id="rest-add-concejo" placeholder="Concejo*" list="concejos-list">
+          <input type="url" id="rest-add-gmaps" placeholder="Enlace de Google Maps (opcional, recomendado)">
           <input type="text" id="rest-add-tique" placeholder="Precio aprox. (p. ej. 35€/persona)">
           <input type="text" id="rest-add-distincion" placeholder="Distinción (opcional, p. ej. Sol Repsol)">
           <input type="text" id="rest-add-especialidades" placeholder="Especialidades (opcional)">
@@ -440,6 +441,7 @@
         <div class="add-item-form" id="sidra-add-form">
           <input type="text" id="sidra-add-nombre" placeholder="Nombre*">
           <input type="text" id="sidra-add-concejo" placeholder="Concejo*" list="concejos-list">
+          <input type="url" id="sidra-add-gmaps" placeholder="Enlace de Google Maps (opcional, recomendado)">
           <label class="add-item-check"><input type="checkbox" id="sidra-add-premiada"> Premiada</label>
           <input type="text" id="sidra-add-premio" placeholder="Premio (opcional)">
           <input type="text" id="sidra-add-especialidad" placeholder="Especialidad (opcional)">
@@ -473,6 +475,7 @@
         <div class="add-item-form" id="lagar-add-form">
           <input type="text" id="lagar-add-nombre" placeholder="Nombre*">
           <input type="text" id="lagar-add-concejo" placeholder="Concejo*" list="concejos-list">
+          <input type="url" id="lagar-add-gmaps" placeholder="Enlace de Google Maps (opcional, recomendado)">
           <label class="add-item-check"><input type="checkbox" id="lagar-add-premiada"> Premiado</label>
           <input type="text" id="lagar-add-premio" placeholder="Premio (opcional)">
           <input type="text" id="lagar-add-especialidad" placeholder="Especialidad (opcional)">
@@ -1419,6 +1422,8 @@ function rutaCardHTML(r){
   const recorridoTxt = r.recorrido==='circular' ? 'circular' : 'lineal (ida)';
   const metaTxt = [distTxt, recorridoTxt].filter(Boolean).join(' · ');
   const puntosTxt = (r.inicio||r.fin) ? [r.inicio, r.fin].filter(Boolean).join(' → ') : '';
+  const gmapQ = encodeURIComponent(`${r.inicio || r.nombre}, Gijón, Asturias, España`);
+  const gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
   const id = rutaDocId(r);
   return `<article class="rest-card ruta-card" data-docid="${id}" data-name="${r.nombre.toLowerCase()}" data-tipo="${r.tipo||'ambos'}">
     <div class="rest-head"><h4>${r.nombre}</h4></div>
@@ -1431,6 +1436,9 @@ function rutaCardHTML(r){
     </div>
     <div class="photo-strip" data-id="${id}"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Ver el inicio de la ruta en Google Maps">📍 Inicio en Google Maps</a>
+    </div>
   </article>`;
 }
 
@@ -1489,6 +1497,7 @@ function customRestCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
   return `<article class="rest-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-dist="" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.tique_medio?`<span class="tique">${item.tique_medio}</span>`:''}</div>
     <div class="badges"><span class="dist-badge badge-google">🙋 Añadido por ti</span></div>
@@ -1507,7 +1516,7 @@ function customRestCardHTML(item){
     <div class="gasto-box" data-id="${item.id}" hidden><input type="text" class="gasto-input" data-id="${item.id}" placeholder="Lo que pagasteis (p. ej. 45€ los dos)"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
@@ -1516,6 +1525,7 @@ function customLagarCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
   return `<article class="sidra-card lagar-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-premiada="${item.premiada?1:0}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.premiada?'<span class="badge-premio">🏆 Premiado</span>':''}</div>
     <div class="badges"><span class="dist-badge badge-google">🙋 Añadido por ti</span></div>
@@ -1538,7 +1548,7 @@ function customLagarCardHTML(item){
     <div class="caja-box" data-id="${item.id}" hidden><input type="text" class="caja-input" data-id="${item.id}" placeholder="Precio de la caja (p. ej. 18€)"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
@@ -1547,6 +1557,7 @@ function customSidraCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
   return `<article class="sidra-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-premiada="${item.premiada?1:0}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.premiada?'<span class="badge-premio">🏆 Premiada</span>':''}</div>
     <div class="badges"><span class="dist-badge badge-google">🙋 Añadida por ti</span></div>
@@ -1565,7 +1576,7 @@ function customSidraCardHTML(item){
     <div class="gasto-box" data-id="${item.id}" hidden><input type="text" class="gasto-input" data-id="${item.id}" placeholder="Lo que pagasteis"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
@@ -1592,6 +1603,8 @@ function customRutaCardHTML(item){
   const tipoTxt = RUTA_TIPO_LABELS[item.tipo_ruta] || RUTA_TIPO_LABELS['ambos'];
   const distTxt = item.distancia_km ? `≈ ${item.distancia_km} km` : '';
   const puntosTxt = (item.inicio||item.fin) ? [item.inicio, item.fin].filter(Boolean).join(' → ') : '';
+  const gmapQ = encodeURIComponent(`${item.inicio || item.nombre}, Gijón, Asturias, España`);
+  const gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
   return `<article class="rest-card ruta-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-tipo="${item.tipo_ruta||'ambos'}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4></div>
     <div class="badges"><span class="dist-badge">${tipoTxt}</span><span class="dist-badge badge-google">🙋 Añadida por ti</span></div>
@@ -1604,6 +1617,9 @@ function customRutaCardHTML(item){
     </div>
     <div class="photo-strip" data-id="${item.id}"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Ver el inicio de la ruta en Google Maps">📍 Inicio en Google Maps</a>
+    </div>
   </article>`;
 }
 
@@ -1654,13 +1670,13 @@ function renderCustomItems(){
 }
 
 function clearRestAddForm(){
-  ['rest-add-nombre','rest-add-concejo','rest-add-tique','rest-add-distincion','rest-add-especialidades','rest-add-desc'].forEach(idAttr=>{
+  ['rest-add-nombre','rest-add-concejo','rest-add-gmaps','rest-add-tique','rest-add-distincion','rest-add-especialidades','rest-add-desc'].forEach(idAttr=>{
     const el = document.getElementById(idAttr);
     if(el) el.value = '';
   });
 }
 function clearSidraAddForm(){
-  ['sidra-add-nombre','sidra-add-concejo','sidra-add-premio','sidra-add-especialidad','sidra-add-desc'].forEach(idAttr=>{
+  ['sidra-add-nombre','sidra-add-concejo','sidra-add-gmaps','sidra-add-premio','sidra-add-especialidad','sidra-add-desc'].forEach(idAttr=>{
     const el = document.getElementById(idAttr);
     if(el) el.value = '';
   });
@@ -1668,7 +1684,7 @@ function clearSidraAddForm(){
   if(chk) chk.checked = false;
 }
 function clearLagarAddForm(){
-  ['lagar-add-nombre','lagar-add-concejo','lagar-add-premio','lagar-add-especialidad','lagar-add-desc'].forEach(idAttr=>{
+  ['lagar-add-nombre','lagar-add-concejo','lagar-add-gmaps','lagar-add-premio','lagar-add-especialidad','lagar-add-desc'].forEach(idAttr=>{
     const el = document.getElementById(idAttr);
     if(el) el.value = '';
   });
@@ -1723,9 +1739,11 @@ function initAddItemForms(){
     const nombre = document.getElementById('rest-add-nombre').value.trim();
     const concejo = document.getElementById('rest-add-concejo').value.trim();
     if(!nombre || !concejo){ alert('Pon al menos el nombre y el concejo.'); return null; }
+    const gmaps_url = document.getElementById('rest-add-gmaps').value.trim();
+    if(gmaps_url && !/^https?:\/\//i.test(gmaps_url)){ alert('El enlace de Google Maps debe empezar por http:// o https://'); return null; }
     return {
       id: 'custom-rest-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
-      tipo: 'restaurante', nombre, concejo,
+      tipo: 'restaurante', nombre, concejo, gmaps_url,
       tique_medio: document.getElementById('rest-add-tique').value.trim(),
       distincion: document.getElementById('rest-add-distincion').value.trim(),
       especialidades: document.getElementById('rest-add-especialidades').value.trim(),
@@ -1739,9 +1757,11 @@ function initAddItemForms(){
     const nombre = document.getElementById('sidra-add-nombre').value.trim();
     const concejo = document.getElementById('sidra-add-concejo').value.trim();
     if(!nombre || !concejo){ alert('Pon al menos el nombre y el concejo.'); return null; }
+    const gmaps_url = document.getElementById('sidra-add-gmaps').value.trim();
+    if(gmaps_url && !/^https?:\/\//i.test(gmaps_url)){ alert('El enlace de Google Maps debe empezar por http:// o https://'); return null; }
     return {
       id: 'custom-sidra-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
-      tipo: 'sidreria', nombre, concejo,
+      tipo: 'sidreria', nombre, concejo, gmaps_url,
       premiada: !!document.getElementById('sidra-add-premiada').checked,
       premio: document.getElementById('sidra-add-premio').value.trim(),
       especialidad: document.getElementById('sidra-add-especialidad').value.trim(),
@@ -1755,9 +1775,11 @@ function initAddItemForms(){
     const nombre = document.getElementById('lagar-add-nombre').value.trim();
     const concejo = document.getElementById('lagar-add-concejo').value.trim();
     if(!nombre || !concejo){ alert('Pon al menos el nombre y el concejo.'); return null; }
+    const gmaps_url = document.getElementById('lagar-add-gmaps').value.trim();
+    if(gmaps_url && !/^https?:\/\//i.test(gmaps_url)){ alert('El enlace de Google Maps debe empezar por http:// o https://'); return null; }
     return {
       id: 'custom-lagar-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),
-      tipo: 'lagar', nombre, concejo,
+      tipo: 'lagar', nombre, concejo, gmaps_url,
       premiada: !!document.getElementById('lagar-add-premiada').checked,
       premio: document.getElementById('lagar-add-premio').value.trim(),
       especialidad: document.getElementById('lagar-add-especialidad').value.trim(),
