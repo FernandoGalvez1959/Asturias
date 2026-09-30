@@ -1158,7 +1158,7 @@ function restCardHTML(r){
     <div class="gasto-box" data-id="${id}" hidden><input type="text" class="gasto-input" data-id="${id}" placeholder="Lo que pagasteis (p. ej. 45€ los dos)"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1263,7 +1263,7 @@ function sidraCardHTML(s){
     <div class="gasto-box" data-id="${id}" hidden><input type="text" class="gasto-input" data-id="${id}" placeholder="Lo que pagasteis"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1368,7 +1368,7 @@ function lagarCardHTML(l){
     <div class="caja-box" data-id="${id}" hidden><input type="text" class="caja-input" data-id="${id}" placeholder="Precio de la caja (p. ej. 18€)"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1490,7 +1490,7 @@ function bodegaCardHTML(b){
     <div class="caja-box" data-id="${id}" hidden><input type="text" class="caja-input" data-id="${id}" placeholder="Precio de la botella (p. ej. 12€)"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1610,7 +1610,7 @@ function destileriaCardHTML(d){
     <div class="caja-box" data-id="${id}" hidden><input type="text" class="caja-input" data-id="${id}" placeholder="Precio de la botella (p. ej. 15€)"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1880,7 +1880,7 @@ function customRestCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
-  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
   const menuDiaBadge = item.menu_dia ? `<span class="dist-badge badge-google">🍽️ Menú del día${item.menu_dia_precio?` (${item.menu_dia_precio})`:''}</span>` : '';
   return `<article class="rest-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-dist="" data-custom="1" data-menudia="${item.menu_dia?1:0}">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.tique_medio?`<span class="tique">${item.tique_medio}</span>`:''}</div>
@@ -1900,7 +1900,7 @@ function customRestCardHTML(item){
     <div class="gasto-box" data-id="${item.id}" hidden><input type="text" class="gasto-input" data-id="${item.id}" placeholder="Lo que pagasteis (p. ej. 45€ los dos)"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1910,7 +1910,7 @@ function customLagarCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
-  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
   return `<article class="sidra-card lagar-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-premiada="${item.premiada?1:0}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.premiada?'<span class="badge-premio">🏆 Premiado</span>':''}</div>
     <div class="badges"><span class="dist-badge badge-google">🙋 Añadido por ti</span></div>
@@ -1933,7 +1933,7 @@ function customLagarCardHTML(item){
     <div class="caja-box" data-id="${item.id}" hidden><input type="text" class="caja-input" data-id="${item.id}" placeholder="Precio de la caja (p. ej. 18€)"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1943,7 +1943,7 @@ function customBodegaCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
-  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
   const visitableBadge = item.visitable ? `<span class="dist-badge badge-google">🚪 Se puede visitar</span>` : '';
   return `<article class="sidra-card bodega-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-premiada="${item.premiada?1:0}" data-visitable="${item.visitable?1:0}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.premiada?'<span class="badge-premio">🏆 Premiada</span>':''}</div>
@@ -1967,7 +1967,7 @@ function customBodegaCardHTML(item){
     <div class="caja-box" data-id="${item.id}" hidden><input type="text" class="caja-input" data-id="${item.id}" placeholder="Precio de la botella (p. ej. 12€)"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -1977,7 +1977,7 @@ function customDestileriaCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
-  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
   const visitableBadge = item.visitable ? `<span class="dist-badge badge-google">🚪 Se puede visitar</span>` : '';
   return `<article class="sidra-card destileria-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-premiada="${item.premiada?1:0}" data-visitable="${item.visitable?1:0}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.premiada?'<span class="badge-premio">🏆 Premiada</span>':''}</div>
@@ -2001,7 +2001,7 @@ function customDestileriaCardHTML(item){
     <div class="caja-box" data-id="${item.id}" hidden><input type="text" class="caja-input" data-id="${item.id}" placeholder="Precio de la botella (p. ej. 15€)"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
@@ -2011,7 +2011,7 @@ function customSidraCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
   const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
-  const gmapHref = item.gmaps_url || `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  const gmapHref = item.gmaps_url || `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
   const menuDiaBadge = item.menu_dia ? `<span class="dist-badge badge-google">🍽️ Menú del día${item.menu_dia_precio?` (${item.menu_dia_precio})`:''}</span>` : '';
   return `<article class="sidra-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-premiada="${item.premiada?1:0}" data-custom="1" data-menudia="${item.menu_dia?1:0}">
     <div class="rest-head"><h4>${item.nombre}</h4>${item.premiada?'<span class="badge-premio">🏆 Premiada</span>':''}</div>
@@ -2031,7 +2031,7 @@ function customSidraCardHTML(item){
     <div class="gasto-box" data-id="${item.id}" hidden><input type="text" class="gasto-input" data-id="${item.id}" placeholder="Lo que pagasteis"></div>
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
       <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
