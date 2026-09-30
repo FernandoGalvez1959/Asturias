@@ -202,7 +202,7 @@
   .rest-card .actions a,.sidra-card .actions a{flex:1;text-align:center;font-size:14px;padding:10px 6px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink)}
   .rest-card .actions a:hover,.sidra-card .actions a:hover{border-color:var(--sea);color:var(--sea)}
   .rest-card .fav-row,.sidra-card .fav-row,.foto-card .fav-row{margin:0 0 9px}
-  .rest-card .photo-strip,.sidra-card .photo-strip{margin:0 0 9px}
+  .rest-card .photo-strip,.sidra-card .photo-strip,.foto-card .photo-strip{margin:0 0 9px}
   .rest-card .note-box,.sidra-card .note-box,.rest-card .gasto-box,.sidra-card .gasto-box,.sidra-card .marca-box,.sidra-card .caja-box{margin:0 0 9px}
 
   .add-item-btn{border:1px solid var(--sea);background:none;color:var(--sea);padding:8px 13px;border-radius:999px;font-size:14px;cursor:pointer;font-weight:600}
@@ -875,6 +875,8 @@ function fotoCardHTML(p){
     <div class="fav-row">
       <button class="star-btn" data-id="${id}" disabled title="Cargando…">☆</button>
     </div>
+    <div class="photo-strip" data-id="${id}"></div>
+    <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
@@ -1427,6 +1429,8 @@ function rutaCardHTML(r){
     <div class="fav-row">
       <button class="star-btn" data-id="${id}" disabled title="Cargando…">☆</button>
     </div>
+    <div class="photo-strip" data-id="${id}"></div>
+    <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
   </article>`;
 }
 
@@ -1598,6 +1602,8 @@ function customRutaCardHTML(item){
       <button class="star-btn" data-id="${item.id}" disabled title="Cargando…">☆</button>
       <button class="custom-del-btn" data-id="${item.id}" title="Eliminar esta ficha">🗑️</button>
     </div>
+    <div class="photo-strip" data-id="${item.id}"></div>
+    <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
   </article>`;
 }
 
@@ -1821,6 +1827,8 @@ function sitioCardHTML(s){
     <div class="fav-row">
       <button class="star-btn" data-id="${id}" disabled title="Cargando…">☆</button>
     </div>
+    <div class="photo-strip" data-id="${id}"></div>
+    <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
     </div>
