@@ -856,7 +856,7 @@ function beachArt(playa){
 function windyUrl(lat,lon){ return `https://www.windy.com/${lat.toFixed(3)}/${lon.toFixed(3)}?wind,${lat.toFixed(3)},${lon.toFixed(3)},11`; }
 function tidesUrl(slug){ return `https://tablademareas.com/es/asturias/${slug}/prevision/mareas`; }
 function waterTempUrl(slug){ return `https://tablademareas.com/es/asturias/${slug}/prevision/temperatura-agua`; }
-function gmapsPlaceUrl(nombre, concejo){ const q = encodeURIComponent(`Playa de ${nombre.split('/')[0].trim()}, ${concejo}, Asturias, España`); return `https://www.google.com/maps/search/?api=1&query=${q}`; }
+function gmapsPlaceUrl(nombre, concejo){ const q = encodeURIComponent(`Playa de ${nombre.split('/')[0].trim()}, ${concejo}, Asturias, España`); return `https://www.google.com/maps/dir/?api=1&destination=${q}`; }
 function gmapsDirUrl(destQuery){ const o = encodeURIComponent('Playa de San Lorenzo, Gijón, Asturias, España'); const d = encodeURIComponent(destQuery); return `https://www.google.com/maps/dir/?api=1&origin=${o}&destination=${d}`; }
 
 function docId(p){ return slug(p.concejo)+'--'+slug(p.nombre); }
@@ -886,7 +886,7 @@ function cardHTML(p){
         <a class="wind" target="_blank" rel="noopener" href="${windyUrl(p.lat,p.lon)}" title="Viento en directo (Windy)">🌬️ Viento</a>
         <a class="tide" target="_blank" rel="noopener" href="${tidesUrl(p.mareas_slug)}" title="Tabla de mareas (tablademareas.com)">🌊 Mareas</a>
         <a class="temp" target="_blank" rel="noopener" href="${waterTempUrl(p.mareas_slug)}" title="Temperatura del agua (tablademareas.com)">🌡️ Temperatura</a>
-        <a class="gmap" target="_blank" rel="noopener" href="${gmapsPlaceUrl(p.nombre,p.concejo)}" title="Cómo llegar (Google Maps)">📍 Llegar</a>
+        <a class="gmap" target="_blank" rel="noopener" href="${gmapsPlaceUrl(p.nombre,p.concejo)}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Llegar</a>
       </div>
     </div>
   </article>`;
@@ -949,7 +949,7 @@ function fotoDocId(p){ return 'foto--'+slug(p.concejo)+'--'+slug(p.nombre); }
 
 function fotoCardHTML(p){
   const gmapQ = encodeURIComponent(`${p.nombre.split('/')[0].trim()}, ${p.concejo}, Asturias, España`);
-  const gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
+  const gmapHref = `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
   const id = fotoDocId(p);
   return `<article class="foto-card" data-docid="${id}" data-name="${p.nombre.toLowerCase()}" data-concejo="${p.concejo}" data-tipo="${p.tipo}">
     <div class="foto-head">
@@ -966,7 +966,7 @@ function fotoCardHTML(p){
     <div class="photo-strip" data-id="${id}"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
@@ -1706,6 +1706,7 @@ function camaraCardHTML(c){
   const distTxt = c.dist_km===0 ? 'En Gijón' : `≈ ${c.dist_km.toFixed(0)} km de Gijón`;
   const lugarTxt = c.localidad ? `${c.localidad} (${c.concejo})` : c.concejo;
   const metaTxt = (c.dist_km===0 && !c.localidad) ? distTxt : `${lugarTxt} · ${distTxt}`;
+  const gmapQ = encodeURIComponent(`${c.nombre}, ${c.localidad||c.concejo}, Asturias, España`);
   const id = camaraDocId(c);
   return `<article class="rest-card camara-card" data-docid="${id}" data-name="${c.nombre.toLowerCase()}" data-concejo="${c.concejo}">
     <div class="rest-head"><h4>${c.nombre}</h4></div>
@@ -1717,6 +1718,7 @@ function camaraCardHTML(c){
     <div class="actions">
       <a target="_blank" rel="noopener" href="${c.url}" title="Ver cámara en directo">🎥 Ver cámara en directo</a>
       ${c.url_alt?`<a target="_blank" rel="noopener" href="${c.url_alt}" title="Enlace alternativo si el principal falla">🔗 Enlace alternativo</a>`:''}
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
@@ -1803,9 +1805,9 @@ function rutaCardHTML(r){
     gmapLabel = '🗺️ Ver ruta en Google Maps';
   } else {
     const gmapQ = encodeURIComponent(origenTxt);
-    gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
-    gmapTitle = 'Ver el inicio de la ruta en Google Maps';
-    gmapLabel = '📍 Inicio en Google Maps';
+    gmapHref = `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
+    gmapTitle = 'Cómo llegar al inicio de la ruta desde tu ubicación (Google Maps)';
+    gmapLabel = '📍 Cómo llegar al inicio';
   }
   const id = rutaDocId(r);
   return `<article class="rest-card ruta-card" data-docid="${id}" data-name="${r.nombre.toLowerCase()}" data-tipo="${r.tipo||'ambos'}">
@@ -2040,6 +2042,7 @@ function customSidraCardHTML(item){
 function customCamaraCardHTML(item){
   const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
   const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
+  const gmapQ = encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`);
   return `<article class="rest-card camara-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-concejo="${item.concejo||''}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4></div>
     <div class="badges"><span class="dist-badge badge-google">🙋 Añadida por ti</span></div>
@@ -2051,6 +2054,7 @@ function customCamaraCardHTML(item){
     </div>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${item.url}" title="Ver cámara en directo">🎥 Ver cámara en directo</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
@@ -2069,9 +2073,9 @@ function customRutaCardHTML(item){
     gmapLabel = '🗺️ Ver ruta en Google Maps';
   } else {
     const gmapQ = encodeURIComponent(origenTxt);
-    gmapHref = `https://www.google.com/maps/search/?api=1&query=${gmapQ}`;
-    gmapTitle = 'Ver el inicio de la ruta en Google Maps';
-    gmapLabel = '📍 Inicio en Google Maps';
+    gmapHref = `https://www.google.com/maps/dir/?api=1&destination=${gmapQ}`;
+    gmapTitle = 'Cómo llegar al inicio de la ruta desde tu ubicación (Google Maps)';
+    gmapLabel = '📍 Cómo llegar al inicio';
   }
   return `<article class="rest-card ruta-card" data-docid="${item.id}" data-name="${item.nombre.toLowerCase()}" data-tipo="${item.tipo_ruta||'ambos'}" data-custom="1">
     <div class="rest-head"><h4>${item.nombre}</h4></div>
@@ -2400,7 +2404,7 @@ function sitioCardHTML(s){
     <div class="photo-strip" data-id="${id}"></div>
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
-      <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${gmapQ}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
     </div>
   </article>`;
 }
