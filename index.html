@@ -249,6 +249,7 @@
     <nav class="tabs">
       <button data-tab="playas">🏖️ Playas</button>
       <button data-tab="foto">📷 Ruta fotográfica</button>
+      <button data-tab="rutas-llanas">🚴 Rutas llanas (Gijón)</button>
       <button data-tab="sitios">🗺️ Qué ver</button>
       <button data-tab="restaurantes">🍽️ Restaurantes</button>
       <button data-tab="sidrerias">🍎 Sidrerías</button>
@@ -256,7 +257,6 @@
       <button data-tab="bodegas">🍷 Bodegas</button>
       <button data-tab="destilerias">🥃 Destilerías</button>
       <button data-tab="camaras">🎥 Cámaras</button>
-      <button data-tab="rutas-llanas">🚴 Rutas llanas (Gijón)</button>
       <button data-tab="backup">💾 Copia de seguridad</button>
     </nav>
   </div>
@@ -271,6 +271,7 @@
     <ul class="info-list">
       <li><strong>🏖️ Playas</strong> — las 199 playas del Principado de oeste a este, con mareas, temperatura del agua y viento en directo, y filtros como tipo de arena, accesibilidad o aptas para kayak y snorkel.</li>
       <li><strong>📷 Ruta fotográfica</strong> — costa (miradores, faros, pueblos marineros) e interior (Picos de Europa, Somiedo, cascadas, desfiladeros), con la mejor luz para cada punto.</li>
+      <li><strong>🚴 Rutas llanas (Gijón)</strong> — recorridos a pie o en bicicleta por Gijón con muy poco desnivel o ninguno: paseos marítimos, vías verdes y sendas de río.</li>
       <li><strong>🗺️ Qué ver</strong> — pueblos, monumentos, museos, cuevas y parques naturales de todos los concejos de Asturias.</li>
       <li><strong>🍽️ Restaurantes</strong> — con estrella Michelín, Sol Repsol o recomendados en esas guías.</li>
       <li><strong>🍎 Sidrerías</strong> — tradicionales, con las premiadas destacadas.</li>
@@ -278,7 +279,6 @@
       <li><strong>🍷 Bodegas</strong> — bodegas de vino asturianas, sobre todo de la DOP Vino de Cangas, muchas con visitas y catas.</li>
       <li><strong>🥃 Destilerías</strong> — destilerías y licorerías de orujo, ginebra, anís y otros licores artesanos de Asturias.</li>
       <li><strong>🎥 Cámaras</strong> — enlaces a cámaras web en directo de playas, puertos y pueblos de Asturias, por concejo.</li>
-      <li><strong>🚴 Rutas llanas (Gijón)</strong> — recorridos a pie o en bicicleta por Gijón con muy poco desnivel o ninguno: paseos marítimos, vías verdes y sendas de río.</li>
       <li><strong>💾 Copia de seguridad</strong> — exporta o restaura tus favoritas, notas y fotos, y sincronízalas entre tus dispositivos si quieres.</li>
     </ul>
   </div>
@@ -1159,6 +1159,7 @@ function restCardHTML(r){
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1263,6 +1264,7 @@ function sidraCardHTML(s){
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1367,6 +1369,7 @@ function lagarCardHTML(l){
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1488,6 +1491,7 @@ function bodegaCardHTML(b){
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1607,6 +1611,7 @@ function destileriaCardHTML(d){
     <input type="file" class="photo-input" data-id="${id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${gmapQ}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1896,6 +1901,7 @@ function customRestCardHTML(item){
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1928,6 +1934,7 @@ function customLagarCardHTML(item){
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1961,6 +1968,7 @@ function customBodegaCardHTML(item){
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -1994,6 +2002,7 @@ function customDestileriaCardHTML(item){
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -2023,6 +2032,7 @@ function customSidraCardHTML(item){
     <input type="file" class="photo-input" data-id="${item.id}" accept="image/*" hidden>
     <div class="actions">
       <a target="_blank" rel="noopener" href="${gmapHref}" title="Cómo llegar (Google Maps)">📍 Cómo llegar</a>
+      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${gmapQ}" title="Buscar más información en Google">🔎 Más información</a>
     </div>
   </article>`;
 }
@@ -2595,7 +2605,7 @@ function init(){
       if(btn.classList.contains('soon')) return;
       document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
-      ['playas','foto','restaurantes','sidrerias','lagares','bodegas','destilerias','sitios','camaras','rutas-llanas','backup'].forEach(t=>{
+      ['playas','foto','rutas-llanas','restaurantes','sidrerias','lagares','bodegas','destilerias','sitios','camaras','backup'].forEach(t=>{
         document.getElementById('tab-'+t).hidden = (t!==btn.dataset.tab);
       });
     });
