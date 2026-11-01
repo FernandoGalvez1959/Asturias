@@ -260,6 +260,14 @@
 
   .add-item-btn{border:1px solid var(--sea);background:none;color:var(--sea);padding:8px 13px;border-radius:999px;font-size:14px;cursor:pointer;font-weight:600}
   .add-item-btn[disabled]{opacity:.35;cursor:default}
+  .quitar-btn{background:none;border:1px solid var(--line);border-radius:7px;cursor:pointer;font-size:13px;padding:5px 8px;color:#c0392b;margin-left:auto}
+  .quitado{display:none !important}
+  .add-generic-row{margin:10px 0;position:relative}
+  .add-generic-row .add-item-dd .add-item-form{position:static;max-width:none;margin-top:6px;box-shadow:none}
+  .custom-block{margin:0 0 14px}
+  .custom-block-h{margin:6px 0 8px;font-size:15px;color:var(--sea)}
+  .quitado-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid var(--line)}
+  .quitado-row button,#restaurar-todo-btn{border:1px solid var(--line);background:#fff;border-radius:7px;padding:5px 10px;cursor:pointer;font-size:13px}
   .add-item-dd{position:relative}
   .add-item-dd summary{list-style:none}
   .add-item-dd summary::-webkit-details-marker{display:none}
@@ -776,6 +784,12 @@
     <p class="backup-status" id="backup-status"></p>
     <p class="hint">Restaurar una copia añade/actualiza tus favoritas, notas y fotos guardadas — no borra lo que ya tengas guardado aquí, salvo que la copia contenga una versión distinta de la misma ficha (entonces gana la más reciente).</p>
   </div>
+  <div class="backup-panel" id="quitados-panel">
+    <h3>🗑️ Fichas quitadas</h3>
+    <p class="hint">Aquí aparecen las fichas que has quitado de las listas. Puedes recuperarlas cuando quieras.</p>
+    <div id="quitados-list"></div>
+    <button type="button" id="restaurar-todo-btn" hidden>↩️ Recuperar todas</button>
+  </div>
   <div class="backup-panel" id="cloud-sync-panel" hidden>
     <h3>☁️ Sincronizar entre tus dispositivos</h3>
     <p class="hint">Si inicias sesión aquí con una cuenta, tus favoritas, notas, gastos, marcas, precios y fotos de playas, restaurantes, sidrerías y lagares se guardan en la nube y aparecen igual en todos los dispositivos donde inicies sesión con esa misma cuenta. Si no inicias sesión, todo se sigue guardando solo en este dispositivo, como hasta ahora.</p>
@@ -1118,6 +1132,7 @@ function applyFotoFilters(){
   document.querySelectorAll('#results-foto .concejo-block').forEach(block=>{
     let anyVisible = false;
     block.querySelectorAll('.foto-card').forEach(card=>{
+      if(card.classList.contains('quitado')) return;
       total++;
       let visible = false;
       if(!sinFiltros){
@@ -1194,6 +1209,7 @@ function applyFotoInteriorFilters(){
   const sinFiltros = !fotoInteriorMostrarTodo && !q && activeTipos.size===0 && !fotoInteriorFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-foto-interior .foto-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1321,6 +1337,7 @@ function applyRestFilters(){
   const sinFiltros = !restMostrarTodo && !q && active.size===0 && !restFavOnly && !restCustomOnly && !restMenuDiaOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-rest .rest-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1425,6 +1442,7 @@ function applySidraFilters(){
   const sinFiltros = !sidraMostrarTodo && !q && !sidraPremiadaOnly && !sidraFavOnly && !sidraCustomOnly && !sidraMenuDiaOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-sidra .sidra-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1544,6 +1562,7 @@ function applyLagaresFilters(){
   const sinFiltros = !lagarMostrarTodo && !q && !concejo && !lagarPremiadoOnly && !lagarGijonOnly && !lagarFavOnly && !lagarCustomOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-lagares .sidra-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1664,6 +1683,7 @@ function applyBodegasFilters(){
   const sinFiltros = !bodegaMostrarTodo && !q && !concejo && !bodegaPremiadaOnly && !bodegaVisitableOnly && !bodegaFavOnly && !bodegaCustomOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-bodegas .sidra-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1784,6 +1804,7 @@ function applyDestileriasFilters(){
   const sinFiltros = !destileriaMostrarTodo && !q && !concejo && !destileriaPremiadaOnly && !destileriaVisitableOnly && !destileriaFavOnly && !destileriaCustomOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-destilerias .sidra-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1873,6 +1894,7 @@ function applyCamarasFilters(){
   const sinFiltros = !camarasMostrarTodo && !q && !concejo && !camaraFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-camaras .camara-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -1969,6 +1991,7 @@ function applyRutasLlanasFilters(){
   const sinFiltros = !rutasLlanasMostrarTodo && !q && !tipo && !desn && !rutaFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-rutas-llanas .ruta-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -2214,7 +2237,73 @@ function customRutaCardHTML(item){
   </article>`;
 }
 
+const GEN_CFG=[
+  {tipo:'playa', cid:'results', label:'playa', badge:'🏖️ Playa'},
+  {tipo:'foto-costa', cid:'results-foto', label:'punto fotográfico de costa', badge:'📷 Ruta fotográfica · costa'},
+  {tipo:'foto-interior', cid:'results-foto-interior', label:'punto fotográfico de interior', badge:'📷 Ruta fotográfica · interior'},
+  {tipo:'sitio', cid:'results-sitios', label:'sitio que ver', badge:'🏛️ Qué ver'},
+];
+function customGenCardHTML(item){
+  const cfg = GEN_CFG.find(c=>c.tipo===item.tipo) || GEN_CFG[0];
+  const distTxt = (typeof item.dist_km==='number') ? (item.dist_km===0?'En Gijón':`≈ ${item.dist_km.toFixed(0)} km de Gijón`) : '';
+  const metaTxt = [item.concejo||'', distTxt].filter(Boolean).join(' · ');
+  const href = item.gmaps_url || ('https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(`${item.nombre}, ${item.concejo||''}, Asturias, España`));
+  return `<article class="rest-card" data-docid="${escH(item.id)}" data-name="${escH(item.nombre.toLowerCase())}" data-concejo="${escH(item.concejo||'')}" data-custom="1">
+    <div class="rest-head"><h4>${escH(item.nombre)}</h4></div>
+    <div class="badges"><span class="dist-badge">${cfg.badge}</span><span class="dist-badge badge-google">🙋 Añadida por ti</span></div>
+    ${item.desc?`<p class="desc">${escH(item.desc)}</p>`:''}
+    ${metaTxt?`<div class="meta">${escH(metaTxt)}</div>`:''}
+    <div class="fav-row">
+      <button class="star-btn" data-id="${escH(item.id)}" disabled title="Cargando…">☆</button>
+      <button class="custom-del-btn" data-id="${escH(item.id)}" title="Eliminar esta ficha">🗑️</button>
+    </div>
+    <div class="photo-strip" data-id="${escH(item.id)}"></div>
+    <input type="file" class="photo-input" data-id="${escH(item.id)}" accept="image/*" hidden>
+    <div class="actions">
+      <a target="_blank" rel="noopener" href="${escH(href)}" title="Cómo llegar desde tu ubicación (Google Maps)">📍 Cómo llegar</a>
+    </div>
+  </article>`;
+}
+function renderGenCustom(){
+  GEN_CFG.forEach(cfg=>{
+    const cont = document.getElementById(cfg.cid); if(!cont) return;
+    let blk = cont.querySelector(':scope > .custom-block');
+    const items = Object.values(customMap).filter(it=>it && it.tipo===cfg.tipo).sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
+    if(!items.length){ if(blk) blk.remove(); return; }
+    if(!blk){ blk = document.createElement('section'); blk.className='custom-block'; cont.insertBefore(blk, cont.firstChild); }
+    blk.innerHTML = '<h3 class="custom-block-h">🙋 Añadidas por ti</h3>' + items.map(customGenCardHTML).join('');
+  });
+}
+function initGenAddForms(){
+  GEN_CFG.forEach(cfg=>{
+    const cont = document.getElementById(cfg.cid); if(!cont || !cont.parentNode) return;
+    const p = cfg.tipo;
+    const row = document.createElement('div'); row.className='add-generic-row';
+    row.innerHTML = `<details class="add-item-dd disabled" id="gen-${p}-dd"><summary class="add-item-btn" title="Cargando…">➕ Añadir ${cfg.label}</summary>
+      <div class="add-item-form" id="gen-${p}-form">
+        <input type="text" id="gen-${p}-nombre" placeholder="Nombre*">
+        <input type="text" id="gen-${p}-concejo" placeholder="Concejo*" list="concejos-list">
+        <input type="url" id="gen-${p}-gmaps" placeholder="Enlace de Google Maps (opcional)">
+        <textarea id="gen-${p}-desc" rows="2" placeholder="Descripción (opcional)"></textarea>
+        <div class="add-item-actions"><button type="button" id="gen-${p}-guardar">Guardar</button><button type="button" id="gen-${p}-cancelar">Cancelar</button></div>
+      </div></details>`;
+    cont.parentNode.insertBefore(row, cont);
+    const clr = ()=>['nombre','concejo','gmaps','desc'].forEach(k=>{ const e=document.getElementById(`gen-${p}-${k}`); if(e) e.value=''; });
+    wireAddItemDD(`gen-${p}-dd`,`gen-${p}-form`,`gen-${p}-guardar`,`gen-${p}-cancelar`, clr, ()=>{
+      const nombre = document.getElementById(`gen-${p}-nombre`).value.trim();
+      const concejo = document.getElementById(`gen-${p}-concejo`).value.trim();
+      if(!nombre || !concejo){ alert('Pon al menos el nombre y el concejo.'); return null; }
+      const gmaps_url = document.getElementById(`gen-${p}-gmaps`).value.trim();
+      if(gmaps_url && !/^https?:\/\//i.test(gmaps_url)){ alert('El enlace de Google Maps debe empezar por http:// o https://'); return null; }
+      return { id:`custom-${p}-`+Date.now()+'-'+Math.random().toString(36).slice(2,7), tipo:p, nombre, concejo, gmaps_url,
+        desc: document.getElementById(`gen-${p}-desc`).value.trim(),
+        dist_km: (concejo in CONCEJO_DIST) ? CONCEJO_DIST[concejo] : null, createdAt: new Date().toISOString() };
+    });
+  });
+}
+
 function renderCustomItems(){
+  renderGenCustom();
   const restItems = Object.values(customMap).filter(it=>it && it.tipo==='restaurante').sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
   const sidraItems = Object.values(customMap).filter(it=>it && it.tipo==='sidreria').sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
   const lagarItems = Object.values(customMap).filter(it=>it && it.tipo==='lagar').sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
@@ -2364,6 +2453,7 @@ function wireAddItemDD(ddId, formId, guardarId, cancelarId, clearFn, buildItem){
 }
 
 function initAddItemForms(){
+  initGenAddForms();
   wireAddItemDD('rest-add-dd','rest-add-form','rest-add-guardar','rest-add-cancelar', clearRestAddForm, ()=>{
     const nombre = document.getElementById('rest-add-nombre').value.trim();
     const concejo = document.getElementById('rest-add-concejo').value.trim();
@@ -2890,6 +2980,7 @@ function applySitiosFilters(){
   const sinFiltros = !sitiosMostrarTodo && !q && !concejo && activeCats.size===0 && !sitiosFavOnly;
   let total=0, shown=0;
   document.querySelectorAll('#results-sitios .foto-card').forEach(card=>{
+    if(card.classList.contains('quitado')) return;
     total++;
     let visible = false;
     if(!sinFiltros){
@@ -2969,6 +3060,7 @@ function applyFilters(){
   document.querySelectorAll('#results .concejo-block').forEach(block=>{
     let anyVisible = false;
     block.querySelectorAll('.card').forEach(card=>{
+      if(card.classList.contains('quitado')) return;
       total++;
       let visible = false;
       if(!sinFiltros){
@@ -3199,10 +3291,30 @@ function fotoALocalDataUrl(file, maxDim=720, calidad=0.62){
 
 function cardFor(id){ return document.querySelector(`[data-docid="${CSS.escape(id)}"]`); }
 
+function escH(t){ return String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function reaplicarFiltros(){
+  ['applyFilters','applyFotoFilters','applyFotoInteriorFilters','applySitiosFilters','applyRestFilters','applySidraFilters','applyLagaresFilters','applyBodegasFilters','applyDestileriasFilters','applyCamarasFilters','applyRutasLlanasFilters'].forEach(n=>{ try{ if(typeof window[n]==='function') window[n](); }catch(e){} });
+}
+let _qtTimer=null;
+function programarQuitados(){ clearTimeout(_qtTimer); _qtTimer=setTimeout(renderQuitados,60); }
+function renderQuitados(){
+  const box=document.getElementById('quitados-list'); if(!box) return;
+  const ids=Object.keys(estadoMap).filter(id=>estadoMap[id] && estadoMap[id].oculto && cardFor(id));
+  const all=document.getElementById('restaurar-todo-btn'); if(all) all.hidden = !ids.length;
+  if(!ids.length){ box.innerHTML='<p class="hint">No has quitado ninguna ficha.</p>'; return; }
+  box.innerHTML = ids.map(id=>{ const c=cardFor(id); const h=c.querySelector('h4'); return `<div class="quitado-row"><span>${escH(h?h.textContent:id)}</span><button type="button" class="restaurar-btn" data-id="${escH(id)}">↩️ Recuperar</button></div>`; }).join('');
+}
+
 function renderEstado(id){
   const card = cardFor(id);
   if(!card) return;
   const est = estadoMap[id] || emptyEstado();
+  card.classList.toggle('quitado', !!est.oculto);
+  if(!card.querySelector('.custom-del-btn, .quitar-btn')){
+    const fr = card.querySelector('.fav-row');
+    if(fr){ const b=document.createElement('button'); b.type='button'; b.className='quitar-btn'; b.dataset.id=id; b.title='Quitar esta ficha de la lista'; b.textContent='🗑️'; fr.appendChild(b); }
+  }
+  programarQuitados();
   const starBtn = card.querySelector('.star-btn');
   const noteBtn = card.querySelector('.note-btn');
   const noteInput = card.querySelector('.note-input');
@@ -3328,6 +3440,17 @@ function wireCardInteractions(containerId){
       const fotos = (cur.fotos||[]).filter(f=>f.id!==fotoId);
       saveEstado(id, {fotos});
       if(storageMode==='db' && assetsCap && !fotoId.startsWith('local-')){ try{ await assetsCap.delete(fotoId); }catch(e){} }
+      return;
+    }
+    const quitBtn = ev.target.closest('.quitar-btn');
+    if(quitBtn){
+      const id = quitBtn.dataset.id;
+      if(storageMode==='none'){ alert('Aquí no se puede guardar nada, así que no se puede quitar la ficha.'); return; }
+      const c = cardFor(id); const h = c && c.querySelector('h4');
+      if(confirm('¿Quitar «'+(h?h.textContent:'esta ficha')+'» de la lista?\nPodrás recuperarla desde Copia de seguridad.')){
+        saveEstado(id, {oculto:true});
+        reaplicarFiltros();
+      }
       return;
     }
     const delBtn = ev.target.closest('.custom-del-btn');
@@ -3765,6 +3888,16 @@ async function importEstado(file){
 }
 
 function initBackupTab(){
+  const ql = document.getElementById('quitados-list');
+  if(ql) ql.addEventListener('click', (ev)=>{
+    const b = ev.target.closest('.restaurar-btn'); if(!b) return;
+    saveEstado(b.dataset.id, {oculto:false}); reaplicarFiltros();
+  });
+  const qa = document.getElementById('restaurar-todo-btn');
+  if(qa) qa.addEventListener('click', ()=>{
+    Object.keys(estadoMap).filter(id=>estadoMap[id] && estadoMap[id].oculto).forEach(id=>saveEstado(id,{oculto:false}));
+    reaplicarFiltros();
+  });
   const btnExport = document.getElementById('backup-export-btn');
   if(btnExport) btnExport.addEventListener('click', exportEstado);
   const input = document.getElementById('backup-import-input');
