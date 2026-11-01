@@ -37,6 +37,7 @@
     color-scheme: dark;
   }
   *{box-sizing:border-box}
+  [hidden]{display:none !important}
   body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;font-size:16px}
   a{color:inherit}
   .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -2775,6 +2776,8 @@ function initInicio(){
   document.getElementById('home-fab').addEventListener('click', volverInicio);
   window.addEventListener('popstate', ev=>{
     const tab = ev.state && ev.state.tab;
+    // Los enlaces internos (p. ej. tocar un concejo del mapa de playas) cambian el # pero no son un cambio de sección.
+    if(!tab && location.hash && location.hash !== '#') return;
     navDesdePop = true;
     try{ if(tab && tab!=='inicio') irASeccion(tab); else mostrarInicio(); } finally { navDesdePop = false; }
   });
