@@ -65,7 +65,7 @@
   }
   :root[data-theme="dark"] .sync-badge.on{background:#123821;color:#7be3a4;border-color:#2f8f5c}
   :root[data-theme="dark"] .sync-badge.off{background:#3a1414;color:#ff9a90;border-color:#a83a30}
-  nav.tabs{display:flex;gap:8px;flex-wrap:wrap}
+  nav.tabs{display:none}
   nav.tabs button{border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);padding:10px 16px;border-radius:999px;font-size:15px;cursor:pointer}
   nav.tabs button.active{background:var(--sea);border-color:var(--sea);color:#fff;font-weight:600}
   nav.tabs button.soon{opacity:.55;cursor:default}
@@ -193,6 +193,23 @@
   @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .fest-badge.fiesta{background:#33204a;color:#dcc0ff} }
   .fest-next{max-width:640px;background:var(--bg-elev);border:1px dashed var(--sea);border-radius:14px;padding:14px 16px;margin-bottom:18px;font-size:15px}
   .fest-next strong{color:var(--sea)}
+  .home-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:18px 0 12px;max-width:640px}
+  .home-hint{margin:0;color:var(--ink-dim);font-size:14px;flex:1 1 220px}
+  .home-bar-btns{display:flex;gap:8px;flex-wrap:wrap}
+  .home-list{display:flex;flex-direction:column;gap:10px;max-width:640px;padding-bottom:70px}
+  .home-row{display:flex;align-items:stretch;gap:8px}
+  .home-row .home-go{flex:1;display:flex;align-items:center;gap:14px;text-align:left;min-height:68px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);box-shadow:var(--card-shadow);cursor:pointer;font:inherit}
+  .home-row .home-go:hover{border-color:var(--sea)}
+  .home-ico{font-size:28px;line-height:1;flex:0 0 auto}
+  .home-txt{flex:1;min-width:0}
+  .home-txt b{display:block;font-size:17px}
+  .home-txt span{display:block;font-size:13.5px;color:var(--ink-dim);line-height:1.35}
+  .home-chev{color:var(--ink-dim);font-size:22px;flex:0 0 auto}
+  .home-move{display:flex;flex-direction:column;gap:6px;flex:0 0 auto;justify-content:center}
+  .home-move button{width:46px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);font-size:16px;cursor:pointer}
+  .home-move button[disabled]{opacity:.3;cursor:default}
+  .home-row.editando .home-go{pointer-events:none;border-style:dashed}
+  .home-fab{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;border:1px solid var(--sea);background:var(--sea);color:#fff;padding:11px 16px;border-radius:999px;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
   .fest-badge.fiesta{background:#efe3fb;color:#5b2d8a}
   .fest-gcal{font-size:13px;color:var(--sea);text-decoration:none;font-weight:600}
   .upd-btn{border:1px solid var(--sea);background:var(--sea);color:#fff;padding:7px 13px;border-radius:999px;font-size:13.5px;cursor:pointer;margin:0 0 16px 6px;font-weight:600}
@@ -280,8 +297,8 @@
       <h1>🏖️ Asturias</h1>
       <button type="button" class="sync-badge" id="sync-status-btn" hidden></button>
     </div>
-    <button type="button" class="info-btn" id="info-open-btn">ℹ️ Qué contiene</button><button type="button" class="upd-btn" id="upd-open-btn">🔄 Actualizar con Claude</button>
-    <nav class="tabs">
+    <button type="button" class="info-btn" id="info-open-btn">ℹ️ Qué contiene</button><button type="button" class="info-btn" id="home-back-btn" hidden>🏠 Inicio</button>
+    <nav class="tabs" id="tabs-nav">
       <button data-tab="playas">🏖️ Playas</button>
       <button data-tab="foto">📷 Ruta fotográfica</button>
       <button data-tab="rutas-llanas">🚴 Rutas llanas (Gijón)</button>
@@ -337,6 +354,21 @@
     <p class="upd-msg" id="upd-status"></p>
   </div>
 </div>
+
+<div id="tab-inicio">
+<main class="wrap">
+  <div class="home-bar">
+    <p class="home-hint" id="home-hint">Toca una fila para entrar. Con «Ordenar» pones las secciones como prefieras.</p>
+    <div class="home-bar-btns">
+      <button type="button" class="fav-toggle" id="home-reset-btn" hidden>↺ Orden original</button>
+      <button type="button" class="fav-toggle" id="home-edit-btn">↕️ Ordenar</button>
+    </div>
+  </div>
+  <div class="home-list" id="home-list"></div>
+</main>
+</div>
+
+<button type="button" class="home-fab" id="home-fab" hidden aria-label="Volver al inicio">🏠 Inicio</button>
 
 <div id="tab-playas" hidden>
 <section class="map-wrap">
@@ -743,8 +775,9 @@
     <p class="hint">Si inicias sesión aquí con una cuenta, tus favoritas, notas, gastos, marcas, precios y fotos de playas, restaurantes, sidrerías y lagares se guardan en la nube y aparecen igual en todos los dispositivos donde inicies sesión con esa misma cuenta. Si no inicias sesión, todo se sigue guardando solo en este dispositivo, como hasta ahora.</p>
     <div id="cloud-sync-logged-out">
       <div class="add-item-form" style="max-width:360px;margin-top:0">
-        <input type="email" id="cloud-email" placeholder="Correo electrónico" autocomplete="email">
+        <input type="email" id="cloud-email" placeholder="Correo electrónico" autocomplete="username">
         <input type="password" id="cloud-password" placeholder="Contraseña (mínimo 6 caracteres)" autocomplete="current-password">
+        <label class="add-item-check"><input type="checkbox" id="cloud-remember" checked> Recordar mi clave en este dispositivo (entra sola cada vez)</label>
         <div class="add-item-actions">
           <button type="button" id="cloud-login-btn">Entrar</button>
           <button type="button" id="cloud-signup-btn">Crear cuenta</button>
@@ -2656,6 +2689,99 @@ function renderFestivos(){
     ? 'Los festivos locales de Gijón (9 de febrero y 29 de junio) y el Día de Asturias (8 de septiembre) están confirmados oficialmente. El resto de festivos de 2027 son los previstos según el calendario habitual y están marcados como "Fecha prevista" hasta que se publiquen en el BOE/BOPA. Los festivos que caen en sábado o domingo no se muestran. Las ferias y fiestas de 2027 aún no tienen fechas publicadas.'
     : 'Festivos según el calendario oficial de 2026 para Asturias y las dos fiestas locales de Gijón (BOPA). Los festivos que caen en sábado o domingo no se muestran, pero sí las fiestas y ferias de esos días. Fechas de ferias y fiestas según las páginas de turismo y del Recinto Ferial Luis Adaro; las fechas pueden cambiar, confírmalas en la web de cada organizador.';
 }
+// ---------- Pantalla de inicio (filas de 1, ordenables) ----------
+const HOME_ITEMS = [
+  {id:'playas', ico:'🏖️', n:'Playas', d:'Las 199 playas del Principado, con mareas, agua y viento'},
+  {id:'foto', ico:'📷', n:'Ruta fotográfica', d:'Costa e interior, con la mejor luz de cada punto'},
+  {id:'rutas-llanas', ico:'🚴', n:'Rutas llanas (Gijón)', d:'Paseos a pie o en bici sin desnivel'},
+  {id:'sitios', ico:'🗺️', n:'Qué ver', d:'Pueblos, monumentos, museos, cuevas y miradores'},
+  {id:'restaurantes', ico:'🍽️', n:'Restaurantes', d:'Con estrella Michelín, Sol Repsol o recomendados'},
+  {id:'sidrerias', ico:'🍎', n:'Sidrerías', d:'Tradicionales, con las premiadas destacadas'},
+  {id:'lagares', ico:'🍏', n:'Lagares', d:'Sidra directa del productor'},
+  {id:'bodegas', ico:'🍷', n:'Bodegas', d:'Vino asturiano, con visitas y catas'},
+  {id:'destilerias', ico:'🥃', n:'Destilerías', d:'Orujo, ginebra, anís y licores artesanos'},
+  {id:'camaras', ico:'🎥', n:'Cámaras', d:'Webcams en directo de playas, puertos y pueblos'},
+  {id:'festivos', ico:'📅', n:'Festivos y ferias', d:'Calendario de Gijón, con Google Calendar'},
+  {id:'actualizar', ico:'🔄', n:'Actualizar con Claude', d:'Pon al día restaurantes, eventos, ferias…', accion:true},
+  {id:'backup', ico:'💾', n:'Copia de seguridad', d:'Favoritas, notas y fotos; sincronización'},
+];
+const HOME_ORDEN_KEY = 'asturias-inicio-orden';
+let homeEditando = false;
+function homeOrdenLeer(){
+  let guardado = [];
+  try{ guardado = JSON.parse(localStorage.getItem(HOME_ORDEN_KEY)||'[]'); }catch(_){ guardado = []; }
+  if(!Array.isArray(guardado)) guardado = [];
+  const ids = HOME_ITEMS.map(i=>i.id);
+  const orden = guardado.filter(id=>ids.includes(id));
+  ids.forEach(id=>{ if(!orden.includes(id)) orden.push(id); });
+  return orden;
+}
+function homeOrdenGuardar(orden){ try{ localStorage.setItem(HOME_ORDEN_KEY, JSON.stringify(orden)); }catch(_){} }
+function renderInicio(){
+  const orden = homeOrdenLeer();
+  const list = document.getElementById('home-list');
+  list.innerHTML = orden.map((id,i)=>{
+    const it = HOME_ITEMS.find(x=>x.id===id);
+    const mover = homeEditando ? `<div class="home-move"><button type="button" data-mv="-1" data-id="${id}" aria-label="Subir ${it.n}" ${i===0?'disabled':''}>▲</button><button type="button" data-mv="1" data-id="${id}" aria-label="Bajar ${it.n}" ${i===orden.length-1?'disabled':''}>▼</button></div>` : '';
+    return `<div class="home-row${homeEditando?' editando':''}"><button type="button" class="home-go" data-go="${id}"><span class="home-ico">${it.ico}</span><span class="home-txt"><b>${it.n}</b><span>${it.d}</span></span><span class="home-chev">›</span></button>${mover}</div>`;
+  }).join('');
+  document.getElementById('home-edit-btn').textContent = homeEditando ? '✔ Listo' : '↕️ Ordenar';
+  document.getElementById('home-edit-btn').classList.toggle('on', homeEditando);
+  document.getElementById('home-reset-btn').hidden = !homeEditando;
+  document.getElementById('home-hint').textContent = homeEditando ? 'Usa ▲ y ▼ para colocar cada sección donde quieras. El orden se guarda en este dispositivo.' : 'Toca una fila para entrar. Con «Ordenar» pones las secciones como prefieras.';
+}
+let navDesdePop = false;
+function mostrarInicio(){
+  ['playas','foto','rutas-llanas','restaurantes','sidrerias','lagares','bodegas','destilerias','sitios','camaras','festivos','backup'].forEach(t=>{ const el=document.getElementById('tab-'+t); if(el) el.hidden = true; });
+  document.getElementById('tab-inicio').hidden = false;
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('home-back-btn').hidden = true;
+  document.getElementById('home-fab').hidden = true;
+  window.scrollTo(0,0);
+}
+function irASeccion(id){
+  if(id==='actualizar'){ if(window.abrirActualizar) window.abrirActualizar(); return; }
+  const b = document.querySelector(`nav.tabs button[data-tab="${id}"]`);
+  if(b) b.click();
+}
+function alMostrarSeccion(tab){
+  document.getElementById('home-back-btn').hidden = false;
+  document.getElementById('home-fab').hidden = false;
+  window.scrollTo(0,0);
+  if(!navDesdePop){ try{ history.pushState({tab}, '', '#'+tab); }catch(_){} }
+}
+function volverInicio(){
+  mostrarInicio();
+  try{ history.pushState({tab:'inicio'}, '', '#'); }catch(_){}
+}
+function initInicio(){
+  const list = document.getElementById('home-list');
+  list.addEventListener('click', ev=>{
+    const mv = ev.target.closest('[data-mv]');
+    if(mv){
+      const orden = homeOrdenLeer(), id = mv.dataset.id, i = orden.indexOf(id), j = i + Number(mv.dataset.mv);
+      if(i<0 || j<0 || j>=orden.length) return;
+      [orden[i], orden[j]] = [orden[j], orden[i]];
+      homeOrdenGuardar(orden); renderInicio();
+      const nuevo = list.querySelector(`[data-mv="${mv.dataset.mv}"][data-id="${id}"]`); if(nuevo && !nuevo.disabled) nuevo.focus();
+      return;
+    }
+    const go = ev.target.closest('[data-go]');
+    if(go && !homeEditando) irASeccion(go.dataset.go);
+  });
+  document.getElementById('home-edit-btn').addEventListener('click', ()=>{ homeEditando = !homeEditando; renderInicio(); });
+  document.getElementById('home-reset-btn').addEventListener('click', ()=>{ try{ localStorage.removeItem(HOME_ORDEN_KEY); }catch(_){} renderInicio(); });
+  document.getElementById('home-back-btn').addEventListener('click', volverInicio);
+  document.getElementById('home-fab').addEventListener('click', volverInicio);
+  window.addEventListener('popstate', ev=>{
+    const tab = ev.state && ev.state.tab;
+    navDesdePop = true;
+    try{ if(tab && tab!=='inicio') irASeccion(tab); else mostrarInicio(); } finally { navDesdePop = false; }
+  });
+  renderInicio();
+  mostrarInicio();
+}
+
 const APP_DATOS_FECHA = 'octubre de 2026';
 const UPD_SECCIONES = ['Playas','Ruta fotográfica','Rutas llanas (Gijón)','Qué ver (incluidos miradores)','Restaurantes','Sidrerías','Lagares','Bodegas','Destilerías','Cámaras web','Festivos y ferias de Gijón'];
 function initActualizar(){
@@ -2664,7 +2790,7 @@ function initActualizar(){
   document.getElementById('upd-opts').innerHTML = UPD_SECCIONES.map((n,i)=>`<label class="dd-check" style="white-space:normal"><input type="checkbox" value="${n}" checked> ${n}</label>`).join('');
   const st = document.getElementById('upd-status');
   const abrir = ()=>{ ov.hidden = false; st.textContent=''; };
-  document.getElementById('upd-open-btn').addEventListener('click', abrir);
+  window.abrirActualizar = abrir;
   document.getElementById('upd-close-btn').addEventListener('click', ()=>{ ov.hidden = true; });
   ov.addEventListener('click', ev=>{ if(ev.target===ov) ov.hidden = true; });
   const texto = ()=>{
@@ -2907,11 +3033,13 @@ function init(){
       if(btn.classList.contains('soon')) return;
       document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
-      ['playas','foto','rutas-llanas','restaurantes','sidrerias','lagares','bodegas','destilerias','sitios','camaras','festivos','backup'].forEach(t=>{
+      ['inicio','playas','foto','rutas-llanas','restaurantes','sidrerias','lagares','bodegas','destilerias','sitios','camaras','festivos','backup'].forEach(t=>{
         document.getElementById('tab-'+t).hidden = (t!==btn.dataset.tab);
       });
+      if(typeof alMostrarSeccion==='function') alMostrarSeccion(btn.dataset.tab);
     });
   });
+  initInicio();
 
   // Panel "Qué contiene": se abre con el botón de la cabecera y se cierra con
   // la X, tocando fuera del recuadro, o con la tecla Escape.
@@ -3311,6 +3439,22 @@ function wireSyncBadge(){
   });
 }
 
+// ---- Clave recordada en este dispositivo (solo si el usuario lo deja marcado) ----
+const CLOUD_CRED_KEY = 'asturias-cloud-cred';
+function credGuardar(e, p){ try{ localStorage.setItem(CLOUD_CRED_KEY, btoa(unescape(encodeURIComponent(JSON.stringify({e,p}))))); }catch(_){} }
+function credLeer(){ try{ const v = localStorage.getItem(CLOUD_CRED_KEY); return v ? JSON.parse(decodeURIComponent(escape(atob(v)))) : null; }catch(_){ return null; } }
+function credBorrar(){ try{ localStorage.removeItem(CLOUD_CRED_KEY); }catch(_){} }
+async function autoLoginGuardado(){
+  const c = credLeer();
+  if(!c || !c.e || !c.p || !fbApi) return;
+  try{ await fbApi.signIn(c.e, c.p); }
+  catch(err){
+    const code = (err && err.code) || '';
+    // Solo se olvida la clave si Firebase dice que ya no vale; un fallo de red no la borra.
+    if(/wrong-password|invalid-credential|user-not-found|invalid-email|user-disabled/.test(code)) credBorrar();
+  }
+}
+
 let cloudSyncPanelWired = false;
 function wireCloudSyncPanel(){
   if(cloudSyncPanelWired) return;
@@ -3319,6 +3463,14 @@ function wireCloudSyncPanel(){
   const signupBtn = document.getElementById('cloud-signup-btn');
   const logoutBtn = document.getElementById('cloud-logout-btn');
   const statusEl = document.getElementById('cloud-status');
+  const rememberEl = document.getElementById('cloud-remember');
+  const guardada = credLeer();
+  if(guardada){
+    const ei = document.getElementById('cloud-email'), pi = document.getElementById('cloud-password');
+    if(ei && !ei.value) ei.value = guardada.e || '';
+    if(pi && !pi.value) pi.value = guardada.p || '';
+  }
+  const recordar = (email, pw)=>{ if(rememberEl && rememberEl.checked) credGuardar(email, pw); else credBorrar(); };
   const setStatus = (msg, ok)=>{ if(!statusEl) return; statusEl.textContent = msg; statusEl.className = 'backup-status' + (ok===true?' ok':ok===false?' err':''); };
 
   if(loginBtn) loginBtn.addEventListener('click', async ()=>{
@@ -3327,7 +3479,7 @@ function wireCloudSyncPanel(){
     const pw = document.getElementById('cloud-password').value||'';
     if(!email || !pw){ setStatus('Escribe tu correo y tu contraseña.', false); return; }
     setStatus('Entrando…');
-    try{ await fbApi.signIn(email, pw); setStatus('Sesión iniciada.', true); }
+    try{ await fbApi.signIn(email, pw); recordar(email, pw); setStatus('Sesión iniciada.', true); }
     catch(e){ setStatus('No se pudo entrar: ' + traducirErrorFirebase(e), false); }
   });
   if(signupBtn) signupBtn.addEventListener('click', async ()=>{
@@ -3336,11 +3488,12 @@ function wireCloudSyncPanel(){
     const pw = document.getElementById('cloud-password').value||'';
     if(!email || !pw){ setStatus('Escribe tu correo y una contraseña (mínimo 6 caracteres).', false); return; }
     setStatus('Creando cuenta…');
-    try{ await fbApi.signUp(email, pw); setStatus('Cuenta creada y sesión iniciada.', true); }
+    try{ await fbApi.signUp(email, pw); recordar(email, pw); setStatus('Cuenta creada y sesión iniciada.', true); }
     catch(e){ setStatus('No se pudo crear la cuenta: ' + traducirErrorFirebase(e), false); }
   });
   if(logoutBtn) logoutBtn.addEventListener('click', async ()=>{
     if(!fbApi) return;
+    credBorrar();
     try{ await fbApi.signOut(); }catch(e){ console.error('No se pudo cerrar sesión', e); }
   });
 }
@@ -3460,7 +3613,8 @@ async function initCapabilities(){
           updateCloudSyncUI(null);
         }
       });
-      await Promise.race([authInicial, new Promise((resolve)=> setTimeout(()=>resolve(undefined), 2500))]);
+      const u0 = await Promise.race([authInicial, new Promise((resolve)=> setTimeout(()=>resolve(undefined), 2500))]);
+      if(!u0) await autoLoginGuardado();
     } else {
       updateCloudSyncUI(null);
     }
