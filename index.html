@@ -3175,7 +3175,7 @@ function init(){
   wireCardInteractions('results-rutas-llanas');
   initAddItemForms();
   populateConcejosDatalist();
-  initCapabilities();
+  initCapabilities().then(()=>{ setTimeout(copiaAutomaticaInicio,3000); setTimeout(copiaAutomaticaInicio,12000); }).catch(()=>{});
   initBackupTab();
 }
 
@@ -3800,17 +3800,37 @@ function setBackupStatus(msg, tipo){
   el.className = 'backup-status' + (tipo ? ' '+tipo : '');
 }
 
+function nombreCopia(){
+  const d = new Date(), p = x=>String(x).padStart(2,'0');
+  return `Asturias ${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}.json`;
+}
+// Copia automática al abrir la app: una vez al día como máximo, solo si hay algo guardado
+// y solo fuera de la conversación de Claude (ahí cada descarga pide confirmación).
+function copiaAutomaticaInicio(){
+  try{
+    if(downloadsCap || storageMode==='none') return;
+    if(!Object.keys(estadoMap).length && !Object.keys(customMap).length) return;
+    const hoy = nombreCopia();
+    if(localStorage.getItem('asturias-ultima-copia')===hoy) return;
+    const text = JSON.stringify({app:'asturias', version:1, exportedAt:new Date().toISOString(), estado:estadoMap, custom:customMap}, null, 1);
+    const url = URL.createObjectURL(new Blob([text], {type:'application/json'}));
+    const a = document.createElement('a'); a.href=url; a.download=hoy; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+    localStorage.setItem('asturias-ultima-copia', hoy);
+  }catch(e){ console.error('Copia automática no realizada', e); }
+}
+
 async function exportEstado(){
   const payload = {
     app: 'asturias',
     version: 1,
     exportedAt: new Date().toISOString(),
     estado: estadoMap,
+    custom: customMap,
   };
   const text = JSON.stringify(payload, null, 1);
-  const n = Object.keys(estadoMap).length;
-  const fecha = new Date().toISOString().slice(0,10);
-  const filename = `asturias-copia-${fecha}.json`;
+  const n = Object.keys(estadoMap).length + Object.keys(customMap).length;
+  const filename = nombreCopia();
 
   if(downloadsCap){
     // Dentro de una conversación de Claude: la descarga se ofrece via la capacidad "downloads".
@@ -3848,6 +3868,13 @@ async function importEstado(file){
     const payload = JSON.parse(text);
     const incoming = (payload && typeof payload==='object' && payload.estado && typeof payload.estado==='object') ? payload.estado : null;
     if(!incoming){ setBackupStatus('⚠️ El archivo no parece una copia de seguridad válida de Asturias.', 'err'); return; }
+    // fichas añadidas por el usuario
+    const inCustom = (payload.custom && typeof payload.custom==='object') ? payload.custom : {};
+    let anadidas = 0;
+    for(const id of Object.keys(inCustom)){
+      if(customMap[id] || !inCustom[id] || typeof inCustom[id]!=='object') continue;
+      await saveCustomItem(id, inCustom[id]); anadidas++;
+    }
 
     let restauradas = 0;
     const paraGuardar = [];
@@ -3880,7 +3907,7 @@ async function importEstado(file){
     if(typeof applyFotoFilters==='function') applyFotoFilters();
     if(typeof applyFotoInteriorFilters==='function') applyFotoInteriorFilters();
 
-    setBackupStatus(restauradas ? `✅ Copia restaurada: ${restauradas} fichas actualizadas.` : 'ℹ️ El archivo no contenía datos nuevos para restaurar.', 'ok');
+    setBackupStatus((restauradas||anadidas) ? `✅ Copia restaurada: ${restauradas} fichas actualizadas y ${anadidas} añadidas.` : 'ℹ️ El archivo no contenía datos nuevos para restaurar.', 'ok');
   }catch(e){
     console.error('No se pudo restaurar la copia de seguridad', e);
     setBackupStatus('⚠️ No se pudo leer el archivo. Comprueba que sea una copia de seguridad exportada desde esta app.', 'err');
