@@ -2905,7 +2905,7 @@ function renderFestivos(){
 const HOME_ITEMS = [
   {id:'playas', ico:'🏖️', n:'Playas', d:'Las 199 playas del Principado, con mareas, agua y viento'},
   {id:'foto', ico:'📷', n:'Ruta fotográfica', d:'Costa e interior, con la mejor luz de cada punto'},
-  {id:'rutas-llanas', ico:'🚴', n:'Rutas llanas (Gijón)', d:'Paseos a pie o en bici con poco o ningún desnivel'},
+  {id:'rutas-llanas', ico:'🚴', n:'Rutas llanas Gijón', d:'Paseos a pie o en bici con poco o ningún desnivel'},
   {id:'rutas-asturias', ico:'🥾', n:'Rutas llanas Asturias', d:'Vías verdes, sendas de río y de costa, a pie o en bici'},
   {id:'sitios', ico:'🗺️', n:'Qué ver', d:'Pueblos, monumentos, museos, cuevas y miradores'},
   {id:'restaurantes', ico:'🍽️', n:'Restaurantes', d:'Con estrella Michelín, Sol Repsol o recomendados'},
@@ -2930,13 +2930,19 @@ function homeOrdenLeer(){
   return orden;
 }
 function homeOrdenGuardar(orden){ try{ localStorage.setItem(HOME_ORDEN_KEY, JSON.stringify(orden)); }catch(_){} }
+const HOME_CONT = {playas:['results'], foto:['results-foto','results-foto-interior'], 'rutas-llanas':['results-rutas-llanas'], 'rutas-asturias':['results-rutas-asturias'], sitios:['results-sitios'], restaurantes:['results-rest'], sidrerias:['results-sidra'], lagares:['results-lagares'], bodegas:['results-bodegas'], destilerias:['results-destilerias'], camaras:['results-camaras']};
+function homeCuenta(id){
+  if(HOME_CONT[id]) return HOME_CONT[id].reduce((n,c)=>n+document.querySelectorAll(`#${c} [data-docid]:not(.quitado)`).length, 0);
+  if(id==='festivos'){ const t=(document.getElementById('count-festivos')||{}).textContent||''; const m=t.match(/\d+/g); return m ? m.reduce((a,b)=>a+Number(b),0) : null; }
+  return null;
+}
 function renderInicio(){
   const orden = homeOrdenLeer();
   const list = document.getElementById('home-list');
   list.innerHTML = orden.map((id,i)=>{
     const it = HOME_ITEMS.find(x=>x.id===id);
     const mover = homeEditando ? `<div class="home-move"><button type="button" data-mv="-1" data-id="${id}" aria-label="Subir ${it.n}" ${i===0?'disabled':''}>▲</button><button type="button" data-mv="1" data-id="${id}" aria-label="Bajar ${it.n}" ${i===orden.length-1?'disabled':''}>▼</button></div>` : '';
-    return `<div class="home-row${homeEditando?' editando':''}"><button type="button" class="home-go" data-go="${id}"><span class="home-ico">${it.ico}</span><span class="home-txt"><b>${it.n}</b><span>${it.d}</span></span><span class="home-chev">›</span></button>${mover}</div>`;
+    return `<div class="home-row${homeEditando?' editando':''}"><button type="button" class="home-go" data-go="${id}"><span class="home-ico">${it.ico}</span><span class="home-txt"><b>${it.n}${(c=>c==null?'':' ('+c+')')(homeCuenta(id))}</b><span>${it.d}</span></span><span class="home-chev">›</span></button>${mover}</div>`;
   }).join('');
   document.getElementById('home-edit-btn').textContent = homeEditando ? '✔ Listo' : '↕️ Ordenar';
   document.getElementById('home-edit-btn').classList.toggle('on', homeEditando);
@@ -2945,6 +2951,7 @@ function renderInicio(){
 }
 let navDesdePop = false;
 function mostrarInicio(){
+  try{ renderInicio(); }catch(_){}
   ['playas','foto','rutas-llanas','rutas-asturias','restaurantes','sidrerias','lagares','bodegas','destilerias','sitios','camaras','festivos','backup'].forEach(t=>{ const el=document.getElementById('tab-'+t); if(el) el.hidden = true; });
   document.getElementById('tab-inicio').hidden = false;
   document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
